@@ -18,11 +18,21 @@
             android:orientation="vertical"
             android:gravity="center">
 
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="left"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="35dp"
+                android:src="@drawable/arrow"
+                android:background="@drawable/logo_back"/>
+
             <ImageView
                 android:id="@+id/login_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="103dp"
+                android:layout_marginTop="30dp"
                 app:srcCompat="@drawable/login_image" />
 
             <TextView
@@ -78,7 +88,7 @@
                 android:maxLength="8"/>
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/lupa_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
@@ -127,8 +137,10 @@
 
             <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="26dp">
                 <ImageButton
+                    android:id="@+id/daftar_google"
                     android:layout_width="341dp"
                     android:layout_height="48dp"
                     android:ems="10"
