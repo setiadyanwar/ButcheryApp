@@ -4,19 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DaftarMitra" >
+    tools:context=".DaftarMitra"
+    android:layout_marginRight="35dp"
+    android:layout_marginLeft="35dp"
+    android:layout_marginTop="35dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center">
-        <ImageView
+        <ImageButton
             android:layout_width="36dp"
             android:layout_height="36dp"
-            android:layout_gravity="left"
+            android:layout_gravity="start"
+            android:layout_marginLeft="-10dp"
             android:src="@drawable/arrow"
-            android:background="@drawable/logo_back"/>
+            android:background="@color/transparent"/>
         <TextView
             android:id="@+id/Gabung"
             android:layout_width="wrap_content"
@@ -24,30 +28,30 @@
             android:text="Gabung Jadi Mitra Kami"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:textSize="24dp"
+            android:textSize="24sp"
             app:layout_constraintTop_toTopOf="parent"/>
-
         <TextView
             android:id="@+id/Gabung_sub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Dagang cukup dari rumah aja!"
-            android:textSize="17dp"
+            android:textSize="17sp"
             android:textColor="@color/grey_font"
             app:layout_constraintTop_toBottomOf="@+id/Gabung"/>
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/Gabung_sub"
             android:id="@+id/Gabung_hiro"
-            android:contentDescription="seorang ukang daging menjaga dagangannya." />
+            android:layout_width="wrap_content"
+            android:layout_height="297dp"
+            android:contentDescription="Seorang perempuan tengah membuka tokonya."
+            android:src="@drawable/hiro_daftarmitra"
+            app:layout_constraintTop_toBottomOf="@id/Gabung_sub" />
         <TextView
             android:id="@+id/Gabung_inputLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Masukkan Nama Toko Kamu"
-            android:textSize="17dp"
-            android:gravity="left"
+            android:textSize="16sp"
+            android:gravity="start"
             android:textColor="@color/grey_font"/>
         <EditText
             android:layout_width="match_parent"
@@ -55,6 +59,7 @@
             android:background="@drawable/edit_text"
             android:textSize="14sp"
             android:hint="Misal: Antara Farm"
+            android:layout_marginTop="8dp"
             android:textColorHint="#999999"
             android:paddingStart="12dp"
             android:paddingEnd="12dp"/>
@@ -63,7 +68,7 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginTop="36dp"
-            android:text="Selanjutnya "
+            android:text="Selanjutnya"
             style="@style/MyButtonStyle"/>
     </LinearLayout>
 
