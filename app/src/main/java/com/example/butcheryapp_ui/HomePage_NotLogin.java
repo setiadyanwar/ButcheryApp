@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
@@ -30,12 +31,21 @@ public class HomePage_NotLogin extends AppCompatActivity {
         imageSlider.setImageList(slideModels);
 
         ImageButton btnMasuk = findViewById(R.id.btn_masuk);
+        ImageButton btnProfile = findViewById(R.id.nav_profile);
 
         btnMasuk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // Di sini kita akan membuat Intent untuk berpindah ke halaman login
                 Intent intent = new Intent(HomePage_NotLogin.this, LoginPage.class);
+                startActivity(intent);
+            }
+        });
+
+        btnProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomePage_NotLogin.this, ProfilePage.class);
                 startActivity(intent);
             }
         });
