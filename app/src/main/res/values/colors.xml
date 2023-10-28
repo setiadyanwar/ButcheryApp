@@ -11,4 +11,5 @@
     <color name="primary_10">#FA4742</color>
     <color name="bg_color">#FEF0F0</color>
     <color name="transparent">#00000000</color>
+    <color name="custom_shadow_color">#E7716D</color>
 </resources>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg_color"
     android:orientation="vertical"
     tools:context=".ProfilePage">
 
@@ -14,26 +15,72 @@
             android:id="@+id/bg_profile"
             android:layout_width="match_parent"
             android:layout_height="130dp"
+            android:adjustViewBounds="true"
             android:background="@drawable/bg_profile"
             tools:ignore="MissingConstraints"/>
         <ImageView
+            android:id="@+id/gambar_banner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
             android:src="@drawable/gambar_bg_profile"
             tools:ignore="MissingConstraints"/>
 
         <TextView
+            android:id="@+id/title_pembelian"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="Pembelian"
-            android:textAlignment="center"
+            android:gravity="center"
             android:textColor="@color/primary_10"
             android:textSize="16sp"
-            android:textStyle="bold"
+            android:textStyle="normal"
+            android:background="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/bg_profile"
+            app:layout_constraintTop_toBottomOf="@+id/gambar_banner"
             app:layout_constraintVertical_bias="0.0" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/container"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_pembelian"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="21dp"
+                android:paddingEnd="10dp"
+                android:src="@drawable/logo_pesanan" />
+
+            <TextView
+                android:layout_width="331dp"
+                android:layout_height="wrap_content"
+                android:paddingEnd="240dp"
+                android:text="Pesanan Saya" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="21dp"
+                android:src="@drawable/caretright"
+                android:background="?attr/selectableItemBackgroundBorderless"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:src="@drawable/line_red"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_pembelian" />
 
         <ImageButton
             android:id="@+id/imageButton"
