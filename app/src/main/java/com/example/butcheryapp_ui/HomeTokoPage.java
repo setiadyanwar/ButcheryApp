@@ -5,23 +5,28 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
-public class ProfilePage extends AppCompatActivity {
+public class HomeTokoPage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile_page);
+        setContentView(R.layout.activity_home_toko_page);
 
-        TextView btn_tokosaya = findViewById(R.id.toko_saya);
+        ImageButton btnproduktoko = findViewById(R.id.btn_produktoko);
 
-        btn_tokosaya.setOnClickListener(new View.OnClickListener() {
+        btnproduktoko.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ProfilePage.this, HomeTokoPage.class);
+                Intent intent = new Intent(HomeTokoPage.this,ManageProdukToko.class);
                 startActivity(intent);
             }
         });
+
+
+
+
     }
 }

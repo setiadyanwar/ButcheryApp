@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="MyButtonStyle">
-        <item name="android:backgroundTint">#D10B05</item>
+    <style name="buttonprimary">
+        <item name="android:background">@drawable/btn_primary</item>
+
+    </style>
+    <style name="buttonSecondary">
+        <item name="android:backgroundTint">@drawable/btn_ubah</item>
     </style>
     <style name="Customshadow" parent="Theme.AppCompat">
         <!-- Menentukan warna bayangan -->

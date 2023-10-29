@@ -5,21 +5,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.ImageView;
 
-public class ProfilePage extends AppCompatActivity {
+public class ManageProdukToko extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile_page);
+        setContentView(R.layout.activity_manage_produk_toko);
 
-        TextView btn_tokosaya = findViewById(R.id.toko_saya);
+        ImageView btnaddproduk = findViewById(R.id.addproduk);
 
-        btn_tokosaya.setOnClickListener(new View.OnClickListener() {
+        btnaddproduk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ProfilePage.this, HomeTokoPage.class);
+                Intent intent = new Intent(ManageProdukToko.this,AddProduk.class );
                 startActivity(intent);
             }
         });

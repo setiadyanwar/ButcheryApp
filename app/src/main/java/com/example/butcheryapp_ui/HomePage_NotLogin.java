@@ -36,7 +36,6 @@ public class HomePage_NotLogin extends AppCompatActivity {
         btnMasuk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Di sini kita akan membuat Intent untuk berpindah ke halaman login
                 Intent intent = new Intent(HomePage_NotLogin.this, LoginPage.class);
                 startActivity(intent);
             }

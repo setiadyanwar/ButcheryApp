@@ -9,7 +9,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="primary_50">#D10B05</color>
     <color name="primary_10">#FA4742</color>
+    <color name="dark_50">#454545</color>
+    <color name="dark_30">#5E5E5E</color>
+    <color name="dark_10">#AEAEAE</color>
     <color name="bg_color">#FEF0F0</color>
     <color name="transparent">#00000000</color>
     <color name="custom_shadow_color">#E7716D</color>
+    <color name="btn_secondaryy">#FEBFBD</color>
 </resources>

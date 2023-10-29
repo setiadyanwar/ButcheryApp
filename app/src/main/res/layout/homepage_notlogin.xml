@@ -290,6 +290,7 @@
                 android:layout_marginLeft="21dp"
                 android:layout_marginStart="21dp"/>
 
+
             <HorizontalScrollView
                 android:id="@+id/sc_2"
                 android:layout_width="match_parent"
@@ -308,7 +309,6 @@
                     android:layout_height="210dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
-
                     <ImageView
                         android:layout_width="150dp"
                         android:layout_height="200dp"
@@ -322,7 +322,7 @@
                         android:layout_height="200dp"
                         android:layout_marginEnd="10dp"
                         android:background="@drawable/bg_produk"
-                        android:elevation="10dp"/>
+                        android:elevation="10dp" />
 
                     <ImageView
                         android:layout_width="150dp"

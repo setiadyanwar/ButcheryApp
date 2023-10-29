@@ -61,16 +61,24 @@
                 android:src="@drawable/logo_pesanan" />
 
             <TextView
-                android:layout_width="331dp"
-                android:layout_height="wrap_content"
-                android:paddingEnd="240dp"
-                android:text="Pesanan Saya" />
-
-            <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingEnd="21dp"
-                android:src="@drawable/caretright"
+                android:text="Pesanan Saya"
+                android:textSize="14sp"
+                android:layout_marginEnd="100dp"
+                android:textColor="@color/dark_50" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lihat Riwayat pesanan"
+                android:textSize="12sp"
+                android:textColor="#787878"/>
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="21dp"
+                android:src="@drawable/caretdark"
                 android:background="?attr/selectableItemBackgroundBorderless"/>
         </LinearLayout>
 
@@ -96,7 +104,7 @@
             app:layout_constraintVertical_bias="0.023" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/toko_saya"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -117,7 +125,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/imageButton"
             app:layout_constraintEnd_toEndOf="@+id/imageButton"
             app:layout_constraintHorizontal_bias="0.421"
-            app:layout_constraintStart_toEndOf="@+id/textView3"
+            app:layout_constraintStart_toEndOf="@+id/toko_saya"
             app:layout_constraintTop_toTopOf="@+id/imageButton">
 
         </ImageView>

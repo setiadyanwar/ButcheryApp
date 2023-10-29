@@ -104,7 +104,7 @@
                 android:layout_marginTop="36dp"
                 android:text="Masuk"
                 android:textColor="@color/white"
-                style="@style/MyButtonStyle"/>
+                style="@style/buttonprimary"/>
 
 
 
