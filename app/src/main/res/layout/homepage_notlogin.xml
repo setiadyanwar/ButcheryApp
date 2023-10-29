@@ -294,14 +294,13 @@
             <HorizontalScrollView
                 android:id="@+id/sc_2"
                 android:layout_width="match_parent"
-                android:layout_height="400dp"
+                android:layout_height="210dp"
                 android:overScrollMode="never"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
                 app:layout_constraintStart_toStartOf="@id/contraint2"
                 app:layout_constraintEnd_toEndOf="@id/contraint2"
                 app:layout_constraintTop_toBottomOf="@+id/Produklaris"
-
                 android:scrollbars="none">
 
                 <LinearLayout
@@ -343,42 +342,350 @@
 
             </HorizontalScrollView>
             <LinearLayout
-                android:layout_width="match_parent"
+                android:id="@+id/judulrekomendasi"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
+                android:layout_marginEnd="21dp"
                 android:orientation="horizontal"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintBottom_toTopOf="@id/cardproduk"
+                app:layout_constraintStart_toStartOf="@id/contraint2"
                 app:layout_constraintTop_toBottomOf="@id/sc_2">
 
-                <ImageView
-                    android:layout_width="180dp"
-                    android:layout_height="160dp"
-                    android:layout_marginEnd="10dp"
+                <TextView
+                    android:id="@+id/rekomendasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rekomendasi untukmu"
+                    android:textColor="#2B2B2B"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+<!--            CARD PRODUK 1-->
+                <LinearLayout
+                    android:id="@+id/cardproduk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="270dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginEnd="21dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintStart_toStartOf="@id/contraint2"
+                    app:layout_constraintTop_toBottomOf="@id/judulrekomendasi"
+                    android:orientation="vertical"
                     android:background="@drawable/bg_produk"
-                    android:elevation="10dp"/>
+                    android:elevation="10dp"
+                    tools:ignore="MissingConstraints">
+                    <ImageView
+                        android:layout_width="180dp"
+                        android:layout_height="121dp"
+                        android:background="@drawable/bg_gambarproduk"
+                        android:id="@+id/image1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:paddingStart="8dp"
+                        android:text="Trimmed Meat / Tetelan\nTuna Beku 500 gr"
+                        android:textSize="14sp"
+                        android:textColor="#000000"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:paddingStart="8dp"
+                        android:text="Rp27.500"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="#000000"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center_vertical">
 
-                <ImageView
-                    android:layout_width="180dp"
-                    android:layout_height="160dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="@drawable/bg_produk"
-                    android:elevation="10dp"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_toko"
+                            android:layout_marginEnd="5dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Culture Tambak"
+                            android:textSize="12sp"
+                            android:textColor="#999999"/>
 
-                <ImageView
-                    android:layout_width="180dp"
-                    android:layout_height="160dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="@drawable/bg_produk"
-                    android:elevation="10dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center_vertical">
 
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_lokasi"
+                            android:layout_marginEnd="5dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bekasi Timur"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_50"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center_vertical"
+                        tools:ignore="MissingConstraints">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_bintang"
+                            android:layout_marginEnd="5dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4.7 | 325 terjual"
+                            android:textSize="12sp"
+                            android:textColor="#999999"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+<!--            CARD PRODUK 1 FINIS-->
+
+<!--            CARD PRODUK 2-->
+                <LinearLayout
+                android:id="@+id/cardproduk2"
+                android:layout_width="wrap_content"
+                android:layout_height="270dp"
+                android:layout_marginStart="21dp"
+                android:layout_marginEnd="21dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="@id/contraint2"
+                app:layout_constraintTop_toBottomOf="@id/cardproduk"
+                android:orientation="vertical"
+                android:background="@drawable/bg_produk"
+                android:elevation="10dp"
+                tools:ignore="MissingConstraints">
                 <ImageView
                     android:layout_width="180dp"
-                    android:layout_height="160dp"
-                    android:layout_marginEnd="120dp"
-                    android:background="@drawable/bg_produk"
-                    android:elevation="10dp"/>
+                    android:layout_height="121dp"
+                    android:background="@drawable/bg_gambarproduk"
+                    android:id="@+id/image2"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingStart="8dp"
+                    android:text="Trimmed Meat / Tetelan\nTuna Beku 500 gr"
+                    android:textSize="14sp"
+                    android:textColor="#000000"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingStart="8dp"
+                    android:text="Rp27.500"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#000000"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_toko"
+                        android:layout_marginEnd="5dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Culture Tambak"
+                        android:textSize="12sp"
+                        android:textColor="#999999"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_lokasi"
+                        android:layout_marginEnd="5dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bekasi Timur"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary_50"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center_vertical"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_bintang"
+                        android:layout_marginEnd="5dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.7 | 325 terjual"
+                        android:textSize="12sp"
+                        android:textColor="#999999"/>
+
+                </LinearLayout>
 
             </LinearLayout>
+<!--            CARD PRODUK 2 FINISH-->
 
+<!--            CARD PRODUK 3-->
+                <LinearLayout
+                android:id="@+id/cardproduk3"
+                android:layout_width="wrap_content"
+                android:layout_height="270dp"
+                android:layout_marginStart="21dp"
+                android:layout_marginEnd="21dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="@id/contraint2"
+                app:layout_constraintTop_toBottomOf="@id/cardproduk2"
+                android:orientation="vertical"
+                android:background="@drawable/bg_produk"
+                android:elevation="10dp"
+                tools:ignore="MissingConstraints">
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="121dp"
+                    android:background="@drawable/bg_gambarproduk"
+                    android:id="@+id/image3"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingStart="8dp"
+                    android:text="Trimmed Meat / Tetelan\nTuna Beku 500 gr"
+                    android:textSize="14sp"
+                    android:textColor="#000000"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingStart="8dp"
+                    android:text="Rp27.500"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#000000"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_toko"
+                        android:layout_marginEnd="5dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Culture Tambak"
+                        android:textSize="12sp"
+                        android:textColor="#999999"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_lokasi"
+                        android:layout_marginEnd="5dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bekasi Timur"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary_50"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center_vertical"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_bintang"
+                        android:layout_marginEnd="5dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.7 | 325 terjual"
+                        android:textSize="12sp"
+                        android:textColor="#999999"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+<!--            CARD PRODUK 3 FINISH-->
+
+<!--SAMPAH START-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/cardproduk3">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:src="@color/transparent"/>
+            </LinearLayout>
+<!--SAMPAH FINIS-->
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
