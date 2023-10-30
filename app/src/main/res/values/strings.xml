@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Butchery</string>
+    <!-- TODO: buat dokumen TOS/Privacy Policy di website dan tautkan di res berikut-->
+    <string name="syarat_ketentuan"><a href="">Syarat dan Ketentuan</a></string>
+    <string name="kebijakan_privasi"><a href="">Kebijakan Privasi</a></string>
+    <string-array name="provinsi">
+        <item>Provinsi</item>
+    </string-array>
+    <string-array name="kota">
+        <item>Kota</item>
+    </string-array>
+    <string-array name="kecamatan">
+        <item>Kecamatan</item>
+    </string-array>
 </resources>

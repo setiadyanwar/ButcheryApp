@@ -4,40 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DaftarMitraDetailActivity"
-    android:layout_marginRight="35dp"
     android:layout_marginLeft="35dp"
-    android:layout_marginTop="35dp">
+    android:layout_marginTop="35dp"
+    android:layout_marginRight="35dp"
+    tools:context=".DaftarMitraDetail">
+
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/linearLayout4"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="vertical"
-        android:gravity="center">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <ImageButton
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:layout_gravity="start"
             android:layout_marginLeft="-10dp"
+            android:id="@+id/kembali_ke_nama"
+            android:background="@color/transparent"
             android:src="@drawable/arrow"
-            android:background="@color/transparent"/>
+            android:contentDescription="Kembali ke halaman nama mitra" />
+
         <TextView
             android:id="@+id/Gabung"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Gabung Jadi Mitra Kami"
-            android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="24sp"
-            app:layout_constraintTop_toTopOf="parent"/>
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/Gabung_sub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Dagang cukup dari rumah aja!"
-            android:textSize="17sp"
             android:textColor="@color/grey_font"
-            app:layout_constraintTop_toBottomOf="@+id/Gabung"/>
+            android:textSize="17sp"
+            app:layout_constraintTop_toBottomOf="@+id/Gabung" />
 
         <ImageView
             android:id="@+id/Gabung_hiro"
@@ -46,64 +55,66 @@
             android:contentDescription="Seorang perempuan tengah membuka tokonya."
             android:src="@drawable/hiro_daftarmitra"
             app:layout_constraintTop_toBottomOf="@id/Gabung_sub" />
+
         <TextView
             android:id="@+id/Gabung_inputLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Masukkan Detail Informasi"
-            android:textSize="17dp"
-            android:textStyle="bold"
             android:gravity="start"
-            android:textColor="@color/black"/>
+            android:text="Masukkan Detail Informasi"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="48dp"
+            android:layout_marginTop="21dp"
             android:background="@drawable/edit_text_none"
-            android:textSize="14sp"
             android:hint="messitahaluasix@gmail.com"
             android:inputType="none"
-            android:textColorHint="#999999"
             android:paddingStart="12dp"
-            android:layout_marginTop="21dp"
-            android:paddingEnd="12dp"/>
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:background="@drawable/edit_text"
-            android:textSize="14sp"
-            android:hint="No. Telepon"
+            android:paddingEnd="12dp"
             android:textColorHint="#999999"
-            android:layout_marginTop="21dp"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp"/>
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:background="@drawable/edit_text"
-            android:textSize="14sp"
-            android:hint="No. Whatsapp (Contact Person)"
-            android:textColorHint="#999999"
-            android:layout_marginTop="21dp"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp"/>
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:background="@drawable/edit_text"
-            android:textSize="14sp"
-            android:hint="No. rekening"
-            android:textColorHint="#999999"
+            android:textSize="14sp" />
 
-            android:layout_marginTop="21dp"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp"/>
-        <Button
-            android:id="@+id/button"
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:layout_marginTop="36dp"
-            android:text="Masuk"
-            android:textColor="@color/white"
-            style="@style/MyButtonStyle"/>
+            android:layout_marginTop="21dp"
+            android:background="@drawable/edit_text"
+            android:hint="No. Telepon"
+            android:paddingHorizontal="18dp"
+            android:textColorHint="#999999"
+            android:textSize="14sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="21dp"
+            android:background="@drawable/edit_text"
+            android:hint="No. Whatsapp (Contact Person)"
+            android:paddingHorizontal="18dp"
+            android:textColorHint="#999999"
+            android:textSize="14sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="21dp"
+            android:background="@drawable/edit_text"
+            android:hint="No. Rekening"
+            android:paddingHorizontal="18dp"
+            android:textColorHint="#999999"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/button_menuju_ke_alamat"
+            style="@style/MyButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:text="Selanjutnya"
+            android:textColor="@color/white" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
