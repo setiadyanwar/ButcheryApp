@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="buttonprimary">
+    <style name="button_primary">
         <item name="android:background">@drawable/btn_primary</item>
-
+        <item name="android:textColor">@color/white</item>
     </style>
     <style name="buttonSecondary">
         <item name="android:backgroundTint">@drawable/btn_ubah</item>
-    </style>
-    <style name="Customshadow" parent="Theme.AppCompat">
-        <!-- Menentukan warna bayangan -->
-        <item name="android:shadowColor">@color/custom_shadow_color</item>
-
-        <!-- Menentukan ukuran bayangan (elevation) -->
-        <item name="android:shadowDx">2</item>
-        <item name="android:shadowDy">2</item>
-        <item name="android:shadowRadius">4</item>
     </style>
 </resources>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg_color"
     tools:context=".AddProduk">
 
     <LinearLayout
@@ -50,18 +51,18 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="45dp"
         app:layout_constraintTop_toBottomOf="@id/nav_addproduk"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp">
+            android:layout_marginBottom="100dp">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginStart="21dp"
                 android:layout_marginEnd="21dp"
                 android:orientation="vertical"
@@ -72,6 +73,7 @@
                     android:layout_marginTop="29dp"
                     android:text="Yuk, isi informasi\nprodukmu"
                     android:textStyle="bold"
+                    android:textSize="18sp"
                     android:textColor="#2B2B2B"/>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -84,17 +86,9 @@
                         android:textColor="#2B2B2B"
                         android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/upload"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="227dp"
-                        android:layout_marginTop="23dp"
-                        android:text="Upload"
-                        android:textColor="@color/primary_10"
-                        android:textStyle="bold" />
                 </LinearLayout>
                 <ImageView
+                    android:id="@+id/mainproduk"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -106,16 +100,19 @@
                     android:orientation="horizontal">
 
                     <ImageView
+                        android:id="@+id/var1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="10dp"
                         android:src="@drawable/foto_var1"/>
                     <ImageView
+                        android:id="@+id/var2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="10dp"
                         android:src="@drawable/foto_var2"/>
                     <ImageView
+                        android:id="@+id/var3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/foto_var3"/>
@@ -132,8 +129,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:textColorHint="@color/dark_30"
                     android:hint="Masukkan nama produk"
-                    android:textSize="12sp"/>
+                    android:textSize="14sp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -145,8 +143,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+
+                    android:textColorHint="@color/dark_30"
                     android:hint="Masukkan deskripsi produk"
-                    android:textSize="12sp"/>
+                    android:textSize="14sp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -163,7 +163,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Variasi 1"
-                        android:textSize="12sp"
+                        android:textSize="14sp"
                         android:textColor="#454545" />
                     <ImageView
                         android:id="@+id/addproduk1"
@@ -179,59 +179,23 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="9dp"
                     android:hint="Nama produk"
-                    android:textSize="12sp"/>
+                    android:textColorHint="@color/dark_30"
+                    android:textSize="14sp"/>
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="9dp"
+                    android:textColorHint="@color/dark_30"
                     android:hint="Masukkan harga produk"
-                    android:textSize="12sp"/>
+                    android:textSize="14sp"/>
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="9dp"
                     android:layout_marginBottom="20dp"
+                    android:textColorHint="@color/dark_30"
                     android:hint="Masukkan stok produk"
-                    android:textSize="12sp"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Variasi 2"
-                        android:textSize="12sp"
-                        android:textColor="#454545" />
-                    <ImageView
-                        android:id="@+id/addproduk"
-                        android:layout_width="16dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="280dp"
-                        android:layout_marginEnd="21dp"
-                        android:background="@color/transparent"
-                        android:src="@drawable/btn_add" />
-                </LinearLayout>
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="9dp"
-                    android:hint="Nama produk"
-                    android:textSize="12sp"/>
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="9dp"
-                    android:hint="Masukkan harga produk"
-                    android:textSize="12sp"/>
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="9dp"
-                    android:layout_marginBottom="50dp"
-                    android:hint="Masukkan stok produk"
-                    android:textSize="12sp"/>
+                    android:textSize="14sp"/>
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
