@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class LoginPage extends AppCompatActivity {
 
@@ -14,6 +15,7 @@ public class LoginPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_page);
 
+        TextView linkdaftar = findViewById(R.id.daftardulu);
         Button btnMasuk = findViewById(R.id.btn_masuk_login);
         ImageButton btnBack = findViewById(R.id.btn_back);
 
@@ -30,6 +32,13 @@ public class LoginPage extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(LoginPage.this, Homepage_MainLogin.class);
                 startActivity(intent);
+            }
+        });
+        linkdaftar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(LoginPage.this,RegisterPage.class);
+                startActivity(i);
             }
         });
 
