@@ -488,15 +488,15 @@
         android:id="@+id/lonceng"
         android:foreground="?android:attr/selectableItemBackground"
         android:background="?attr/selectableItemBackgroundBorderless"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
         android:layout_marginEnd="21dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.028"
+        app:layout_constraintVertical_bias="0.030"
         app:srcCompat="@drawable/lonceng" />
 <LinearLayout
     android:id="@+id/ayodaftar"
@@ -513,7 +513,7 @@
         android:layout_gravity="center_vertical"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="5dp"
+        android:layout_marginEnd="12dp"
         android:background="@drawable/profile_picture" />
     <TextView
         android:layout_width="wrap_content"
