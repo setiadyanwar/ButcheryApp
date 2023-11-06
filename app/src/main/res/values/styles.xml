@@ -3,6 +3,12 @@
     <style name="button_primary">
         <item name="android:background">@drawable/btn_primary</item>
         <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="button_secondlight">
+        <item name="android:background">@color/custom_shadow_color</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">false</item>
     </style>
     <style name="buttonSecondary">
         <item name="android:backgroundTint">@drawable/btn_ubah</item>

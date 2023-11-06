@@ -39,98 +39,147 @@
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Hai Daftar Dulu Ya"
+                android:text="Isi Data Diri Dulu"
                 android:textSize="29sp"
                 android:textStyle="bold"
                 android:textColor="#2B2B2B"
                 android:textAlignment="center"/>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textSize="14sp"
-                    android:layout_marginTop="6dp"
-                    android:text="Sudah punya akun? "
-                    android:textColor="#787878"/>
-                <TextView
-                    android:id="@+id/daftardulu"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textSize="14sp"
-                    android:layout_marginTop="6dp"
-                    android:text="Masuk "
-                    android:textColor="@color/primary_50"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textSize="14sp"
-                    android:layout_marginTop="6dp"
-                    android:text="aja langsung."
-                    android:textColor="#787878"/>
-
-            </LinearLayout>
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/dark_30"
+                android:text="Username"
+                android:textStyle="bold"/>
 
             <EditText
-                android:id="@+id/editTextTextPersonName3"
+                android:id="@+id/username"
                 android:layout_width="341dp"
                 android:layout_height="48dp"
                 android:ems="10"
-                android:layout_marginTop="29dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:textColor="@color/black"
                 android:inputType="textPersonName"
-                android:hint="No. Handphone/Email"
+                android:hint="Masukkan username kamu"
                 android:importantForAutofill="no"
                 android:textSize="14sp"
                 android:textColorHint="#999999"
                 android:paddingStart="12dp"
                 android:paddingEnd="12dp"
                 android:background="@drawable/edit_text"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/dark_30"
+                android:text="Provinsi"
+                android:textStyle="bold"/>
+
+            <Spinner
+                android:layout_width="341dp"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Provinsi"
+                android:importantForAutofill="no"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:textColorHint="#999999"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:background="@drawable/edit_text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="5dp"
+                android:text="Kota"
+                android:textColor="@color/dark_30"
+                android:textStyle="bold"/>
+
+            <Spinner
+                android:layout_width="341dp"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Kota"
+                android:importantForAutofill="no"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:textColorHint="#999999"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:background="@drawable/edit_text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="5dp"
+                android:text="Kecamatan"
+                android:textColor="@color/dark_30"
+                android:textStyle="bold"/>
+
+            <Spinner
+                android:layout_width="341dp"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Kecamatan"
+                android:importantForAutofill="no"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:textColorHint="#999999"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:background="@drawable/edit_text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="5dp"
+                android:text="Alamat"
+                android:textColor="@color/dark_30"
+                android:textStyle="bold"/>
 
             <EditText
                 android:layout_width="341dp"
-                android:layout_height="48dp"
+                android:layout_height="120dp"
                 android:ems="10"
-                android:layout_marginTop="22dp"
-                android:hint="Password"
+                android:paddingTop="8dp"
+                android:layout_marginTop="10dp"
+                android:hint="Alamat detail"
                 android:importantForAutofill="no"
                 android:textSize="14sp"
                 android:textColor="@color/black"
                 android:textColorHint="#999999"
                 android:paddingStart="12dp"
                 android:paddingEnd="12dp"
-                android:background="@drawable/edit_text"
-                android:inputType="textPassword"
-                android:maxLength="8"/>
-            <EditText
-                android:layout_width="341dp"
-                android:layout_height="48dp"
-                android:ems="10"
-                android:layout_marginTop="22dp"
-                android:hint="Confirm Password"
-                android:importantForAutofill="no"
-                android:textSize="14sp"
-                android:textColor="@color/black"
-                android:textColorHint="#999999"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp"
-                android:background="@drawable/edit_text"
-                android:inputType="textPassword"
-                android:maxLength="8"/>
+                android:gravity="top"
+                android:background="@drawable/edit_text_alamat"
+                android:inputType="textMultiLine"
+                android:maxLength="200"/>
 
             <Button
-                android:id="@+id/btn_next_registrasi"
+                android:id="@+id/btn_masuk_regis"
                 android:layout_width="341dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="36dp"
-                android:text="Next step"
+                android:text="Masuk"
                 android:textColor="@color/white"
                 style="@style/button_primary"/>
 

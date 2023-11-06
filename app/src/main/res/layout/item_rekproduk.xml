@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:paddingStart="8dp"
-            android:text=""
+            android:text="nama Produknya"
             android:textSize="14sp"
             android:textColor="#000000"/>
         <TextView
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:paddingStart="8dp"
-            android:text=""
+            android:text="Rp.200000"
             android:textStyle="bold"
             android:textSize="16sp"
             android:textColor="#000000"/>
@@ -53,7 +53,7 @@
                 android:id="@+id/nama_toko"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""
+                android:text="nama tokonya"
                 android:textSize="12sp"
                 android:textColor="#999999"/>
 
@@ -75,7 +75,7 @@
                 android:id="@+id/alamat_toko"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""
+                android:text="lokasi toko"
                 android:textSize="12sp"
                 android:textColor="@color/primary_50"/>
 

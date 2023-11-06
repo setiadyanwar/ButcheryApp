@@ -3,6 +3,8 @@ package com.example.butcheryapp_ui;
 import static com.android.volley.VolleyLog.TAG;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -46,10 +48,31 @@ public class HomePage_NotLogin extends AppCompatActivity {
     private RequestQueue mRequestQueue;
     private StringRequest mStringRequest;
     private String url = "https://us-east-1.aws.data.mongodb-api.com/app/application-0-fophn/endpoint/getAllRekomendasiProduk";
+
+//    card produk recycleviewnya
+    //private RecyclerView recyclerView;
+    //RecyclerView.LayoutManager layoutManager;
+    //AdapterCardProdukHomeNotLogin adapterCardProdukHomeNotLogin;
+
+//    data array gambar
+    //int []arr= {R.drawable.slide1,R.drawable.slide2,R.drawable.slide3};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.homepage_notlogin);
+        //recyclerView=findViewById(R.id.cardproduk);
+        //layoutManager=new GridLayoutManager(this,2);
+        //recyclerView.setLayoutManager(layoutManager);
+
+//        import pake array
+        //adapterCardProdukHomeNotLogin=new AdapterCardProdukHomeNotLogin(arr);
+
+        //recyclerView.setAdapter(adapterCardProdukHomeNotLogin);
+
+//        fix ukuran gambar
+        //recyclerView.setHasFixedSize(true);
+
 
         ImageSlider imageSlider = findViewById(R.id.imageSlider);
         List<SlideModel> slideModels = new ArrayList<>();
