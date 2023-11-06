@@ -12,6 +12,12 @@
         android:theme="@style/Theme.ButcheryApp_UI"
         tools:targetApi="31">
         <activity
+            android:name=".TokoHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TokoAllActivity"
+            android:exported="false" />
+        <activity
             android:name=".ProfilePage"
             android:exported="false" />
         <activity
