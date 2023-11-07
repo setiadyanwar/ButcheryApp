@@ -360,22 +360,18 @@
                     android:text="Rekomendasi untukmu"
                     android:textColor="#2B2B2B"
                     android:textStyle="bold"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp"
+                    android:layout_marginBottom="20dp"/>
             </LinearLayout>
 
             <!--CARD PRODUK 1-->
-            <LinearLayout
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/cardproduk"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_marginStart="21dp"
-                android:layout_marginEnd="21dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
                 app:layout_constraintStart_toStartOf="@id/contraint2"
-                app:layout_constraintTop_toBottomOf="@id/judulrekomendasi">
-
-            </LinearLayout>
+                app:layout_constraintTop_toBottomOf="@id/judulrekomendasi"/>
             <!--CARD PRODUK 1 FINISH-->
 
 

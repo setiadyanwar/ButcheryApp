@@ -79,7 +79,7 @@
             </LinearLayout>
 
             <EditText
-                android:id="@+id/editTextTextPersonName3"
+                android:id="@+id/identifier"
                 android:layout_width="341dp"
                 android:layout_height="48dp"
                 android:ems="10"
@@ -95,6 +95,7 @@
                 android:background="@drawable/edit_text"/>
 
             <EditText
+                android:id="@+id/password"
                 android:layout_width="341dp"
                 android:layout_height="48dp"
                 android:ems="10"

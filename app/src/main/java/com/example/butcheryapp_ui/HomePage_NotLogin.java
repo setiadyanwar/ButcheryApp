@@ -4,9 +4,12 @@ import static com.android.volley.VolleyLog.TAG;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -48,31 +51,18 @@ public class HomePage_NotLogin extends AppCompatActivity {
     private RequestQueue mRequestQueue;
     private StringRequest mStringRequest;
     private String url = "https://us-east-1.aws.data.mongodb-api.com/app/application-0-fophn/endpoint/getAllRekomendasiProduk";
-
-//    card produk recycleviewnya
-    //private RecyclerView recyclerView;
-    //RecyclerView.LayoutManager layoutManager;
-    //AdapterCardProdukHomeNotLogin adapterCardProdukHomeNotLogin;
-
-//    data array gambar
-    //int []arr= {R.drawable.slide1,R.drawable.slide2,R.drawable.slide3};
+    private RecyclerView recyclerView;
+    private ProdukAdapter produkAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.homepage_notlogin);
-        //recyclerView=findViewById(R.id.cardproduk);
-        //layoutManager=new GridLayoutManager(this,2);
-        //recyclerView.setLayoutManager(layoutManager);
 
-//        import pake array
-        //adapterCardProdukHomeNotLogin=new AdapterCardProdukHomeNotLogin(arr);
-
-        //recyclerView.setAdapter(adapterCardProdukHomeNotLogin);
-
-//        fix ukuran gambar
-        //recyclerView.setHasFixedSize(true);
-
+        recyclerView = findViewById(R.id.cardproduk);
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+        produkAdapter = new ProdukAdapter(new ArrayList<>());
+        recyclerView.setAdapter(produkAdapter);
 
         ImageSlider imageSlider = findViewById(R.id.imageSlider);
         List<SlideModel> slideModels = new ArrayList<>();
@@ -113,8 +103,10 @@ public class HomePage_NotLogin extends AppCompatActivity {
             public void onResponse(String response) {
                 try{
                     JSONArray jsonArray = new JSONArray(response);
+                    List<ProdukModel> produkList = new ArrayList<>();
                     for (int i = 0; i < jsonArray.length();i++){
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
+                        ProdukModel produk = new ProdukModel();
                         String getSupplierId = jsonObject.getString("supplier_id");
                         String getNamaToko = jsonObject.getString("nama_toko");
                         JSONObject getAlamatToko = jsonObject.getJSONObject("alamat_toko");
@@ -124,6 +116,7 @@ public class HomePage_NotLogin extends AppCompatActivity {
                         String getDeskripsiProduk = jsonObject.getString("deskripsi");
                         JSONArray getVarianProduk = jsonObject.getJSONArray("varian");
 
+                        /*
                         LinearLayout cardProdukLayout = findViewById(R.id.cardproduk);
                         View itemProdukView = getLayoutInflater().inflate(R.layout.item_rekproduk, null);
 
@@ -132,26 +125,26 @@ public class HomePage_NotLogin extends AppCompatActivity {
                         TextView nama_toko = itemProdukView.findViewById(R.id.nama_toko);
                         TextView alamat_toko = itemProdukView.findViewById(R.id.alamat_toko);
 
-                        nama_produk.setText(getNamaProduk);
+                        */
+
+                        produk.setNamaProduk(getNamaProduk);
 
                         String getHargaProduk = getVarianProduk.getJSONObject(0).getString("harga");
                         Currency customCurrency = Currency.getInstance("IDR");
-
                         NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
                         currencyFormat.setCurrency(customCurrency);
-
                         String formattedCurrency = currencyFormat.format(Integer.parseInt(getHargaProduk));
-                        harga_produk.setText(formattedCurrency);
+                        produk.setHargaProduk(formattedCurrency);
 
-                        nama_toko.setText(getNamaToko);
+                        produk.setNamaToko(getNamaToko);
 
                         String getDetailedAlamatToko = getAlamatToko.getString("alamat");
-                        alamat_toko.setText(getDetailedAlamatToko);
+                        produk.setAlamatToko(getDetailedAlamatToko);
 
-                        cardProdukLayout.addView(itemProdukView);
+                        produkList.add(produk);
                     }
-
-                    Toast.makeText(HomePage_NotLogin.this, "response : ", Toast.LENGTH_LONG).show();
+                    produkAdapter.setProdukList(produkList);
+                    produkAdapter.notifyDataSetChanged();
 
                 }catch (JSONException e){
                     e.printStackTrace();
