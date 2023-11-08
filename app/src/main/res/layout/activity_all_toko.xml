@@ -76,6 +76,38 @@
             android:contentDescription="Ikuti toko Culture Tambak"/>
     </LinearLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/toko"
+        android:paddingVertical="12dp"
+        android:paddingHorizontal="16dp">
 
+        <Button
+            android:id="@+id/btn_option_toko"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="Toko"
+            android:textColor="@color/primary_50"/>
+
+        <Button
+            android:id="@+id/btn_option_produk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/btn_option_toko"
+            android:text="Produk"
+            android:textColor="@color/grey_font"
+            android:layout_marginStart="10dp"/>
+
+        <Button
+            android:id="@+id/btn_option_etalase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/btn_option_produk"
+            android:text="Etalase"
+            android:textColor="@color/grey_font"
+            android:layout_marginStart="10dp"/>
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
