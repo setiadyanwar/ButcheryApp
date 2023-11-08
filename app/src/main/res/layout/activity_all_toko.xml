@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeTokoPage"
+    android:background="@color/bg_color">
+
+    <LinearLayout
+        android:id="@+id/nav_alltoko"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+        android:background="@drawable/container"
+        android:elevation="10dp"
+        android:gravity="center_vertical"
+        tools:ignore="MissingConstraints">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:src="@drawable/arrow_red"
+            android:background="@color/transparent"
+            app:layout_constraintBottom_toBottomOf="@+id/textView3"
+            app:layout_constraintStart_toStartOf="@+id/textView3"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="Kembali ke halaman sebelumnya"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Toko"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/toko"
+        android:layout_width="450dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_toko"
+        android:elevation="8dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="32dp"
+        android:layout_marginStart="-24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/nav_alltoko">
+
+        <ImageView
+            android:id="@+id/profile_pic"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginHorizontal="32dp"
+            android:src="@drawable/profile_picture" />
+
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8sp"
+            android:text="Culture Tambak"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/btn_ikuti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/btn_ikuti"
+            android:contentDescription="Ikuti toko Culture Tambak"/>
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

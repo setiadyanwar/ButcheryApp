@@ -13,4 +13,13 @@
     <style name="buttonSecondary">
         <item name="android:backgroundTint">@drawable/btn_ubah</item>
     </style>
+    <style name="btn_tabtoko_active">
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/primary_50</item>
+        <item name="android:background">@drawable/btn_tabtoko_active</item>
+    </style><style name="btn_tabtoko">
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/grey_font</item>
+
+    </style>
 </resources>
