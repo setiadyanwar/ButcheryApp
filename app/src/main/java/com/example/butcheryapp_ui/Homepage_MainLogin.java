@@ -32,6 +32,7 @@ import com.denzcoskun.imageslider.models.SlideModel;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -45,10 +46,11 @@ import java.util.ArrayList;
 import java.util.Currency;
 import java.util.List;
 
+import at.favre.lib.crypto.bcrypt.BCrypt;
+
 public class Homepage_MainLogin extends AppCompatActivity {
     private RequestQueue mRequestQueue;
     private StringRequest mStringRequest;
-    private String url = "https://us-east-1.aws.data.mongodb-api.com/app/application-0-fophn/endpoint/getAllRekomendasiProduk";
     private RecyclerView recyclerView;
     private ProdukAdapter produkAdapter;
 
@@ -59,6 +61,7 @@ public class Homepage_MainLogin extends AppCompatActivity {
 
         SharedPreferences sharedPref = getSharedPreferences("myPrefs", Context.MODE_PRIVATE);
         boolean isLoggedIn = sharedPref.getBoolean("login", false);
+        String id_user = sharedPref.getString("id_user","");
 
         if (!isLoggedIn) {
             Intent intent = new Intent(Homepage_MainLogin.this, LoginPage.class);
@@ -90,10 +93,13 @@ public class Homepage_MainLogin extends AppCompatActivity {
             }
         });
 
-        getDataRekProduk();
+        getDataAllProduk();
+        getKonsumenByID(id_user);
     }
 
-    private void getDataRekProduk() {
+    private void getDataAllProduk() {
+        String url = "https://us-east-1.aws.data.mongodb-api.com/app/application-0-fophn/endpoint/getAllRekomendasiProduk";
+
         // RequestQueue initialized
         mRequestQueue = Volley.newRequestQueue(this);
 
@@ -101,12 +107,13 @@ public class Homepage_MainLogin extends AppCompatActivity {
         mStringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                try{
+                try {
                     JSONArray jsonArray = new JSONArray(response);
                     List<ProdukModel> produkList = new ArrayList<>();
-                    for (int i = 0; i < jsonArray.length();i++){
+                    for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
                         ProdukModel produk = new ProdukModel();
+
                         String getSupplierId = jsonObject.getString("supplier_id");
                         String getNamaToko = jsonObject.getString("nama_toko");
                         JSONObject getAlamatToko = jsonObject.getJSONObject("alamat_toko");
@@ -119,7 +126,7 @@ public class Homepage_MainLogin extends AppCompatActivity {
                         //SET PRODUK KE DALAM PRODUK MODEL
                         produk.setNamaProduk(getNamaProduk);
 
-                        String getHargaProduk = getVarianProduk.getJSONObject(0).getString("harga");
+                        String getHargaProduk = getVarianProduk.getJSONObject(0).getString("harga1");
                         Currency customCurrency = Currency.getInstance("IDR");
                         NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
                         currencyFormat.setCurrency(customCurrency);
@@ -133,22 +140,59 @@ public class Homepage_MainLogin extends AppCompatActivity {
 
                         produkList.add(produk);
                     }
+
                     produkAdapter.setProdukList(produkList);
                     produkAdapter.notifyDataSetChanged();
-
-                    Toast.makeText(Homepage_MainLogin.this, "response : ", Toast.LENGTH_LONG).show();
-
-                }catch (JSONException e){
+                } catch (JSONException e) {
                     e.printStackTrace();
+                    Toast.makeText(Homepage_MainLogin.this, "tidak ada data", Toast.LENGTH_SHORT).show();
                 }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.i(TAG, "Error :" + error.toString());
+                error.printStackTrace();
+                Toast.makeText(Homepage_MainLogin.this, "Error: Gagal mengambil data konsumen", Toast.LENGTH_LONG).show();
             }
         });
 
         mRequestQueue.add(mStringRequest);
     }
+
+    private void getKonsumenByID(String id_user) {
+        String url = "https://us-east-1.aws.data.mongodb-api.com/app/application-0-fophn/endpoint/getKonsumenByID?id=" + id_user;
+
+        // RequestQueue initialized
+        mRequestQueue = Volley.newRequestQueue(this);
+
+        // String Request initialized
+        mStringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    TextView welcome_message;
+                    welcome_message = findViewById(R.id.welcome_message);
+                    JSONArray jsonArray = new JSONArray(response);
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        JSONObject jsonObject = jsonArray.getJSONObject(i);
+
+                        String getUsername = jsonObject.getString("username");
+                        welcome_message.setText("Hi! Selamat Datang\n" + getUsername);
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Toast.makeText(Homepage_MainLogin.this, "tidak ada data", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
+                Toast.makeText(Homepage_MainLogin.this, "Error: Gagal mengambil data konsumen", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        mRequestQueue.add(mStringRequest);
+    }
+
 }

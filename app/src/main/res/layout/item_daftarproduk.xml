@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
     android:background="@color/bg_color"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <!-- CARD 1 START-->
@@ -10,9 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="23dp"
+        android:layout_marginBottom="23dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:padding="8dp"
+        android:padding="10dp"
         android:orientation="vertical"
         android:background="@drawable/container_daftarproduk"
         android:elevation="10dp"
@@ -42,11 +44,11 @@
                 android:orientation="vertical"
                 android:layout_gravity="center_vertical">
                 <TextView
-                    android:id="@+id/nama_prduk"
+                    android:id="@+id/nama_produk"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#2B2B2B"
-                    android:text="Daging US Beef Slice\nPremium Quality 1kg"
+                    android:text=""
                     android:textStyle="bold"
                     android:layout_marginStart="16dp"/>
                 <LinearLayout
@@ -60,14 +62,14 @@
                         android:layout_marginStart="16dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Rp169.500"/>
+                        android:text=""/>
                     <TextView
                         android:id="@+id/variasi"
                         android:layout_width="39dp"
                         android:layout_height="20dp"
                         android:textAlignment="center"
                         android:textColor="@color/primary_50"
-                        android:text="250gr"
+                        android:text=""
                         android:textSize="12sp"
                         android:layout_marginStart="6dp"
                         android:background="@drawable/bg_variasi"/>
@@ -77,7 +79,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="YusufAnjayMabar"
+                    android:text=""
                     android:textColor="#999999"
                     android:layout_marginStart="16dp"/>
             </LinearLayout>
@@ -88,17 +90,26 @@
                 android:orientation="vertical"
                 android:layout_gravity="center_vertical">
 
-                <ImageView
-                    android:layout_width="82dp"
+                <Button
+                    android:id="@+id/btnubah"
+                    android:layout_width="80dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/btn_ubah"
-                    android:layout_marginStart="44dp"/>
-                <ImageView
-                    android:layout_width="82dp"
+                    android:text="Ubah"
+                    android:textSize="10dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/btn_ubah"
+                    android:layout_marginStart="44dp" />
+
+                <Button
+                    android:id="@+id/btnhapus"
+                    android:layout_width="80dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/btn_hapus"
+                    android:text="Hapus"
+                    android:textSize="10dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/btn_hapus"
                     android:layout_marginTop="5dp"
-                    android:layout_marginStart="44dp"/>
+                    android:layout_marginStart="44dp" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

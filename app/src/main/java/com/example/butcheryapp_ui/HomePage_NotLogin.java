@@ -50,7 +50,6 @@ import java.util.List;
 public class HomePage_NotLogin extends AppCompatActivity {
     private RequestQueue mRequestQueue;
     private StringRequest mStringRequest;
-    private String url = "https://us-east-1.aws.data.mongodb-api.com/app/application-0-fophn/endpoint/getAllRekomendasiProduk";
     private RecyclerView recyclerView;
     private ProdukAdapter produkAdapter;
 
@@ -58,6 +57,15 @@ public class HomePage_NotLogin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.homepage_notlogin);
+
+        SharedPreferences sharedPref = getSharedPreferences("myPrefs", Context.MODE_PRIVATE);
+        boolean isLoggedIn = sharedPref.getBoolean("login", false);
+        String id_user = sharedPref.getString("id_user","");
+
+        if (isLoggedIn) {
+            Intent intent = new Intent(HomePage_NotLogin.this, Homepage_MainLogin.class);
+            startActivity(intent);
+        }
 
         recyclerView = findViewById(R.id.cardproduk);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
@@ -91,9 +99,11 @@ public class HomePage_NotLogin extends AppCompatActivity {
             }
         });
 
-        getDataRekProduk();
+        getDataAllProduk();
     }
-    private void getDataRekProduk() {
+    private void getDataAllProduk() {
+        String url = "https://us-east-1.aws.data.mongodb-api.com/app/application-0-fophn/endpoint/getAllRekomendasiProduk";
+
         // RequestQueue initialized
         mRequestQueue = Volley.newRequestQueue(this);
 
@@ -101,12 +111,13 @@ public class HomePage_NotLogin extends AppCompatActivity {
         mStringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                try{
+                try {
                     JSONArray jsonArray = new JSONArray(response);
                     List<ProdukModel> produkList = new ArrayList<>();
-                    for (int i = 0; i < jsonArray.length();i++){
+                    for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
                         ProdukModel produk = new ProdukModel();
+
                         String getSupplierId = jsonObject.getString("supplier_id");
                         String getNamaToko = jsonObject.getString("nama_toko");
                         JSONObject getAlamatToko = jsonObject.getJSONObject("alamat_toko");
@@ -116,20 +127,10 @@ public class HomePage_NotLogin extends AppCompatActivity {
                         String getDeskripsiProduk = jsonObject.getString("deskripsi");
                         JSONArray getVarianProduk = jsonObject.getJSONArray("varian");
 
-                        /*
-                        LinearLayout cardProdukLayout = findViewById(R.id.cardproduk);
-                        View itemProdukView = getLayoutInflater().inflate(R.layout.item_rekproduk, null);
-
-                        TextView nama_produk = itemProdukView.findViewById(R.id.nama_produk);
-                        TextView harga_produk = itemProdukView.findViewById(R.id.harga_produk);
-                        TextView nama_toko = itemProdukView.findViewById(R.id.nama_toko);
-                        TextView alamat_toko = itemProdukView.findViewById(R.id.alamat_toko);
-
-                        */
-
+                        //SET PRODUK KE DALAM PRODUK MODEL
                         produk.setNamaProduk(getNamaProduk);
 
-                        String getHargaProduk = getVarianProduk.getJSONObject(0).getString("harga");
+                        String getHargaProduk = getVarianProduk.getJSONObject(0).getString("harga1");
                         Currency customCurrency = Currency.getInstance("IDR");
                         NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
                         currencyFormat.setCurrency(customCurrency);
@@ -143,17 +144,19 @@ public class HomePage_NotLogin extends AppCompatActivity {
 
                         produkList.add(produk);
                     }
+
                     produkAdapter.setProdukList(produkList);
                     produkAdapter.notifyDataSetChanged();
-
-                }catch (JSONException e){
+                } catch (JSONException e) {
                     e.printStackTrace();
+                    Toast.makeText(HomePage_NotLogin.this, "tidak ada data", Toast.LENGTH_SHORT).show();
                 }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.i(TAG, "Error :" + error.toString());
+                error.printStackTrace();
+                Toast.makeText(HomePage_NotLogin.this, "Error: Gagal mengambil data konsumen", Toast.LENGTH_LONG).show();
             }
         });
 

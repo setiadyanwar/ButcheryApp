@@ -119,16 +119,20 @@ public class LoginPage extends AppCompatActivity {
                 try {
                     JSONArray jsonArray = new JSONArray(response);
                     boolean loginSuccessful = false;
+                    String id_user = "";
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
 
+                        String getIDUser = jsonObject.getString("_id");
                         String getPassword = jsonObject.getString("password");
+
                         Verifyer verify = BCrypt.verifyer();
                         Result cocokPass = verify.verify(password.toCharArray(),getPassword);
                         Boolean result = cocokPass.verified;
 
                         if(result){
                             loginSuccessful = true;
+                            id_user = getIDUser;
                             break;
                         }
                     }
@@ -139,6 +143,7 @@ public class LoginPage extends AppCompatActivity {
                         SharedPreferences sharedPref = getSharedPreferences("myPrefs", Context.MODE_PRIVATE);
                         SharedPreferences.Editor editor = sharedPref.edit();
                         editor.putBoolean("login", true);
+                        editor.putString("id_user", id_user);
                         editor.apply();
 
                         startActivity(intent);
