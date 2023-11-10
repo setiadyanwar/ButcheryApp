@@ -82,6 +82,7 @@
                 android:textStyle="bold"/>
 
             <Spinner
+                android:id="@+id/provinsi"
                 android:layout_width="341dp"
                 android:layout_height="48dp"
                 android:ems="10"
@@ -94,7 +95,8 @@
                 android:textColorHint="#999999"
                 android:paddingStart="12dp"
                 android:paddingEnd="12dp"
-                android:background="@drawable/edit_text" />
+                android:background="@drawable/edit_text"
+                />
 
             <TextView
                 android:layout_width="match_parent"
@@ -107,6 +109,7 @@
                 android:textStyle="bold"/>
 
             <Spinner
+                android:id="@+id/kota"
                 android:layout_width="341dp"
                 android:layout_height="48dp"
                 android:ems="10"
@@ -132,6 +135,7 @@
                 android:textStyle="bold"/>
 
             <Spinner
+                android:id="@+id/kecamatan"
                 android:layout_width="341dp"
                 android:layout_height="48dp"
                 android:ems="10"
@@ -157,6 +161,7 @@
                 android:textStyle="bold"/>
 
             <EditText
+                android:id="@+id/alamat"
                 android:layout_width="341dp"
                 android:layout_height="120dp"
                 android:ems="10"
