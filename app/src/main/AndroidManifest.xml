@@ -14,6 +14,18 @@
         android:theme="@style/Theme.ButcheryApp_UI"
         tools:targetApi="31">
         <activity
+            android:name=".CategoriesPage"
+            android:exported="false" />
+        <activity
+            android:name=".CartPage"
+            android:exported="false" />
+        <activity
+            android:name=".WishlistPage"
+            android:exported="false" />
+        <activity
+            android:name=".DetailProduk"
+            android:exported="false" />
+        <activity
             android:name=".RegisPageFinish"
             android:exported="false" />
         <activity

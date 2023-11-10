@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/home"
+        android:title="Beranda"/>
+    <item
+        android:id="@+id/wishlist"
+        android:icon="@drawable/wishlish"
+        android:title="Suka"/>
+    <item
+        android:title=""/>
+    <item
+        android:id="@+id/categories"
+        android:icon="@drawable/kategori"
+        android:title="Ktegori"/>
+    <item
+        android:id="@+id/profil"
+        android:icon="@drawable/profilnav"
+        android:title="Profil"/>
+
+
+
+</menu>
