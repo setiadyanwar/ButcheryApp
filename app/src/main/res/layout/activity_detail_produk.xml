@@ -17,7 +17,6 @@
         android:id="@+id/gambar_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/image_detail"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -122,18 +121,20 @@
             android:layout_marginEnd="20dp"
             android:orientation="vertical">
         <TextView
+            android:id="@+id/detail_harga_produk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
-            android:text="Rp99.000"
+            android:text=""
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@color/primary_50"/>
         <TextView
+            android:id="@+id/detail_nama_produk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Udang Vaname segar size 85-90\n250gr/500gr/1kg"
+            android:text=""
             android:textSize="16sp"
             android:textStyle="normal"
             android:textColor="@color/black"/>
@@ -192,30 +193,30 @@
                 android:layout_marginTop="15dp"
                 android:orientation="horizontal">
                 <RadioButton
+                    android:id="@+id/varian1"
                     android:layout_width="68dp"
                     android:layout_height="38dp"
-                    android:background="@drawable/radio_selected"
                     android:button="@drawable/radio_null_selector"
                     android:textColor="@drawable/radio_text_selector"
                     android:textAlignment="center"
-                    android:text="200gr"/>
+                    android:text=""/>
                 <RadioButton
+                    android:id="@+id/varian2"
                     android:layout_width="68dp"
                     android:layout_height="38dp"
-                    android:background="@drawable/radio_notselected"
                     android:button="@drawable/radio_null_selector"
                     android:textAlignment="center"
                     android:textColor="@drawable/radio_text_selector"
-                    android:text="500gr"
+                    android:text=""
                     android:layout_marginHorizontal="12dp"/>
                 <RadioButton
+                    android:id="@+id/varian3"
                     android:layout_width="68dp"
                     android:layout_height="38dp"
-                    android:background="@drawable/radio_notselected"
                     android:button="@drawable/radio_null_selector"
                     android:textAlignment="center"
                     android:textColor="@drawable/radio_text_selector"
-                    android:text="250gr"/>
+                    android:text=""/>
             </RadioGroup>
             <ImageView
                 android:layout_width="match_parent"
@@ -239,17 +240,19 @@
                     android:layout_marginEnd="95dp"
                     android:layout_gravity="center_vertical">
                     <TextView
+                        android:id="@+id/detail_nama_toko"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
-                        android:text="Culture Tambak"
+                        android:text=""
                         android:textColor="#2B2B2B"
                         android:textStyle="bold"/>
                     <TextView
+                        android:id="@+id/detail_alamat_toko"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
-                        android:text="Bekasi timur"/>
+                        android:text=""/>
                 </LinearLayout>
                 <ImageButton
                     android:id="@+id/btn_lihattoko"
@@ -346,10 +349,11 @@
                 android:textColor="@color/primary_50"
                 android:textStyle="bold"/>
             <TextView
+                android:id="@+id/detail_deskripsi_produk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14dp"
-                android:text="Kami menyediakan udang vaname segar dengan berat 1 kilogram, hasil tangkapan harian yang selalu segar dan utuh, serta bergaransi kesegaran.Layanan kami mencakup pemrosesan gratis seperti penghilangan kepala, kupas bersih, dan penghilangan sisa ekor, sehingga Anda dapat menikmati udang dengan mudah. Kami hanya menyediakan layanan tersebut tanpa layanan tambahan lainnya.Selain memberikan cita rasa lezat, udang vaname ini juga memberikan manfaat kesehatan yang berharga, seperti tingginya kandungan protein untuk pembentukan sel tubuh, yodium untuk produksi hormon, kalsium untuk kesehatan gigi dan tulang, serta asam lemak Omega-3 yang baik untuk kesehatan jantung. Dengan produk berkualitas dan layanan yang prima, kami siap memenuhi kebutuhan udang segar Anda."
+                android:text=""
                 android:textSize="14sp"
                 android:textColor="#454545"
                 android:textStyle="normal"/>

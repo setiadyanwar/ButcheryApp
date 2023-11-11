@@ -1,9 +1,12 @@
 package com.example.butcheryapp_ui;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -36,6 +39,14 @@ public class ProdukAdapter extends RecyclerView.Adapter<ProdukAdapter.ProdukView
         holder.hargaProdukTextView.setText(produk.getHargaProduk());
         holder.namaTokoTextView.setText(produk.getNamaToko());
         holder.alamatTokoTextView.setText(produk.getAlamatToko());
+        holder.card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), DetailProduk.class);
+                intent.putExtra("id_produk", produk.getId_produk());
+                v.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -45,9 +56,11 @@ public class ProdukAdapter extends RecyclerView.Adapter<ProdukAdapter.ProdukView
 
     public class ProdukViewHolder extends RecyclerView.ViewHolder {
         TextView namaProdukTextView, hargaProdukTextView, namaTokoTextView, alamatTokoTextView;
+        LinearLayout card;
 
         public ProdukViewHolder(@NonNull View itemView) {
             super(itemView);
+            card = itemView.findViewById(R.id.card);
             namaProdukTextView = itemView.findViewById(R.id.nama_produk);
             hargaProdukTextView = itemView.findViewById(R.id.harga_produk);
             namaTokoTextView = itemView.findViewById(R.id.nama_toko);

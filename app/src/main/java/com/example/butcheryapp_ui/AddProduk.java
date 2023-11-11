@@ -397,7 +397,7 @@ public class AddProduk extends AppCompatActivity {
 
     private void insertUpdateDataProduk(String id_produk, String supplier_id, String nama_toko, String id_alamat, String alamat, String foto1, String foto2, String foto3, String nama_produk, String id_kategori, String deskripsi, String varian1, String harga1, String stok1, String varian2, String harga2, String stok2,String varian3, String harga3, String stok3) {
         String apiUrl = "";
-        if(id_produk.isEmpty()){
+        if(id_produk == ""){
             apiUrl = "https://us-east-1.aws.data.mongodb-api.com/app/application-0-fophn/endpoint/insertProdukBySupplier";
         }else {
             apiUrl = "https://us-east-1.aws.data.mongodb-api.com/app/application-0-fophn/endpoint/updateProdukByID?id="+id_produk;

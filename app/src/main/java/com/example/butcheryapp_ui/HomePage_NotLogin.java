@@ -141,6 +141,8 @@ public class HomePage_NotLogin extends AppCompatActivity {
                         JSONArray getVarianProduk = jsonObject.getJSONArray("varian");
 
                         //SET PRODUK KE DALAM PRODUK MODEL
+                        produk.setId_produk(jsonObject.getString("_id"));
+
                         produk.setNamaProduk(getNamaProduk);
 
                         String getHargaProduk = getVarianProduk.getJSONObject(0).getString("harga1");

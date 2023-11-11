@@ -28,7 +28,7 @@
         app:layout_constraintTop_toBottomOf="@id/imageView2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/bg_nav"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
         android:scrollbars="none"
         android:overScrollMode="never">
 
@@ -494,16 +494,6 @@
 
 <!--    AKHIR SCROLLVIEW-->
 
-    <ImageView
-        android:id="@+id/bg_nav"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="@drawable/bg_navigation"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:elevation="10dp"/>
-
     <!--NAVIGASI START-->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
@@ -531,7 +521,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/nav_cart"
         android:background="?attr/selectableItemBackgroundBorderless"
-        app:layout_constraintBottom_toBottomOf="@+id/bg_nav"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/search_container"
