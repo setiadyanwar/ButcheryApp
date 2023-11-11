@@ -29,6 +29,7 @@ import com.android.volley.toolbox.Volley;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -81,8 +82,6 @@ public class HomePage_NotLogin extends AppCompatActivity {
         imageSlider.setImageList(slideModels);
 
         ImageButton btnMasuk = findViewById(R.id.btn_masuk);
-        ImageButton btnProfile = findViewById(R.id.nav_profile);
-
         btnMasuk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -91,13 +90,27 @@ public class HomePage_NotLogin extends AppCompatActivity {
             }
         });
 
-        btnProfile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HomePage_NotLogin.this, ProfilePage.class);
-                startActivity(intent);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigation);
+        bottomNavigationView.setSelectedItemId(R.id.home);
+
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            switch (item.getItemId()){
+                case R.id.home:
+                    startActivity(new Intent(HomePage_NotLogin.this, Homepage_MainLogin.class));
+                    return true;
+                case R.id.wishlist:
+                    startActivity(new Intent(HomePage_NotLogin.this, WishlistPage.class));
+                    return true;
+                case R.id.kategori:
+                    startActivity(new Intent(HomePage_NotLogin.this, CategoriesPage.class));
+                    return true;
+                case R.id.profil:
+                    startActivity(new Intent(HomePage_NotLogin.this, ProfilePage.class));
+                    return true;
             }
+            return false;
         });
+
 
         getDataAllProduk();
     }

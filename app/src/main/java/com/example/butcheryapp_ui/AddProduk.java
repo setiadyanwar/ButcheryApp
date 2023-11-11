@@ -49,6 +49,8 @@ import at.favre.lib.crypto.bcrypt.BCrypt;
 
 public class AddProduk extends AppCompatActivity {
     String supplier_id, nama_toko, id_alamat, alamat, foto1, foto2, foto3;
+    EditText nama_produk, deskripsi, varian1, harga1, stok1, varian2, harga2, stok2, varian3, harga3, stok3;
+
     private RequestQueue mRequestQueue;
     private StringRequest mStringRequest;
 
@@ -266,11 +268,11 @@ public class AddProduk extends AppCompatActivity {
                     Toast.makeText(AddProduk.this, "Isi semua field dahulu!", Toast.LENGTH_LONG).show();
                 }
 
-                insertUpdateDataProduk(id_produk,supplier_id,nama_toko,id_alamat,alamat,foto1,foto2,foto3,namaProdukValue,id_kategori.toString(),deskripsiValue,(variasi1Value.isEmpty()) ? "" : variasi1Value,(harga1Value.isEmpty()) ? "" : harga1Value,(stok1Value.isEmpty()) ? "" : stok1Value,(variasi2Value.isEmpty()) ? "" : variasi2Value,(harga2Value.isEmpty()) ? "" : harga2Value,(stok2Value.isEmpty()) ? "" : stok2Value,(variasi3Value.isEmpty()) ? "" : variasi3Value,(harga3Value.isEmpty()) ? "" : harga3Value,(stok3Value.isEmpty()) ? "" : stok3Value);
+                insertUpdateDataProduk((id_produk == null) ? "" : id_produk,supplier_id,nama_toko,id_alamat,alamat,foto1,foto2,foto3,namaProdukValue,id_kategori.toString(),deskripsiValue,(variasi1Value.isEmpty()) ? "" : variasi1Value,(harga1Value.isEmpty()) ? "" : harga1Value,(stok1Value.isEmpty()) ? "" : stok1Value,(variasi2Value.isEmpty()) ? "" : variasi2Value,(harga2Value.isEmpty()) ? "" : harga2Value,(stok2Value.isEmpty()) ? "" : stok2Value,(variasi3Value.isEmpty()) ? "" : variasi3Value,(harga3Value.isEmpty()) ? "" : harga3Value,(stok3Value.isEmpty()) ? "" : stok3Value);
             }
         });
 
-        getProdukBYID(id_produk);
+            getProdukBYID(id_produk);
     }
 
     public void getKategoriProduk(){
@@ -321,8 +323,7 @@ public class AddProduk extends AppCompatActivity {
     }
 
     public void getSupplierByUserID(String id_user){
-
-        String url = "https://us-east-1.aws.data.mongodb-api.com/app/application-0-fophn/endpoint/getSupplierByKonsumenID?user_id=" + id_user;
+        String url = "https://us-east-1.aws.data.mongodb-api.com/app/application-0-fophn/endpoint/getSupplierBYKonsumenID?user_id="+id_user;
 
         // RequestQueue initialized
         mRequestQueue = Volley.newRequestQueue(this);
@@ -333,6 +334,7 @@ public class AddProduk extends AppCompatActivity {
             public void onResponse(String response) {
                 try {
                     JSONArray jsonArray = new JSONArray(response);
+
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
                         supplier_id = jsonObject.getString("_id");
@@ -343,6 +345,7 @@ public class AddProduk extends AppCompatActivity {
 
                         id_alamat = data.getString("kota");
                     }
+
                     getKotaByID(id_alamat);
 
                 } catch (JSONException e) {
@@ -362,7 +365,6 @@ public class AddProduk extends AppCompatActivity {
     }
 
     public void getKotaByID(String id_alamat){
-
         String url = "https://www.emsifa.com/api-wilayah-indonesia/api/regency/"+id_alamat+".json";
 
         // RequestQueue initialized
@@ -476,7 +478,6 @@ public class AddProduk extends AppCompatActivity {
                         String id_kategori_produk = jsonObject.getString("id_kategori");
                         JSONArray getVarianProduk = jsonObject.getJSONArray("varian");
                         JSONObject getFotoProduk = jsonObject.getJSONObject("foto");
-
 
                         nama_produk = findViewById(R.id.nama_produk);
                         deskripsi = findViewById(R.id.deskripsi);

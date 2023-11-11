@@ -28,7 +28,7 @@
         app:layout_constraintTop_toBottomOf="@id/imageView2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/linearLayout2"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
         android:scrollbars="none"
         android:overScrollMode="never">
 
@@ -471,13 +471,11 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/search_icon" />
 
-
-
     <!--    AKHIR SCROLLVIEW-->
 
 <!--NAVIGASI START-->
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/linearLayout2"
+        android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:menu="@menu/menu_bar"
@@ -491,6 +489,7 @@
         android:elevation="10dp"
         app:itemIconTint="@drawable/item_selector"
         app:itemRippleColor="@color/transparent">
+
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 <!--NAVIGASI FINISH-->
 

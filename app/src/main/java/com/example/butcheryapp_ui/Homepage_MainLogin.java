@@ -28,6 +28,7 @@ import com.android.volley.toolbox.Volley;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -82,15 +83,26 @@ public class Homepage_MainLogin extends AppCompatActivity {
 
         imageSlider.setImageList(slideModels);
 
-//        BTN
-        ImageButton btnProfile = findViewById(R.id.nav_profile);
 
-        btnProfile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Homepage_MainLogin.this, ProfilePage.class);
-                startActivity(intent);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigation);
+        bottomNavigationView.setSelectedItemId(R.id.home);
+
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            switch (item.getItemId()){
+                case R.id.home:
+                    startActivity(new Intent(Homepage_MainLogin.this, Homepage_MainLogin.class));
+                    return true;
+                case R.id.wishlist:
+                    startActivity(new Intent(Homepage_MainLogin.this, WishlistPage.class));
+                    return true;
+                case R.id.kategori:
+                    startActivity(new Intent(Homepage_MainLogin.this, CategoriesPage.class));
+                    return true;
+                case R.id.profil:
+                    startActivity(new Intent(Homepage_MainLogin.this, ProfilePage.class));
+                    return true;
             }
+            return false;
         });
 
         getDataAllProduk();

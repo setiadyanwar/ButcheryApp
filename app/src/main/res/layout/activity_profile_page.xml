@@ -8,7 +8,7 @@
 
 <ScrollView
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:scrollbars="none"
     tools:ignore="MissingConstraints">
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -451,24 +451,9 @@
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
-    <!--NAVIGASI START-->
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:menu="@menu/menu_bar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="MissingConstraints"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
-        android:background="@drawable/bg_navigation"
-        android:elevation="10dp"
-        app:itemIconTint="@drawable/item_selector"
-        app:itemRippleColor="@color/transparent">
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
-        <ImageButton
+
+
+    <ImageButton
             android:id="@+id/nav_cart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

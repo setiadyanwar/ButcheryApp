@@ -20,6 +20,4 @@
         android:icon="@drawable/profilnav"
         android:title="Profil"/>
 
-
-
 </menu>

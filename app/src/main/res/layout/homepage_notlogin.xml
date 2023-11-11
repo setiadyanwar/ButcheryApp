@@ -504,53 +504,25 @@
         app:layout_constraintStart_toStartOf="parent"
         android:elevation="10dp"/>
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="wrap_content"
+    <!--NAVIGASI START-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        app:menu="@menu/menu_bar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@id/ayodaftar"
         app:layout_constraintEnd_toEndOf="@id/lonceng"
-        app:layout_constraintTop_toTopOf="@id/bg_nav"
         tools:ignore="MissingConstraints"
-        android:elevation="10dp">
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:background="@drawable/bg_navigation"
+        android:elevation="10dp"
+        app:itemIconTint="@drawable/item_selector"
+        app:itemRippleColor="@color/transparent">
 
-        <ImageButton
-            android:id="@+id/nav_home"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:layout_marginRight="20dp"
-            android:src="@drawable/nav_home" />
-
-        <ImageButton
-            android:id="@+id/nav_wishlist"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:layout_marginRight="90dp"
-            android:src="@drawable/nav_wishlist" />
-
-
-
-        <ImageButton
-            android:id="@+id/nav_categories"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/nav_categories" />
-
-        <ImageButton
-            android:id="@+id/nav_profile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/nav_profile" />
-    </LinearLayout>
-
-
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+    <!--NAVIGASI FINISH-->
 
 
     <ImageButton
@@ -565,8 +537,6 @@
         app:layout_constraintTop_toBottomOf="@+id/search_container"
         app:layout_constraintVertical_bias="0.92"
         android:elevation="10dp"/>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
