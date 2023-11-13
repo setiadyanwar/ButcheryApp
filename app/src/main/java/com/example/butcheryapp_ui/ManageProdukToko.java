@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,6 +37,7 @@ public class ManageProdukToko extends AppCompatActivity {
     private StringRequest mStringRequest;
     private RecyclerView recyclerView;
     private DaftarProdukSupplierAdapter DaftarProdukSupplierAdapter;
+    private ProgressBar progressBar;
 
     String id_produk;
 
@@ -52,6 +54,9 @@ public class ManageProdukToko extends AppCompatActivity {
             Intent intent = new Intent(ManageProdukToko.this, LoginPage.class);
             startActivity(intent);
         }
+
+        progressBar = findViewById(R.id.progressBar);
+        progressBar.getIndeterminateDrawable().setColorFilter(0xFFFF0000, android.graphics.PorterDuff.Mode.MULTIPLY);
 
         recyclerView = findViewById(R.id.listproduk);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -71,6 +76,8 @@ public class ManageProdukToko extends AppCompatActivity {
         getAllProduk();
     }
     private void getAllProduk() {
+        progressBar.setVisibility(View.VISIBLE);
+
         String url = "https://us-east-1.aws.data.mongodb-api.com/app/application-0-fophn/endpoint/getAllRekomendasiProduk";
 
         // RequestQueue initialized
@@ -122,10 +129,12 @@ public class ManageProdukToko extends AppCompatActivity {
 
                     DaftarProdukSupplierAdapter.setProdukList(produkList);
                     DaftarProdukSupplierAdapter.notifyDataSetChanged();
+                    progressBar.setVisibility(View.INVISIBLE);
 
                 } catch (JSONException e) {
                     e.printStackTrace();
                     Toast.makeText(ManageProdukToko.this, "tidak ada data", Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(View.INVISIBLE);
                 }
             }
         }, new Response.ErrorListener() {
@@ -133,6 +142,7 @@ public class ManageProdukToko extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
                 error.printStackTrace();
                 Toast.makeText(ManageProdukToko.this, "Error: Gagal mengambil data konsumen", Toast.LENGTH_LONG).show();
+                progressBar.setVisibility(View.INVISIBLE);
             }
         });
 

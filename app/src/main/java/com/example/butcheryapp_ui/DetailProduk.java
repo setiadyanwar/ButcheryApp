@@ -93,7 +93,7 @@ public class DetailProduk extends AppCompatActivity {
                         deskripsi.setText(jsonObject.getString("deskripsi"));
 
                         varian1.setText(getVarianProduk.getJSONObject(0).getString("varian1"));
-                        varian1.setBackground(Drawable.createFromPath("@drawable/radio_selected"));
+                        varian1.setBackgroundResource(R.drawable.radio_selected);
                         harga_produk.setText(hargaVarian1);
 
                         nama_toko.setText(truncateText(jsonObject.getString("nama_toko"),5));
@@ -106,13 +106,13 @@ public class DetailProduk extends AppCompatActivity {
                                 TextView harga_produk = findViewById(R.id.detail_harga_produk);
 
                                 varian1 = findViewById(R.id.varian1);
-                                varian1.setBackground(Drawable.createFromPath("@drawable/radio_selected"));
+                                varian1.setBackgroundResource(R.drawable.radio_selected);
 
                                 varian2 = findViewById(R.id.varian2);
-                                varian2.setBackground(Drawable.createFromPath("@drawable/radio_notselected"));
+                                varian2.setBackgroundResource(R.drawable.radio_notselected);
 
                                 varian3 = findViewById(R.id.varian3);
-                                varian3.setBackground(Drawable.createFromPath("@drawable/radio_notselected"));
+                                varian3.setBackgroundResource(R.drawable.radio_notselected);
 
                                 harga_produk.setText(hargaVarian1);
                             }
@@ -126,13 +126,13 @@ public class DetailProduk extends AppCompatActivity {
                                 TextView harga_produk = findViewById(R.id.detail_harga_produk);
 
                                 varian1 = findViewById(R.id.varian1);
-                                varian1.setBackground(Drawable.createFromPath("@drawable/radio_notselected"));
+                                varian1.setBackgroundResource(R.drawable.radio_notselected);
 
                                 varian2 = findViewById(R.id.varian2);
-                                varian2.setBackground(Drawable.createFromPath("@drawable/radio_selected"));
+                                varian2.setBackgroundResource(R.drawable.radio_selected);
 
                                 varian3 = findViewById(R.id.varian3);
-                                varian3.setBackground(Drawable.createFromPath("@drawable/radio_notselected"));
+                                varian3.setBackgroundResource(R.drawable.radio_notselected);
 
                                 harga_produk.setText(hargaVarian2);
                             }
@@ -146,13 +146,13 @@ public class DetailProduk extends AppCompatActivity {
                                 TextView harga_produk = findViewById(R.id.detail_harga_produk);
 
                                 varian1 = findViewById(R.id.varian1);
-                                varian1.setBackground(Drawable.createFromPath("@drawable/radio_notselected"));
+                                varian1.setBackgroundResource(R.drawable.radio_notselected);
 
                                 varian2 = findViewById(R.id.varian2);
-                                varian2.setBackground(Drawable.createFromPath("@drawable/radio_notselected"));
+                                varian2.setBackgroundResource(R.drawable.radio_notselected);
 
                                 varian3 = findViewById(R.id.varian3);
-                                varian3.setBackground(Drawable.createFromPath("@drawable/radio_selected"));
+                                varian3.setBackgroundResource(R.drawable.radio_selected);
 
                                 harga_produk.setText(hargaVarian3);
                             }

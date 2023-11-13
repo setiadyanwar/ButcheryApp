@@ -83,9 +83,17 @@ public class Homepage_MainLogin extends AppCompatActivity {
 
         imageSlider.setImageList(slideModels);
 
-
+//BottomNavigasi
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigation);
         bottomNavigationView.setSelectedItemId(R.id.home);
+        ImageButton btncart = findViewById(R.id.nav_cart);
+        btncart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Homepage_MainLogin.this,CartPage.class);
+                startActivity(i);
+            }
+        });
 
         bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()){
@@ -93,13 +101,16 @@ public class Homepage_MainLogin extends AppCompatActivity {
                     startActivity(new Intent(Homepage_MainLogin.this, Homepage_MainLogin.class));
                     return true;
                 case R.id.wishlist:
-                    startActivity(new Intent(Homepage_MainLogin.this, WishlistPage.class));
+                    startActivity(new Intent(getApplicationContext(),WishlistPage.class));
+                    finish();
                     return true;
                 case R.id.kategori:
-                    startActivity(new Intent(Homepage_MainLogin.this, CategoriesPage.class));
+                    startActivity(new Intent(getApplicationContext(),CategoriesPage.class));
+                    finish();
                     return true;
                 case R.id.profil:
-                    startActivity(new Intent(Homepage_MainLogin.this, ProfilePage.class));
+                    startActivity(new Intent(getApplicationContext(),ProfilePage.class));
+                    finish();
                     return true;
             }
             return false;

@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="10dp"
-    android:background="@color/bg_color"
+    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <!-- CARD 1 START-->
     <LinearLayout
         android:id="@+id/card1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
-        android:layout_marginBottom="23dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:padding="10dp"
-        android:orientation="vertical"
         android:background="@drawable/container_daftarproduk"
+        android:layout_margin="10dp"
         android:elevation="10dp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -38,78 +34,81 @@
                     android:layout_height="84dp"
                     android:background="@drawable/gambar_manageproduk" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_gravity="center_vertical">
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical">
+
                 <TextView
                     android:id="@+id/nama_produk"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#2B2B2B"
+                    android:layout_width="150dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="16dp"
                     android:text=""
-                    android:textStyle="bold"
-                    android:layout_marginStart="16dp"/>
+                    android:textColor="#2B2B2B"
+                    android:textStyle="bold" />
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="4dp">
+                    android:orientation="horizontal">
+
                     <TextView
                         android:id="@+id/harga_produk"
-                        android:layout_marginStart="16dp"
-                        android:layout_width="wrap_content"
+                        android:layout_width="95dp"
                         android:layout_height="wrap_content"
-                        android:text=""/>
+                        android:layout_marginStart="16dp"
+                        android:text="" />
+
                     <TextView
                         android:id="@+id/variasi"
                         android:layout_width="39dp"
                         android:layout_height="20dp"
+                        android:layout_marginStart="6dp"
+                        android:background="@drawable/bg_variasi"
+                        android:text=""
                         android:textAlignment="center"
                         android:textColor="@color/primary_50"
-                        android:text=""
-                        android:textSize="12sp"
-                        android:layout_marginStart="6dp"
-                        android:background="@drawable/bg_variasi"/>
+                        android:textSize="12sp" />
                 </LinearLayout>
+
                 <TextView
                     android:id="@+id/nama_toko"
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
                     android:layout_marginTop="4dp"
                     android:text=""
-                    android:textColor="#999999"
-                    android:layout_marginStart="16dp"/>
+                    android:textColor="#999999" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_gravity="center_vertical">
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
 
                 <Button
                     android:id="@+id/btnubah"
                     android:layout_width="80dp"
-                    android:layout_height="30dp"
+                    android:layout_height="35dp"
+                    style="@style/button_secondlight"
                     android:text="Ubah"
-                    android:textSize="10dp"
-                    android:textColor="@color/white"
-                    android:background="@drawable/btn_ubah"
-                    android:layout_marginStart="44dp" />
+                    android:textSize="12dp" />
 
                 <Button
                     android:id="@+id/btnhapus"
                     android:layout_width="80dp"
-                    android:layout_height="30dp"
-                    android:text="Hapus"
-                    android:textSize="10dp"
-                    android:textColor="@color/white"
-                    android:background="@drawable/btn_hapus"
+                    android:layout_height="35dp"
                     android:layout_marginTop="5dp"
-                    android:layout_marginStart="44dp" />
+                    style="@style/button_primary"
+                    android:text="Hapus"
+                    android:textSize="12dp" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

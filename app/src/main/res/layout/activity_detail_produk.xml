@@ -10,101 +10,104 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/image_shadow"
+        android:adjustViewBounds="true"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
     <ImageView
         android:id="@+id/gambar_detail"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/image"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <LinearLayout
         android:id="@+id/linear1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="29dp"
         android:layout_marginStart="21dp"
         android:layout_marginEnd="21dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
+        <ImageButton
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@drawable/arrow_white"
+            android:layout_marginEnd="235dp"
+            android:background="@drawable/logoback_black"/>
+        <ImageButton
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@drawable/cart_troli"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/logoback_black"/>
+        <ImageButton
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@drawable/lonceng_native"
+            android:background="@drawable/logoback_black"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/constrainbeli"
+        android:layout_width="411dp"
+        android:layout_height="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:elevation="20dp"
+        android:gravity="center"
+        android:background="@color/white">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="295dp">
-            <ImageView
-                android:id="@+id/elips"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:background="@drawable/logoback_black"
-                tools:ignore="MissingConstraints">
-            </ImageView>
+            android:layout_marginEnd="17dp">
 
-            <ImageView
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:src="@drawable/arrow_white"
-                app:layout_constraintBottom_toBottomOf="@+id/elips"
-                app:layout_constraintEnd_toEndOf="@+id/elips"
-                app:layout_constraintStart_toStartOf="@+id/elips"
-                app:layout_constraintTop_toTopOf="@+id/elips" />
+            <ImageButton
+                android:id="@+id/buttonbeli"
+                android:layout_width="151dp"
+                android:layout_height="42dp"
+                android:background="@drawable/btn_nofill"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@+id/buttonbeli"
+                app:layout_constraintStart_toStartOf="@id/buttonbeli"
+                app:layout_constraintEnd_toEndOf="@id/buttonbeli"
+                app:layout_constraintBottom_toBottomOf="@id/buttonbeli"
+                android:text="Beli"
+                android:textSize="16sp"
+                android:textColor="@color/primary_50"
+                tools:ignore="NotSibling" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:layout_width="203dp"
+            android:layout_height="42dp"
+            android:text="+ Keranjang"
+            style="@style/button_primary"/>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp">
-            <ImageView
-                android:id="@+id/elips2"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:background="@drawable/logoback_black"
-                tools:ignore="MissingConstraints">
-            </ImageView>
 
-            <ImageView
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:src="@drawable/cart_troli"
-                app:layout_constraintBottom_toBottomOf="@+id/elips2"
-                app:layout_constraintEnd_toEndOf="@+id/elips2"
-                app:layout_constraintStart_toStartOf="@+id/elips2"
-                app:layout_constraintTop_toTopOf="@+id/elips2" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:id="@+id/elips3"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:background="@drawable/logoback_black"
-                tools:ignore="MissingConstraints">
-            </ImageView>
-
-            <ImageView
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:src="@drawable/lonceng_native"
-                app:layout_constraintBottom_toBottomOf="@+id/elips3"
-                app:layout_constraintEnd_toEndOf="@+id/elips3"
-                app:layout_constraintStart_toStartOf="@+id/elips3"
-                app:layout_constraintTop_toTopOf="@+id/elips3" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 <ScrollView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:layout_constraintTop_toBottomOf="@id/linear1"
-    android:layout_marginTop="200dp">
+    app:layout_constraintTop_toTopOf="parent"
+    android:scrollbars="none">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="1000dp"
+        android:layout_marginTop="242dp"
         android:background="@drawable/container_profile"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -162,7 +165,7 @@
                     android:text="4.7"
                     android:textColor="@color/black"
                     android:layout_marginTop="10dp"
-                    android:layout_marginEnd="200dp"/>
+                    android:layout_marginEnd="175dp"/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -198,6 +201,7 @@
                     android:layout_height="38dp"
                     android:button="@drawable/radio_null_selector"
                     android:textColor="@drawable/radio_text_selector"
+                    android:background="@drawable/radio_selector"
                     android:textAlignment="center"
                     android:text=""/>
                 <RadioButton
@@ -207,6 +211,7 @@
                     android:button="@drawable/radio_null_selector"
                     android:textAlignment="center"
                     android:textColor="@drawable/radio_text_selector"
+                    android:background="@drawable/radio_selector"
                     android:text=""
                     android:layout_marginHorizontal="12dp"/>
                 <RadioButton
@@ -215,6 +220,7 @@
                     android:layout_height="38dp"
                     android:button="@drawable/radio_null_selector"
                     android:textAlignment="center"
+                    android:background="@drawable/radio_selector"
                     android:textColor="@drawable/radio_text_selector"
                     android:text=""/>
             </RadioGroup>
@@ -237,11 +243,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_marginEnd="95dp"
+                    android:layout_marginEnd="40dp"
                     android:layout_gravity="center_vertical">
                     <TextView
                         android:id="@+id/detail_nama_toko"
-                        android:layout_width="wrap_content"
+                        android:layout_width="130dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
                         android:text=""
@@ -256,7 +262,7 @@
                 </LinearLayout>
                 <ImageButton
                     android:id="@+id/btn_lihattoko"
-                    android:layout_width="wrap_content"
+                    android:layout_width="131dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/btn_lihattoko"
                     android:background="@color/transparent"

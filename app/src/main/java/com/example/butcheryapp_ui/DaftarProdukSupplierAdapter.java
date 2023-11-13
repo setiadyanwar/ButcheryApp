@@ -47,9 +47,9 @@ public class DaftarProdukSupplierAdapter extends RecyclerView.Adapter<DaftarProd
     @Override
     public void onBindViewHolder(@NonNull ProdukViewHolder holder, int position) {
         ProdukModel produk = produkList.get(position);
-        holder.namaProdukTextView.setText(truncateText(produk.getNamaProduk(),5));
-        holder.hargaProdukTextView.setText(truncateText(produk.getHargaProduk(),5));
-        holder.namaTokoTextView.setText(truncateText(produk.getNamaToko(),5));
+        holder.namaProdukTextView.setText(truncateText(produk.getNamaProduk(),50));
+        holder.hargaProdukTextView.setText(truncateText(produk.getHargaProduk(),12));
+        holder.namaTokoTextView.setText(truncateText(produk.getNamaToko(),18));
         holder.variasiProdukTextView.setText(produk.getVarianProduk());
         holder.btn_ubah.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -12,9 +12,9 @@
     <item
         android:title=""/>
     <item
-        android:id="@+id/categories"
+        android:id="@+id/kategori"
         android:icon="@drawable/kategori"
-        android:title="Ktegori"/>
+        android:title="Kategori"/>
     <item
         android:id="@+id/profil"
         android:icon="@drawable/profilnav"

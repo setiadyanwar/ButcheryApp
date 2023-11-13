@@ -34,7 +34,8 @@
             android:exported="false" />
         <activity
             android:name=".Homepage_MainLogin"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"/>
         <activity
             android:name=".AddProduk"
             android:exported="false" />

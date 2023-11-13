@@ -9,12 +9,38 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 public class ProfilePage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_page);
+
+//        BOTTOM NAVIGASI
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigation);
+        bottomNavigationView.setSelectedItemId(R.id.profil);
+
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            switch (item.getItemId()){
+                case R.id.home:
+                    startActivity(new Intent(getApplicationContext(),Homepage_MainLogin.class));
+                    finish();
+                    return true;
+                case R.id.wishlist:
+                    startActivity(new Intent(getApplicationContext(),WishlistPage.class));
+                    finish();
+                    return true;
+                case R.id.kategori:
+                    startActivity(new Intent(getApplicationContext(),CategoriesPage.class));
+                    finish();
+                    return true;
+                case R.id.profil:
+                    return true;
+            }
+            return false;
+        });
 
         SharedPreferences sharedPref = getSharedPreferences("myPrefs", Context.MODE_PRIVATE);
         boolean isLoggedIn = sharedPref.getBoolean("login", false);
