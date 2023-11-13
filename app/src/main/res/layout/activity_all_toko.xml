@@ -30,16 +30,17 @@
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="match_parent"
+            android:layout_width="294dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="Toko"
-            android:textSize="16sp"
-            android:textColor="@color/black"/>
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/toko"
+        android:id="@+id/profile_toko"
         android:layout_width="450dp"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_toko"
@@ -79,35 +80,45 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/toko"
+        app:layout_constraintTop_toBottomOf="@+id/profile_toko"
         android:paddingVertical="12dp"
         android:paddingHorizontal="16dp">
 
-        <Button
-            android:id="@+id/btn_option_toko"
+        <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:text="Toko"
-            android:textColor="@color/primary_50"/>
-
-        <Button
-            android:id="@+id/btn_option_produk"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/btn_option_toko"
-            android:text="Produk"
-            android:textColor="@color/grey_font"
-            android:layout_marginStart="10dp"/>
-
-        <Button
-            android:id="@+id/btn_option_etalase"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/btn_option_produk"
-            android:text="Etalase"
-            android:textColor="@color/grey_font"
-            android:layout_marginStart="10dp"/>
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="25sp"
+                android:textAlignment="center"
+                android:text="Toko"
+                android:checked="true"
+                android:background="@drawable/view_radio_selector"
+                android:button="@null"
+                android:id="@+id/view_toko"
+                android:textColor="@color/view_radio_text_selector"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="25sp"
+                android:textAlignment="center"
+                android:text="Produk"
+                android:layout_marginStart="10dp"
+                android:button="@null"
+                android:background="@drawable/view_radio_selector"
+                android:id="@+id/view_produk"
+                android:textColor="@color/view_radio_text_selector"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="25sp"
+                android:textAlignment="center"
+                android:text="Etalase"
+                android:layout_marginStart="10dp"
+                android:button="@null"
+                android:background="@drawable/view_radio_selector"
+                android:id="@+id/view_etalase"
+                android:textColor="@color/view_radio_text_selector"/>
+        </RadioGroup>
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
