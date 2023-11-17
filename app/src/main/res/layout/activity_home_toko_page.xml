@@ -135,19 +135,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/transparent"
+            android:src="@drawable/menu_pesanan"
+            android:layout_marginEnd="48.67dp"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
             android:src="@drawable/menu_keuangan"
             android:layout_marginEnd="48.67dp"/>
+
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/transparent"
-            android:src="@drawable/menu_aitrend"
-            android:layout_marginEnd="48.67dp"/>
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/transparent"
-            android:src="@drawable/menu_pusatbantuan"/>
+            android:src="@drawable/menu_aitrend"/>
+
 
 
 

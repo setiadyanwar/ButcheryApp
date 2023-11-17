@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/bg_color">
-
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <!-- CARD 1 START-->
     <LinearLayout
         android:id="@+id/card1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
-        android:padding="8dp"
-        android:orientation="vertical"
-        android:background="@color/white"
+        android:background="@drawable/container_daftarproduk"
+        android:layout_margin="10dp"
         android:elevation="10dp"
-        tools:ignore="MissingConstraints">
+        android:orientation="vertical"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,8 +26,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginStart="21dp">
+                android:orientation="vertical">
 
                 <ImageView
                     android:id="@+id/gambar_produk"
@@ -34,70 +34,93 @@
                     android:layout_height="84dp"
                     android:background="@drawable/gambar_manageproduk" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_gravity="center_vertical">
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical">
+
                 <TextView
-                    android:id="@+id/nama_prduk"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/nama_produk"
+                    android:layout_width="150dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="16dp"
+                    android:text=""
                     android:textColor="#2B2B2B"
-                    android:text="Daging US Beef Slice\nPremium Quality 1kg"
-                    android:textStyle="bold"
-                    android:layout_marginStart="16dp"/>
+                    android:textStyle="bold" />
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="4dp">
+                    android:orientation="horizontal">
+
                     <TextView
                         android:id="@+id/harga_produk"
-                        android:layout_marginStart="16dp"
-                        android:layout_width="wrap_content"
+                        android:layout_width="95dp"
                         android:layout_height="wrap_content"
-                        android:text="Rp169.500"/>
+                        android:layout_marginStart="16dp"
+                        android:text="" />
+
                     <TextView
                         android:id="@+id/variasi"
                         android:layout_width="39dp"
                         android:layout_height="20dp"
+                        android:layout_marginStart="6dp"
+                        android:background="@drawable/bg_variasi"
+                        android:text=""
                         android:textAlignment="center"
                         android:textColor="@color/primary_50"
-                        android:text="250gr"
-                        android:textSize="12sp"
-                        android:layout_marginStart="6dp"
-                        android:background="@drawable/bg_variasi"/>
+                        android:textSize="12sp" />
                 </LinearLayout>
+
                 <TextView
                     android:id="@+id/nama_toko"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="4dp"
+                    android:text=""
+                    android:textColor="#999999" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+                <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="YusufAnjayMabar"
-                    android:textColor="#999999"
-                    android:layout_marginStart="16dp"/>
-            </LinearLayout>
+                    android:orientation="vertical"
+                    android:layout_alignParentEnd="true">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_gravity="center_vertical">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="50dp"
-                    android:src="@drawable/btn_siap_active_" />
-                <ImageView
-                    android:layout_width="82dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/btn_dikirim_false_"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginStart="44dp"/>
-            </LinearLayout>
+                    <RadioButton
+                        android:id="@+id/siap"
+                        android:layout_width="93dp"
+                        android:layout_height="31dp"
+                        android:text="Siap"
+                        android:textColor="@color/primary_50"
+                        android:background="@drawable/pesanan_siap_selector"
+                        android:textAlignment="center"
+                        android:button="@drawable/radio_null_selector"/>
+                    <RadioButton
+                        android:id="@+id/dikirim"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="93dp"
+                        android:layout_height="31dp"
+                        android:text="Dikirim"
+                        android:textColor="@color/white"
+                        android:background="@drawable/pesanan_dikirim_selector"
+                        android:textAlignment="center"
+                        android:button="@drawable/radio_null_selector"/>
+                </RadioGroup>
+            </RelativeLayout>
         </LinearLayout>
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- CARD 1 FINISH-->
+
+</androidx.cardview.widget.CardView>
