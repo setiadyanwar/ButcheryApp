@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".ConfirmPayment">
+
+    <LinearLayout
+        android:id="@+id/nav_konfirmasi"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+        android:background="@drawable/container"
+        android:elevation="10dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="21dp"
+            android:src="@drawable/arrow_red" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textAlignment="center"
+            android:text="Konfirmasi Pembayaran"
+            android:textSize="16sp"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/nav_konfirmasi">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="371dp"
+                android:layout_height="534dp"
+                android:layout_marginHorizontal="21dp"
+                android:layout_marginVertical="80dp"
+                app:cardCornerRadius="25dp"
+                app:strokeColor="#CCCCCC"
+                app:strokeWidth="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/imagepayment"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"/>
+
+                    <TextView
+                        android:id="@+id/Rincian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:text="Rincian Belanja"
+                        android:layout_marginStart="30dp"
+                        android:textSize="18sp"
+                        android:textColor="@color/dark_50"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp">
+
+                        <TextView
+                            android:id="@+id/subtotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Subtotal "
+                            android:layout_marginStart="30dp"
+                            android:textColor="@color/dark_30"/>
+                        <TextView
+                            android:id="@+id/subtotalValue"
+                            android:layout_width="15dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/subtotal"
+                            android:text="1 "
+                            android:textColor="@color/dark_30"/>
+                        <TextView
+                            android:id="@+id/produkValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/subtotalValue"
+                            android:text="produk"
+                            android:textColor="@color/dark_30"/>
+                        <TextView
+                            android:id="@+id/priceValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="30dp"
+                            android:text="Rp34.600"
+                            android:textColor="@color/dark_30"
+                            android:layout_gravity="end"
+                            android:gravity="end"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:id="@+id/pengiriman"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pengiriman"
+                            android:layout_marginStart="30dp"
+                            android:textColor="@color/dark_30"/>
+                        <TextView
+                            android:id="@+id/pricepengiriman"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="30dp"
+                            android:text="Rp9.900"
+                            android:textColor="@color/dark_30"
+                            android:layout_gravity="end"
+                            android:gravity="end"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:id="@+id/layanan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Biaya layanan aplikasi"
+                            android:layout_marginStart="30dp"
+                            android:textColor="@color/dark_30"/>
+                        <TextView
+                            android:id="@+id/pricelayanan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="30dp"
+                            android:text="Rp1.000"
+                            android:textColor="@color/dark_30"
+                            android:layout_gravity="end"
+                            android:gravity="end"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/pembatas"
+                            android:layout_marginTop="22dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:src="@drawable/line"/>
+                        <TextView
+                            android:id="@+id/total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/pembatas"
+                            android:layout_marginTop="20dp"
+                            android:text="Total Belanja"
+                            android:layout_marginStart="30dp"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:textColor="#999999"/>
+                        <TextView
+                            android:id="@+id/pricetotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_below="@+id/pembatas"
+                            android:layout_marginEnd="30dp"
+                            android:layout_marginTop="20dp"
+                            android:text="Rp45.500"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"
+                            android:layout_gravity="end"
+                            android:gravity="end"/>
+                        <Button
+                            android:layout_width="311dp"
+                            android:layout_height="40dp"
+                            android:text="Bayar"
+                            android:layout_marginTop="56dp"
+                            android:layout_centerInParent="true"
+                            style="@style/button_primary"
+                            android:layout_below="@+id/pricetotal"/>
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

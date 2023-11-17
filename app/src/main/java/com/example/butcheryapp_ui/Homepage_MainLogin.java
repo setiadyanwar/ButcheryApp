@@ -77,9 +77,10 @@ public class Homepage_MainLogin extends AppCompatActivity {
 //        SLIDER
         ImageSlider imageSlider = findViewById(R.id.imageSlider);
         List<SlideModel> slideModels = new ArrayList<>();
-        slideModels.add(new SlideModel(R.drawable.slide1,null, ScaleTypes.FIT));
-        slideModels.add(new SlideModel(R.drawable.slide2,null, ScaleTypes.FIT));
-        slideModels.add(new SlideModel(R.drawable.slide3,null, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.banner1,null, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.banner2,null, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.banner3,null, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.banner4,null, ScaleTypes.FIT));
 
         imageSlider.setImageList(slideModels);
 
