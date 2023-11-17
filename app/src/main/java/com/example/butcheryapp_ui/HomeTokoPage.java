@@ -18,6 +18,8 @@ public class HomeTokoPage extends AppCompatActivity {
 
         ImageButton btnproduktoko = findViewById(R.id.btn_produktoko);
         ImageView btnback = findViewById(R.id.btn_back);
+        ImageButton btnpesanan = findViewById(R.id.pesanan);
+
 
         btnproduktoko.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,6 +36,14 @@ public class HomeTokoPage extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        btnpesanan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(HomeTokoPage.this,PesananPage.class);
+                startActivity(i);
+            }
+        });
+
 
 
 
