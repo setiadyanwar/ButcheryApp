@@ -15,6 +15,9 @@
         android:theme="@style/Theme.ButcheryApp_UI"
         tools:targetApi="31">
         <activity
+            android:name=".PesananSayaPage"
+            android:exported="false" />
+        <activity
             android:name=".PesananPage"
             android:exported="false" />
         <activity
