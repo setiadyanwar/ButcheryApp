@@ -147,6 +147,7 @@ public class Homepage_MainLogin extends AppCompatActivity {
                         JSONArray getVarianProduk = jsonObject.getJSONArray("varian");
 
                         //SET PRODUK KE DALAM PRODUK MODEL
+                        produk.setSupplierID(getSupplierId);
                         produk.setId_produk(jsonObject.getString("_id"));
 
                         produk.setNamaProduk(getNamaProduk);

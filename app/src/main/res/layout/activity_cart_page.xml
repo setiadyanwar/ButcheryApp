@@ -74,6 +74,7 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listcartproduk"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/ceksemua"
@@ -101,9 +102,10 @@
             android:textColor="@color/dark_10"
             android:textSize="16sp"/>
         <TextView
+            android:id="@+id/subtotal_cart"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:text="Rp100.000"
+            android:text=""
             android:textColor="@color/primary_50"
             android:textStyle="bold"
             android:textSize="16sp"/>
@@ -115,7 +117,7 @@
             android:layout_marginEnd="17dp">
 
             <ImageButton
-                android:id="@+id/buttonbeli"
+                android:id="@+id/buttoncartcheckout"
                 android:layout_width="203dp"
                 android:layout_height="55dp"
                 android:background="@drawable/btn_checkout"
@@ -124,10 +126,10 @@
                 android:id="@+id/text1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="@+id/buttonbeli"
-                app:layout_constraintStart_toStartOf="@id/buttonbeli"
-                app:layout_constraintEnd_toEndOf="@id/buttonbeli"
-                app:layout_constraintBottom_toBottomOf="@id/buttonbeli"
+                app:layout_constraintTop_toTopOf="@+id/buttoncartcheckout"
+                app:layout_constraintStart_toStartOf="@id/buttoncartcheckout"
+                app:layout_constraintEnd_toEndOf="@id/buttoncartcheckout"
+                app:layout_constraintBottom_toBottomOf="@id/buttoncartcheckout"
                 android:text="Checkout (   )"
                 android:textSize="16sp"
                 android:textStyle="bold"
@@ -137,12 +139,12 @@
                 android:id="@+id/textjumlah"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="@+id/buttonbeli"
+                app:layout_constraintTop_toTopOf="@+id/buttoncartcheckout"
                 app:layout_constraintStart_toStartOf="@id/text1"
-                app:layout_constraintEnd_toEndOf="@id/buttonbeli"
-                app:layout_constraintBottom_toBottomOf="@id/buttonbeli"
+                app:layout_constraintEnd_toEndOf="@id/buttoncartcheckout"
+                app:layout_constraintBottom_toBottomOf="@id/buttoncartcheckout"
                 app:layout_constraintHorizontal_bias="0.57"
-                android:text="2"
+                android:text="0"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:textColor="@color/white"
