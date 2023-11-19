@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".ManageProdukToko">
+    tools:context=".PesananPage">
 
     <RelativeLayout
         android:id="@+id/nav_produk"
@@ -34,23 +33,14 @@
             android:layout_marginStart="8dp"
             android:layout_centerHorizontal="true"
             android:textAlignment="center"
-            android:text="Daftar Produk"
+            android:text="Daftar Pesanan"
             android:textSize="16sp"
             android:textColor="@color/black" />
 
-        <ImageView
-            android:id="@+id/addproduk"
-            android:layout_width="30dp"
-            android:layout_alignParentEnd="true"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="21dp"
-            android:background="@color/transparent"
-            android:src="@drawable/btn_add_elips" />
-
     </RelativeLayout>
-    
+
     <EditText
-        android:id="@+id/searchproduk"
+        android:id="@+id/searchpesanan"
         android:layout_width="370dp"
         android:layout_height="41dp"
         android:layout_marginStart="21dp"
@@ -72,34 +62,34 @@
         android:layout_height="21dp"
         android:layout_marginStart="20dp"
         android:src="@drawable/search_icondark"
-        app:layout_constraintBottom_toBottomOf="@+id/searchproduk"
-        app:layout_constraintStart_toStartOf="@id/searchproduk"
-        app:layout_constraintTop_toTopOf="@+id/searchproduk" />
-<ScrollView
-    android:id="@+id/scrollView"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:layout_constraintTop_toBottomOf="@id/searchproduk"
-    android:layout_marginTop="125dp"
-    android:layout_marginBottom="50dp"
-    android:background="@color/white">
-    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintBottom_toBottomOf="@+id/searchpesanan"
+        app:layout_constraintStart_toStartOf="@id/searchpesanan"
+        app:layout_constraintTop_toTopOf="@+id/searchpesanan" />
+    <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/searchpesanan"
+        android:layout_marginTop="125dp"
+        android:layout_marginBottom="50dp"
         android:background="@color/white">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/listproduk"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="0dp"
-            tools:listitem="@layout/item_daftarproduk" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+            android:background="@color/white">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listproduk"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="0dp"
+                tools:listitem="@layout/item_daftarpesanan" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -110,5 +100,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/scrollView"
         app:layout_constraintBottom_toBottomOf="@id/scrollView"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

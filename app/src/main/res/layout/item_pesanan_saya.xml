@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/white"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
+
     <!-- CARD 1 START-->
     <LinearLayout
         android:id="@+id/card1"
@@ -13,10 +12,7 @@
         android:layout_margin="10dp"
         android:elevation="10dp"
         android:orientation="vertical"
-        android:padding="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:padding="15dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -85,6 +81,7 @@
                     android:layout_marginTop="4dp"
                     android:text=""
                     android:textColor="#999999" />
+
             </LinearLayout>
 
             <RelativeLayout
@@ -102,9 +99,9 @@
                         android:id="@+id/siap"
                         android:layout_width="93dp"
                         android:layout_height="31dp"
-                        android:text="Siap"
-                        android:textColor="@color/primary_50"
-                        android:background="@drawable/pesanan_siap_selector"
+                        android:text="Nilai"
+                        android:textColor="@drawable/radio_text_selector"
+                        android:background="@drawable/pesanansaya_selector"
                         android:textAlignment="center"
                         android:button="@drawable/radio_null_selector"/>
                     <RadioButton
@@ -112,15 +109,35 @@
                         android:layout_marginTop="5dp"
                         android:layout_width="93dp"
                         android:layout_height="31dp"
-                        android:text="Dikirim"
-                        android:textColor="@color/white"
-                        android:background="@drawable/pesanan_dikirim_selector"
+                        android:text="Sampai"
+                        android:textColor="@drawable/radio_text_selector"
+                        android:background="@drawable/pesanansaya_selector"
                         android:textAlignment="center"
                         android:button="@drawable/radio_null_selector"/>
                 </RadioGroup>
             </RelativeLayout>
         </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           android:layout_marginTop="6dp">
+            <TextView
+                android:id="@+id/text_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status :"
+                android:textStyle="bold"
+                android:layout_marginEnd="5dp"
+                android:textColor="@color/dark_10"/>
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="70dp"
+                android:layout_toEndOf="@id/text_status"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Dikemas"/>
+        </RelativeLayout>
     </LinearLayout>
     <!-- CARD 1 FINISH-->
 
-</androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
