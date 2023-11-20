@@ -120,11 +120,10 @@
                 android:id="@+id/view_etalase"
                 android:textColor="@color/view_radio_text_selector"/>
         </RadioGroup>
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/all_toko_fragment"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_below="@+id/sections_nav"/>
+        <FrameLayout
+            android:id="@+id/toko_views_fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
