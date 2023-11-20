@@ -27,16 +27,20 @@ public class ProfilePage extends AppCompatActivity {
                 case R.id.home:
                     startActivity(new Intent(getApplicationContext(),Homepage_MainLogin.class));
                     finish();
+                    overridePendingTransition(0, 0);
                     return true;
                 case R.id.wishlist:
                     startActivity(new Intent(getApplicationContext(),WishlistPage.class));
                     finish();
+                    overridePendingTransition(0, 0);
                     return true;
                 case R.id.kategori:
                     startActivity(new Intent(getApplicationContext(),CategoriesPage.class));
                     finish();
+                    overridePendingTransition(0, 0);
                     return true;
                 case R.id.profil:
+                    overridePendingTransition(0, 0);
                     return true;
             }
             return false;

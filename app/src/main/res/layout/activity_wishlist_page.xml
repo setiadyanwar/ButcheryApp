@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_color"
+    android:background="@color/white"
     tools:context=".WishlistPage">
 
 
@@ -50,6 +50,143 @@
 
     </RelativeLayout>
 
+
+    <!--    CONTENT START-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/nav_wishlist">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="21dp"
+            android:layout_marginTop="25dp">
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Semua\nWishlist Kamu"
+                    android:textSize="24dp"
+                    android:textColor="@color/dark_30"
+                    android:textStyle="bold"/>
+                <ImageView
+                    android:id="@+id/line"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="3dp"
+                    android:layout_below="@id/text1"
+                    android:src="@drawable/line"/>
+                <RelativeLayout
+                    android:id="@+id/relative"
+                    android:layout_width="400dp"
+                    android:layout_height="46dp"
+                    android:layout_below="@id/line"
+                    android:layout_marginTop="10dp"
+                    android:elevation="10dp"
+                    android:background="@drawable/container_stroke_rectangle">
+
+                    <TextView
+                        android:id="@+id/pakai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="7dp"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark_30"
+                        android:text="Pakai fitur Koleksi, Wishlist jadi rapi"/>
+                    <TextView
+                        android:id="@+id/kelompok"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginBottom="6dp"
+                        android:textSize="12sp"
+                        android:textColor="@color/dark_10"
+                        android:layout_below="@id/pakai"
+                        android:text="Kelompokkan barang di Wishlist sesukamu"/>
+                </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/relative">
+
+                <ImageView
+                    android:id="@+id/foto1"
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:layout_marginBottom="2dp"
+                    android:src="@drawable/gambar_manageproduk"/>
+                <ImageView
+                    android:id="@+id/foto2"
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:layout_below="@id/foto1"
+                    android:src="@drawable/gambar_manageproduk"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/relative2_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="2dp"
+                android:layout_toEndOf="@id/relative2"
+                android:layout_below="@id/relative">
+
+                <ImageView
+                    android:id="@+id/foto3"
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:layout_marginBottom="2dp"
+                    android:src="@drawable/gambar_manageproduk"/>
+                <ImageView
+                    android:id="@+id/foto4"
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:layout_below="@id/foto3"
+                    android:src="@drawable/gambar_manageproduk"/>
+
+            </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+    </ScrollView>
+    <!--    CONTENT FINISH-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!--NAVIGASI START-->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
@@ -80,5 +217,7 @@
         app:layout_constraintVertical_bias="0.94"
         android:elevation="10dp"/>
     <!--NAVIGASI FINISH-->
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

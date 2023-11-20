@@ -67,7 +67,10 @@ public class Homepage_MainLogin extends AppCompatActivity {
         if (!isLoggedIn) {
             Intent intent = new Intent(Homepage_MainLogin.this, LoginPage.class);
             startActivity(intent);
+            finish();
         }
+
+
 
         recyclerView = findViewById(R.id.cardproduk);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
@@ -100,18 +103,22 @@ public class Homepage_MainLogin extends AppCompatActivity {
             switch (item.getItemId()){
                 case R.id.home:
                     startActivity(new Intent(Homepage_MainLogin.this, Homepage_MainLogin.class));
+                    overridePendingTransition(0, 0);
                     return true;
                 case R.id.wishlist:
                     startActivity(new Intent(getApplicationContext(),WishlistPage.class));
                     finish();
+                    overridePendingTransition(0, 0);
                     return true;
                 case R.id.kategori:
                     startActivity(new Intent(getApplicationContext(),CategoriesPage.class));
                     finish();
+                    overridePendingTransition(0, 0);
                     return true;
                 case R.id.profil:
                     startActivity(new Intent(getApplicationContext(),ProfilePage.class));
                     finish();
+                    overridePendingTransition(0, 0);
                     return true;
             }
             return false;

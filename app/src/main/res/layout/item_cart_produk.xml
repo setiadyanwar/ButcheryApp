@@ -32,18 +32,19 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center">
+            android:gravity="center"
+            android:layout_marginStart="21dp">
 
             <CheckBox
                 android:id="@+id/ceklis"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="21dp"
+                android:layout_width="21dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="16dp"
                 android:textColor="@color/dark_10"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
             <ImageView
                 android:layout_width="75dp"
-                android:layout_height="64dp"
+                android:layout_height="75dp"
                 android:layout_marginEnd="14dp"
                 android:src="@drawable/gambar_manageproduk"/>
             <LinearLayout
@@ -63,7 +64,7 @@
                         android:layout_height="35dp"
                         android:text=""
                         android:textColor="@color/black"
-                        android:layout_marginEnd="22dp"
+                        android:layout_marginEnd="14dp"
                         android:textSize="14sp" />
                     <ImageButton
                         android:id="@+id/btn_delete"
@@ -108,12 +109,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:gravity="center"
-                    android:layout_marginBottom="6dp">
+                    android:layout_marginBottom="15dp">
 
                     <ImageButton
                         android:id="@+id/minus"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:src="@drawable/minus"
                         android:background="@drawable/elips_dark"/>
                     <TextView
@@ -126,8 +127,8 @@
                         android:text="1"/>
                     <ImageButton
                         android:id="@+id/plus"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:src="@drawable/plus"
                         android:background="@drawable/elips_red"/>
                 </LinearLayout>
