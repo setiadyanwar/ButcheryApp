@@ -58,6 +58,8 @@ public class TokoFragment extends Fragment {
         slideModels.add(new SlideModel(R.drawable.banner3,null, ScaleTypes.FIT));
         slideModels.add(new SlideModel(R.drawable.banner4,null, ScaleTypes.FIT));
 
+        imageSlider.setImageList(slideModels);
+
         return view;
     }
 }
