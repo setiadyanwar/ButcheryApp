@@ -12,71 +12,53 @@ import android.widget.RadioButton;
 public class AllTokoActivity extends AppCompatActivity {
 
     RadioButton viewToko, viewProduk, viewEtalase;
+    Fragment currentFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_all_toko);
 
         viewToko = findViewById(R.id.view_toko);
         viewProduk = findViewById(R.id.view_produk);
         viewEtalase = findViewById(R.id.view_etalase);
 
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.add(R.id.toko_views_fragment_container, new TokoFragment(), "TokoFragment");
-        fragmentTransaction.commit();
+        Fragment tokoFragment = new TokoFragment();
+        Fragment produkFragment = new ProdukFragment();
+        Fragment etalaseFragment = new EtalaseFragment();
 
-        viewToko.setOnClickListener(v -> showToko());
-        viewProduk.setOnClickListener(v -> showProduk());
-        viewEtalase.setOnClickListener(v -> showEtalase());
+        addFragment(tokoFragment, "TokoFragment");
+        addFragment(produkFragment, "ProdukFragment");
+        addFragment(etalaseFragment, "EtalaseFragment");
+
+        currentFragment = tokoFragment;
+
+        showFragment(tokoFragment);
+
+        viewToko.setOnClickListener(v -> showFragment(tokoFragment));
+        viewProduk.setOnClickListener(v -> showFragment(produkFragment));
+        viewEtalase.setOnClickListener(v -> showFragment(etalaseFragment));
     }
 
-    private void showToko() {
+    private void addFragment(Fragment fragment, String tag) {
         FragmentManager fragmentManager = getSupportFragmentManager();
-
-        Fragment tokoFragment = fragmentManager.findFragmentByTag("TokoFragment");
-
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-        if (tokoFragment == null) {
-            fragmentTransaction.add(R.id.toko_views_fragment_container, new TokoFragment(), "TokoFragment");
-            fragmentTransaction.commit();
-            return;
+        if (getSupportFragmentManager().findFragmentByTag(tag) == null) {
+            fragmentTransaction.add(R.id.toko_views_fragment_container, fragment, tag);
         }
 
-        fragmentTransaction.show(tokoFragment);
+        fragmentTransaction.hide(fragment);
         fragmentTransaction.commit();
     }
-    private void showProduk() {
-        FragmentManager fragmentManager = getSupportFragmentManager();
 
-        Fragment produkFragment = fragmentManager.findFragmentByTag("ProdukFragment");
-
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-        if (produkFragment == null) {
-            fragmentTransaction.add(R.id.toko_views_fragment_container, new ProdukFragment(), "ProdukFragment");
-            fragmentTransaction.commit();
-            return;
+    private void showFragment(Fragment fragment) {
+        if (fragment != currentFragment) {
+            getSupportFragmentManager().beginTransaction().hide(currentFragment).show(fragment).commit();
+            currentFragment = fragment;
+        } else {
+            getSupportFragmentManager().beginTransaction().show(currentFragment).commit();
         }
-
-        fragmentTransaction.show(produkFragment);
-        fragmentTransaction.commit();
-    }
-    private void showEtalase() {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-
-        Fragment etalaseFragment = fragmentManager.findFragmentByTag("EtalaseFragment");
-
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-        if (etalaseFragment == null) {
-            fragmentTransaction.add(R.id.toko_views_fragment_container, new EtalaseFragment(), "EtalaseFragment");
-            fragmentTransaction.commit();
-            return;
-        }
-
-        fragmentTransaction.show(etalaseFragment);
-        fragmentTransaction.commit();
     }
 }
