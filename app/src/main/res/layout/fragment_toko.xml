@@ -6,27 +6,70 @@
     android:layout_height="match_parent"
     tools:context=".TokoFragment">
 
-<!--    <TextView-->
-<!--        android:id="@+id/textView2"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Toko"-->
-<!--        android:textSize="36sp"/>-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.denzcoskun.imageslider.ImageSlider
+            android:id="@+id/imageSlider"
+            android:layout_width="354dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:iss_auto_cycle="true"
+            app:iss_corner_radius="10"
+            app:iss_delay="0"
+            app:iss_period="3000"
+            app:iss_placeholder="@color/black"
+            app:iss_error_image="@color/primary_10" />
 
-    <com.denzcoskun.imageslider.ImageSlider
-        android:id="@+id/imageSlider"
-        android:layout_width="354dp"
-        android:layout_height="140dp"
-        android:layout_marginTop="15dp"
-        app:layout_constraintTop_toBottomOf="@id/bgMenu"
-        app:layout_constraintStart_toStartOf="@id/bgMenu"
-        app:layout_constraintEnd_toEndOf="@id/bgMenu"
-        app:iss_auto_cycle="true"
-        app:iss_corner_radius="10"
-        app:iss_delay="0"
-        app:iss_period="3000"
-        app:iss_placeholder="@color/black"
-        app:iss_error_image="@color/primary_10">
-    </com.denzcoskun.imageslider.ImageSlider>
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginEnd="21dp"
+            android:layout_below="@+id/imageSlider"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="190dp"
+                android:layout_marginStart="110dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="160dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/bg_produk"
+                    android:elevation="10dp"/>
+
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="160dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/bg_produk"
+                    android:elevation="10dp"/>
+
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="160dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/bg_produk"
+                    android:elevation="10dp"/>
+
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="160dp"
+                    android:layout_marginEnd="120dp"
+                    android:background="@drawable/bg_produk"
+                    android:elevation="10dp"/>
+
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+    </RelativeLayout>
 
 </FrameLayout>
