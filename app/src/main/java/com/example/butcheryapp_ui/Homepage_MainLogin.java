@@ -2,6 +2,7 @@ package com.example.butcheryapp_ui;
 
 import static com.android.volley.VolleyLog.TAG;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -13,6 +14,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -69,6 +71,14 @@ public class Homepage_MainLogin extends AppCompatActivity {
             startActivity(intent);
             finish();
         }
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                moveTaskToBack(true);
+                System.exit(1);
+                finish();
+            }
+         });
 
 
 
@@ -76,6 +86,16 @@ public class Homepage_MainLogin extends AppCompatActivity {
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         produkAdapter = new ProdukAdapter(new ArrayList<>());
         recyclerView.setAdapter(produkAdapter);
+
+        EditText searchklik = findViewById(R.id.search_container);
+
+        searchklik.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Homepage_MainLogin.this,SearchPage.class);
+                startActivity(i);
+            }
+        });
 
 //        SLIDER
         ImageSlider imageSlider = findViewById(R.id.imageSlider);

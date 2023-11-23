@@ -64,6 +64,20 @@ public class ProfilePage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        TextView btn_pesanan = findViewById(R.id.lihat_pesanansaya);
+
+        btn_pesanan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(ProfilePage.this,PesananSayaPage.class);
+                startActivity(i);
+            }
+        });
+
+
+
+
         btn_keluarakun.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

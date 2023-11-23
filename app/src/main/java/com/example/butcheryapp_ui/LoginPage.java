@@ -56,6 +56,7 @@ public class LoginPage extends AppCompatActivity {
         if (isLoggedIn) {
             Intent intent = new Intent(LoginPage.this, Homepage_MainLogin.class);
             startActivity(intent);
+            finish();
         }
 
         TextView linkdaftar = findViewById(R.id.daftardulu);
@@ -67,6 +68,7 @@ public class LoginPage extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(LoginPage.this, HomePage_NotLogin.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -146,7 +148,9 @@ public class LoginPage extends AppCompatActivity {
                         editor.putString("id_user", id_user);
                         editor.apply();
 
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         startActivity(intent);
+                        finish();
                     } else {
                         Toast.makeText(LoginPage.this, "No.Hp/Email dan Password salah!!", Toast.LENGTH_LONG).show();
                     }

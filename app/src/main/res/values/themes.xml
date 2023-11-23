@@ -29,4 +29,12 @@
     <style name="buttonSecondary">
         <item name="android:backgroundTint">@drawable/btn_ubah</item>
     </style>
+
+    <style name="Myratebar" parent="Widget.AppCompat.RatingBar">
+<!--        saat tidak aktif-->
+        <item name="colorControlNormal">@color/dark_30</item>
+
+<!--        saat aktif-->
+        <item name="colorControlActivated">@color/primary_10</item>
+    </style>
 </resources>
