@@ -79,7 +79,7 @@ public class CartProdukAdapter extends RecyclerView.Adapter<CartProdukAdapter.Pr
 
         // Initialize the quantity and subtotal for each item
         holder.qtyProdukTextView.setText(cart.getQty());
-        cartPage.setSubtotal(formatCurrency(parseInt(cartList.get(position).getSubtotal())));
+        cartPage.setSubtotal(cartList.get(position).getSubtotal());
 
         // Set the checkbox state based on the item's selection status
         holder.checkItem.setOnCheckedChangeListener(null);

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,9 +24,10 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/toko"/>
             <TextView
+                android:id="@+id/nama_toko"
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
-                android:text="Culture Tambak "
+                android:text=""
                 android:layout_marginStart="5dp"
                 android:textStyle="bold"
                 android:textColor="#000000"/>
@@ -52,9 +53,10 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <TextView
+                    android:id="@+id/nama_item_checkout"
                     android:layout_width="250dp"
                     android:layout_height="38dp"
-                    android:text="Wagyu Sirloin Meltique Beef Steak 200gr"
+                    android:text=""
                     android:textColor="#000000"/>
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -66,10 +68,11 @@
                         android:textSize="12sp"
                         android:textColor="@color/dark_30"/>
                     <TextView
+                        android:id="@+id/varian_item_checkout"
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:textSize="12sp"
-                        android:text="200gr "
+                        android:text=""
                         android:textColor="@color/dark_30"
                         android:layout_marginEnd="170dp"/>
                 </LinearLayout>
@@ -78,20 +81,21 @@
                     android:layout_height="25dp"
                     android:layout_marginTop="8dp">
                     <TextView
-                        android:id="@+id/harga"
-                        android:layout_width="80dp"
+                        android:id="@+id/harga_item_checkout"
+                        android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:text="Rp34.600"
+                        android:text=""
                         android:textStyle="bold"
                         android:textSize="14sp"
                         android:layout_marginEnd="180dp"
                         android:textColor="#000000"/>
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:id="@+id/qty_item_checkout"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="12sp"
-                        android:text="x1"
+                        android:text=""
                         android:textColor="@color/dark_10"/>
                 </LinearLayout>
 

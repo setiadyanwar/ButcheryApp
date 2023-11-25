@@ -215,7 +215,7 @@ public class CartPage extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 if(response.isEmpty()){
-                    Intent intent = new Intent(CartPage.this, Homepage_MainLogin.class);
+                    Intent intent = new Intent(CartPage.this, ManagePaymentPage.class);
                     startActivity(intent);
                 }else {
                     Intent intent = new Intent(CartPage.this, CartPage.class);
@@ -241,7 +241,7 @@ public class CartPage extends AppCompatActivity {
                     params.put("varian_" + i, selectedCart.getVarian());
                     params.put("harga_" + i, selectedCart.getHarga());
                     params.put("qty_" + i, selectedCart.getQty());
-                    params.put("harga_total_" + i, subtotalTextView.getText().toString());
+                    params.put("harga_total_" + i, selectedCart.getSubtotal());
                     params.put("note_" + i, selectedCart.getNote());
                 }
                 Log.d("params", "getParams: " + params.toString());

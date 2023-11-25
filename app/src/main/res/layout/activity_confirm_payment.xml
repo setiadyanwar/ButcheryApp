@@ -203,7 +203,8 @@
                             android:layout_below="@+id/pricetotal"
                             android:layout_centerInParent="true"
                             android:layout_marginTop="56dp"
-                            android:text="Bayar" />
+                            android:text="Bayar"
+                            android:id="@+id/clickPay"/>
                     </RelativeLayout>
 
 

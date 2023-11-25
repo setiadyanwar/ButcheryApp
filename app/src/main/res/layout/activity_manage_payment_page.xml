@@ -89,7 +89,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Ubah"
-                        android:textColor="@color/primary_50"
+                        android:textColor="@color/grey_font"
                         android:layout_marginStart="12dp"/>
                 </LinearLayout>
                 <LinearLayout
@@ -99,11 +99,12 @@
                     android:paddingStart="18dp">
 
                     <TextView
+                        android:id="@+id/alamat_pembeli"
                         android:layout_width="301dp"
                         android:layout_height="57dp"
                         android:paddingStart="21dp"
                         android:paddingEnd="21dp"
-                        android:text="Perumahan Satoru Residance, Jl Srimahi 39, Blok E4 No. 13, RT 09 RW 02 Jawa Barat, Jawa Barat, Bandung"
+                        android:text=""
                         android:textColor="@color/dark_10"
                         android:layout_marginStart="12dp"/>
 
@@ -115,9 +116,10 @@
                         android:layout_marginBottom="15dp">
 
                         <TextView
+                            android:id="@+id/nama_pembeli"
                             android:layout_width="80dp"
                             android:layout_height="20dp"
-                            android:text="Bambang"
+                            android:text=""
                             android:textColor="@color/dark_70"
                             android:layout_marginStart="12dp"/>
                         <TextView
@@ -126,10 +128,10 @@
                             android:text="|"
                             android:textColor="@color/dark_70"/>
                         <TextView
-                            android:id="@+id/no_telp"
+                            android:id="@+id/no_telp_user"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="(+62)876526765142"
+                            android:text=""
                             android:layout_marginStart="5dp"
                             android:textColor="@color/dark_70"/>
 
@@ -141,24 +143,24 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:src="@drawable/line_colorfull"/>
-
             </LinearLayout>
 
             <!--    Recycle view itemnya-->
 
-            <!--<androidx.recyclerview.widget.RecyclerView-->
-            <!--    android:id="@+id/pesanan"-->
-            <!--    android:layout_width="match_parent"-->
-            <!--    android:layout_height="wrap_content"-->
-            <!--    app:layout_constraintTop_toBottomOf="@id/infoalamat"-->
-            <!--    tools:listitem="@layout/item_pembayaran">-->
-            <!--</androidx.recyclerview.widget.RecyclerView>-->
+            <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/card_checkout"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:layout_constraintTop_toBottomOf="@id/infoalamat"
+               tools:listitem="@layout/item_pembayaran">
+            </androidx.recyclerview.widget.RecyclerView>
 
 
             <!--    Recycle view itemnya-->
 
 
-            <!--    Versi manual item-->
+            <!--    Versi manual item -->
+            <!--
             <LinearLayout
                 android:id="@+id/pesanan"
                 android:layout_width="match_parent"
@@ -255,7 +257,9 @@
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
+            -->
             <!--    Versi manual item-->
+
 
 
             <LinearLayout
@@ -263,7 +267,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_gratisongkir"
-                app:layout_constraintTop_toBottomOf="@id/pesanan"
+                app:layout_constraintTop_toBottomOf="@id/card_checkout"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -295,6 +299,7 @@
                     android:layout_marginEnd="21dp"
                     android:layout_marginTop="10dp">
                     <TextView
+                        android:id="@+id/pengiriman"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/dark_50"
@@ -342,6 +347,7 @@
                         android:text="Pesan: "
                         android:textColor="@color/dark_50"/>
                     <EditText
+                        android:id="@+id/note_checkout"
                         android:layout_width="151dp"
                         android:layout_height="15dp"
                         android:background="@color/white"
@@ -378,17 +384,19 @@
                     android:layout_marginStart="21dp"
                     android:layout_marginEnd="21dp">
                     <TextView
+                        android:id="@+id/total_produk"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Subtotal"
+                        android:text=""
                         android:textSize="12sp"
                         android:layout_marginEnd="230dp"
                         android:textColor="@color/dark_30"/>
                     <TextView
+                        android:id="@+id/subtotal_checkout"
                         android:layout_width="75dp"
                         android:layout_height="wrap_content"
                         android:textAlignment="textEnd"
-                        android:text="Rp34.600"
+                        android:text=""
                         android:textSize="12sp"
                         android:textColor="@color/dark_30"/>
                 </LinearLayout>
@@ -401,14 +409,14 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pengiriman"
+                        android:text="Pengiriman (Promo)"
                         android:textSize="12sp"
                         android:layout_marginEnd="236dp"
                         android:textColor="@color/dark_30"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Rp34.600"
+                        android:text="Rp10.000"
                         android:textSize="12sp"
                         android:textColor="@color/dark_30"/>
                 </LinearLayout>
@@ -429,7 +437,7 @@
                         android:layout_width="75dp"
                         android:layout_height="wrap_content"
                         android:textAlignment="textEnd"
-                        android:text="Rp34.600"
+                        android:text="Rp3.000"
                         android:textSize="12sp"
                         android:textColor="@color/dark_30"/>
                 </LinearLayout>
@@ -447,17 +455,15 @@
                         android:layout_marginEnd="240dp"
                         android:textColor="@color/dark_30"/>
                     <TextView
+                        android:id="@+id/total_harga_ringkasan"
                         android:layout_width="75dp"
                         android:layout_height="wrap_content"
                         android:textAlignment="textEnd"
-                        android:text="Rp34.600"
+                        android:text=""
                         android:textSize="16sp"
                         android:layout_marginBottom="20dp"
                         android:textColor="@color/dark_30"/>
                 </LinearLayout>
-
-
-
 
 
 
@@ -491,9 +497,10 @@
             android:textColor="@color/dark_10"
             android:textSize="16sp"/>
         <TextView
+            android:id="@+id/total_harga_checkout"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:text="Rp100.000"
+            android:text=""
             android:textColor="@color/primary_50"
             android:textStyle="bold"
             android:textSize="16sp"/>
@@ -505,7 +512,7 @@
             android:layout_marginEnd="17dp">
 
             <ImageButton
-                android:id="@+id/buttonbeli"
+                android:id="@+id/buttonbeli_checkout"
                 android:layout_width="203dp"
                 android:layout_height="55dp"
                 android:background="@drawable/btn_checkout"
@@ -514,10 +521,10 @@
                 android:id="@+id/text1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="@+id/buttonbeli"
-                app:layout_constraintStart_toStartOf="@id/buttonbeli"
-                app:layout_constraintEnd_toEndOf="@id/buttonbeli"
-                app:layout_constraintBottom_toBottomOf="@id/buttonbeli"
+                app:layout_constraintTop_toTopOf="@+id/buttonbeli_checkout"
+                app:layout_constraintStart_toStartOf="@id/buttonbeli_checkout"
+                app:layout_constraintEnd_toEndOf="@id/buttonbeli_checkout"
+                app:layout_constraintBottom_toBottomOf="@id/buttonbeli_checkout"
                 android:text="Buat Pesanan"
                 android:textSize="16sp"
                 android:textStyle="bold"

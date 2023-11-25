@@ -3,7 +3,9 @@ plugins {
 }
 
 android {
-    namespace 'com.example.butcheryapp_ui'
+    flavorDimensions "version"
+
+    namespace "com.example.butcheryapp_ui"
     compileSdk 34
 
     defaultConfig {
@@ -15,7 +17,6 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
     buildTypes {
         release {
             minifyEnabled false
@@ -23,23 +24,33 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_9
-        targetCompatibility JavaVersion.VERSION_1_9
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    productFlavors {
+        sandbox {
+            dimension "version"
+            buildConfigField "String", "BASE_URL", "\"http://5ebd-120-188-92-12.ngrok-free.app/api/getSnapToken/charge/\""
+            buildConfigField "String", "CLIENT_KEY", "\"SB-Mid-client-SpSU-pEjrIfuDEE7\""
+        }
+    }
+
 }
 
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'com.google.android.material:material:1.10.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.ar:core:1.40.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     //Image Slider
     implementation 'com.github.denzcoskun:ImageSlideshow:0.1.2'
-    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'com.github.bumptech.glide:glide:4.12.0'
@@ -47,4 +58,6 @@ dependencies {
     implementation 'com.android.volley:volley:1.2.1'
     implementation 'org.mindrot:jbcrypt:0.4'
     implementation 'at.favre.lib:bcrypt:0.9.0'
+
+    implementation 'com.midtrans:uikit:2.0.0-SANDBOX'
 }
