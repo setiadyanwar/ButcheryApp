@@ -2,6 +2,7 @@ package com.example.butcheryapp_ui;
 
 import static com.android.volley.VolleyLog.TAG;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -67,6 +68,15 @@ public class HomePage_NotLogin extends AppCompatActivity {
             Intent intent = new Intent(HomePage_NotLogin.this, Homepage_MainLogin.class);
             startActivity(intent);
         }
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                moveTaskToBack(true);
+                System.exit(1);
+                finish();
+            }
+        });
 
         recyclerView = findViewById(R.id.cardproduk);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));

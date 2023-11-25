@@ -2,6 +2,7 @@ package com.example.butcheryapp_ui;
 
 import static com.android.volley.VolleyLog.TAG;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -13,6 +14,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -67,12 +69,33 @@ public class Homepage_MainLogin extends AppCompatActivity {
         if (!isLoggedIn) {
             Intent intent = new Intent(Homepage_MainLogin.this, LoginPage.class);
             startActivity(intent);
+            finish();
         }
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                moveTaskToBack(true);
+                System.exit(1);
+                finish();
+            }
+         });
+
+
 
         recyclerView = findViewById(R.id.cardproduk);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         produkAdapter = new ProdukAdapter(new ArrayList<>());
         recyclerView.setAdapter(produkAdapter);
+
+        EditText searchklik = findViewById(R.id.search_container);
+
+        searchklik.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Homepage_MainLogin.this,SearchPage.class);
+                startActivity(i);
+            }
+        });
 
 //        SLIDER
         ImageSlider imageSlider = findViewById(R.id.imageSlider);
@@ -100,18 +123,22 @@ public class Homepage_MainLogin extends AppCompatActivity {
             switch (item.getItemId()){
                 case R.id.home:
                     startActivity(new Intent(Homepage_MainLogin.this, Homepage_MainLogin.class));
+                    overridePendingTransition(0, 0);
                     return true;
                 case R.id.wishlist:
                     startActivity(new Intent(getApplicationContext(),WishlistPage.class));
                     finish();
+                    overridePendingTransition(0, 0);
                     return true;
                 case R.id.kategori:
                     startActivity(new Intent(getApplicationContext(),CategoriesPage.class));
                     finish();
+                    overridePendingTransition(0, 0);
                     return true;
                 case R.id.profil:
                     startActivity(new Intent(getApplicationContext(),ProfilePage.class));
                     finish();
+                    overridePendingTransition(0, 0);
                     return true;
             }
             return false;

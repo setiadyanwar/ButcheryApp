@@ -23,15 +23,19 @@ public class WishlistPage extends AppCompatActivity {
                 case R.id.home:
                     startActivity(new Intent(getApplicationContext(),Homepage_MainLogin.class));
                     finish();
+                    overridePendingTransition(0, 0);
                     return true;
                 case R.id.wishlist:
+                    overridePendingTransition(0, 0);
                     return true;
                 case R.id.kategori:
                     startActivity(new Intent(getApplicationContext(),CategoriesPage.class));
+                    overridePendingTransition(0, 0);
                     finish();
                     return true;
                 case R.id.profil:
                     startActivity(new Intent(getApplicationContext(),ProfilePage.class));
+                    overridePendingTransition(0, 0);
                     finish();
                     return true;
             }

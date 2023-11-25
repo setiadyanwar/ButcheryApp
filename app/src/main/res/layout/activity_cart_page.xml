@@ -105,9 +105,10 @@
             android:textSize="16sp"/>
         <TextView
             android:id="@+id/subtotal_cart"
-            android:layout_width="100dp"
+            android:layout_width="116dp"
             android:layout_height="wrap_content"
             android:text=""
+            android:layout_marginEnd="8dp"
             android:textColor="@color/primary_50"
             android:textStyle="bold"
             android:textSize="16sp"/>
@@ -120,7 +121,7 @@
 
             <ImageButton
                 android:id="@+id/buttoncartcheckout"
-                android:layout_width="203dp"
+                android:layout_width="180dp"
                 android:layout_height="55dp"
                 android:background="@drawable/btn_checkout"
                 tools:ignore="MissingConstraints" />
@@ -145,7 +146,7 @@
                 app:layout_constraintStart_toStartOf="@id/text1"
                 app:layout_constraintEnd_toEndOf="@id/buttoncartcheckout"
                 app:layout_constraintBottom_toBottomOf="@id/buttoncartcheckout"
-                app:layout_constraintHorizontal_bias="0.57"
+                app:layout_constraintHorizontal_bias="0.62"
                 android:text="0"
                 android:textSize="16sp"
                 android:textStyle="bold"

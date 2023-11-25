@@ -16,6 +16,15 @@
         android:supportsRtl="true"
         tools:replace="android:allowBackup">
         <activity
+            android:name=".SearchPage"
+            android:exported="false" />
+        <activity
+            android:name=".RateDialog"
+            android:exported="false" />
+        <activity
+            android:name=".PrekdiksiTrend"
+            android:exported="false" />
+        <activity
             android:name=".PesananSayaPage"
             android:exported="false" />
         <activity

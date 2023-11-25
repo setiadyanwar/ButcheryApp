@@ -27,16 +27,20 @@ public class ProfilePage extends AppCompatActivity {
                 case R.id.home:
                     startActivity(new Intent(getApplicationContext(),Homepage_MainLogin.class));
                     finish();
+                    overridePendingTransition(0, 0);
                     return true;
                 case R.id.wishlist:
                     startActivity(new Intent(getApplicationContext(),WishlistPage.class));
                     finish();
+                    overridePendingTransition(0, 0);
                     return true;
                 case R.id.kategori:
                     startActivity(new Intent(getApplicationContext(),CategoriesPage.class));
                     finish();
+                    overridePendingTransition(0, 0);
                     return true;
                 case R.id.profil:
+                    overridePendingTransition(0, 0);
                     return true;
             }
             return false;
@@ -60,6 +64,20 @@ public class ProfilePage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        TextView btn_pesanan = findViewById(R.id.lihat_pesanansaya);
+
+        btn_pesanan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(ProfilePage.this,PesananSayaPage.class);
+                startActivity(i);
+            }
+        });
+
+
+
+
         btn_keluarakun.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

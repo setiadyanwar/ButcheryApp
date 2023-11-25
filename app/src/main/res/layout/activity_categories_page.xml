@@ -49,6 +49,347 @@
 
     </RelativeLayout>
 
+<!--    CONTENT START-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            app:layout_constraintTop_toBottomOf="@id/nav_catiegories"
+            app:layout_constraintBottom_toTopOf="@id/bottomNavigation">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="21dp"
+                android:layout_marginTop="25dp"
+                android:paddingTop="25dp">
+                <TextView
+                    android:id="@+id/judul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Semua Kategori"
+                    android:textSize="24dp"
+                    android:textColor="@color/dark_30"
+                    android:textStyle="bold"/>
+
+                <RelativeLayout
+                    android:id="@+id/ikan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/judul">
+
+                    <ImageView
+                        android:id="@+id/kategori_ikan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/kategori_ikan" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/kategori_ikan"
+                        android:layout_alignBottom="@+id/kategori_ikan"
+                        android:layout_marginVertical="16dp"
+                        android:layout_marginStart="36dp"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:text="Daging Ikan"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ayam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ikan">
+
+                    <ImageView
+                        android:id="@+id/kategori_ayam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/kategori_ayam" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/kategori_ayam"
+                        android:layout_alignBottom="@+id/kategori_ayam"
+                        android:layout_marginVertical="16dp"
+                        android:layout_marginStart="36dp"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:text="Daging Ayam"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/bebek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ayam">
+
+                    <ImageView
+                        android:id="@+id/kategori_bebek"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/kategori_bebek" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/kategori_bebek"
+                        android:layout_alignBottom="@+id/kategori_bebek"
+                        android:layout_marginVertical="16dp"
+                        android:layout_marginStart="36dp"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:text="Daging Bebek"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/kambing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/bebek">
+
+                    <ImageView
+                        android:id="@+id/kategori_kambing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/kategori_kambing" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/kategori_kambing"
+                        android:layout_alignBottom="@+id/kategori_kambing"
+                        android:layout_marginVertical="16dp"
+                        android:layout_marginStart="36dp"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:text="Daging Kambing"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/sapi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/kambing">
+
+                    <ImageView
+                        android:id="@+id/kategori_sapi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/kategori_sapi" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/kategori_sapi"
+                        android:layout_alignBottom="@+id/kategori_sapi"
+                        android:layout_marginVertical="16dp"
+                        android:layout_marginStart="36dp"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:text="Daging Sapi"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/kelinci"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sapi">
+
+                    <ImageView
+                        android:id="@+id/kategori_kelinci"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/kategori_kelinci" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/kategori_kelinci"
+                        android:layout_alignBottom="@+id/kategori_kelinci"
+                        android:layout_marginVertical="16dp"
+                        android:layout_marginStart="36dp"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:text="Daging Kelinci"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/domba"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/kelinci">
+
+                    <ImageView
+                        android:id="@+id/kategori_domba"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/kategori_domba" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/kategori_domba"
+                        android:layout_alignBottom="@+id/kategori_domba"
+                        android:layout_marginVertical="16dp"
+                        android:layout_marginStart="36dp"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:text="Daging Domba"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/puyuh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/domba">
+
+                    <ImageView
+                        android:id="@+id/kategori_puyuh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/kategori_puyuh" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/kategori_puyuh"
+                        android:layout_alignBottom="@+id/kategori_puyuh"
+                        android:layout_marginVertical="16dp"
+                        android:layout_marginStart="36dp"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:text="Daging Puyuh"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/udang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/puyuh">
+
+                    <ImageView
+                        android:id="@+id/kategori_udang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/kategori_udang" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/kategori_udang"
+                        android:layout_alignBottom="@+id/kategori_udang"
+                        android:layout_marginVertical="16dp"
+                        android:layout_marginStart="36dp"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:text="Daging Udang"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/kerang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/udang">
+
+                    <ImageView
+                        android:id="@+id/kategori_kerang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/kategori_kerang" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/kategori_kerang"
+                        android:layout_alignBottom="@+id/kategori_kerang"
+                        android:layout_marginVertical="16dp"
+                        android:layout_marginStart="36dp"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:text="Kerang dan Tiram"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/cumi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/kerang">
+
+                    <ImageView
+                        android:id="@+id/kategori_cumi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="160dp"
+                        android:src="@drawable/kategori_cumi" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/kategori_cumi"
+                        android:layout_alignBottom="@+id/kategori_cumi"
+                        android:layout_marginVertical="16dp"
+                        android:layout_marginStart="36dp"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:text="Cumi cumi"/>
+
+                </RelativeLayout>
+
+
+
+
+            </RelativeLayout>
+
+
+        </ScrollView>
+<!--    CONTENT FINISH-->
+
     <!--NAVIGASI START-->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
