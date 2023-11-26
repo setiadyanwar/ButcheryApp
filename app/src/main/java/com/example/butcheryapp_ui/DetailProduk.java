@@ -6,12 +6,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -43,6 +45,28 @@ public class DetailProduk extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_produk);
+
+//        BACK
+        ImageButton btnback = findViewById(R.id.arrow);
+        btnback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(DetailProduk.this, Homepage_MainLogin.class);
+                startActivity(i);
+            }
+        });
+
+//        CART
+        ImageButton btncart = findViewById(R.id.cart);
+        btncart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DetailProduk.this, CartPage.class);
+                startActivity(intent);
+            }
+        });
+
+
 
         SharedPreferences sharedPref = getSharedPreferences("myPrefs", Context.MODE_PRIVATE);
         boolean isLoggedIn = sharedPref.getBoolean("login", false);
@@ -153,7 +177,7 @@ public class DetailProduk extends AppCompatActivity {
                         getSubtotalProduk = beforeFormattedHarga1;
 
 
-                        nama_toko.setText(truncateText(jsonObject.getString("nama_toko"),5));
+                        nama_toko.setText(truncateText(jsonObject.getString("nama_toko"),24));
                         alamat_toko.setText(getAlamatToko.getString("alamat"));
 
                         varian1.setOnClickListener(new View.OnClickListener() {
@@ -302,7 +326,7 @@ public class DetailProduk extends AppCompatActivity {
         if (text.length() <= maxLength) {
             return text;
         } else {
-            return text.substring(0, maxLength) + " ..."; // Tambahkan elipsis (...) jika diperlukan.
+            return text.substring(0, maxLength) + " ...";
         }
     }
 }

@@ -404,7 +404,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:text="Ulasan"
+                android:text="Komentar"
                 android:textColor="@color/dark_50" />
 
             <ImageButton
@@ -412,7 +412,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                android:paddingStart="285dp"
+                android:paddingStart="268dp"
                 android:src="@drawable/caretdark" />
         </LinearLayout>
     </LinearLayout>
@@ -446,7 +446,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingEnd="10dp"
-                android:src="@drawable/ulasan" />
+                android:src="@drawable/icon_pusatbantuan" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -474,7 +474,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingEnd="10dp"
-                android:src="@drawable/ulasan" />
+                android:src="@drawable/icon_chatbutchery" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -502,7 +502,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingEnd="10dp"
-                android:src="@drawable/ulasan" />
+                android:src="@drawable/icon_pengaturan" />
 
             <TextView
                 android:layout_width="wrap_content"

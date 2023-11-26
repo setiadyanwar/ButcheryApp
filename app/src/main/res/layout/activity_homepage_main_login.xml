@@ -214,33 +214,273 @@
                         android:gravity="center_vertical"
                         android:orientation="horizontal">
 
-                        <ImageView
+                        <androidx.cardview.widget.CardView
                             android:layout_width="130dp"
                             android:layout_height="160dp"
                             android:layout_marginEnd="10dp"
-                            android:background="@drawable/bg_produk"
-                            android:elevation="10dp"/>
+                            app:cardCornerRadius="8dp"
+                            android:backgroundTint="@color/white"
+                            android:elevation="10dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
 
-                        <ImageView
+                                <ImageView
+                                    android:layout_width="130dp"
+                                    android:layout_height="71dp"
+                                    android:src="@drawable/fs1"/>
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="35dp"
+                                    android:textColor="@color/dark_70"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginTop="2dp"
+                                    android:textSize="10sp"
+                                    android:text="US Sliced Beef Slice Yakiniku Gyudon 500gr"/>
+                                <TextView
+                                    android:layout_width="65dp"
+                                    android:layout_height="16dp"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_marginStart="5dp"
+                                    android:textColor="@color/black"
+                                    android:text="Rp45.000"
+                                    android:textSize="14sp"/>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="55dp"
+                                        android:layout_height="16dp"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_marginStart="5dp"
+                                        android:textColor="@color/dark_10"
+                                        android:text="Rp59.000"
+                                        android:textSize="10sp"/>
+                                    <TextView
+                                        android:id="@+id/diskoncard1"
+                                        android:layout_width="22dp"
+                                        android:layout_height="14dp"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_marginStart="6dp"
+                                        android:background="@drawable/bg_diskonproduk"
+                                        android:text="24%"
+                                        android:textAlignment="center"
+                                        android:textColor="#F1C40F"
+                                        android:textSize="8sp" />
+
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
                             android:layout_width="130dp"
                             android:layout_height="160dp"
                             android:layout_marginEnd="10dp"
-                            android:background="@drawable/bg_produk"
-                            android:elevation="10dp"/>
+                            app:cardCornerRadius="8dp"
+                            android:backgroundTint="@color/white"
+                            android:elevation="10dp">
 
-                        <ImageView
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="130dp"
+                                    android:layout_height="71dp"
+                                    android:src="@drawable/fs2"/>
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="35dp"
+                                    android:textColor="@color/dark_70"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginTop="2dp"
+                                    android:textSize="10sp"
+                                    android:text="Saikoro Beef Wagyu Meltique Cube 500gr"/>
+                                <TextView
+                                    android:layout_width="65dp"
+                                    android:layout_height="16dp"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_marginStart="5dp"
+                                    android:textColor="@color/black"
+                                    android:text="Rp77.000"
+                                    android:textSize="14sp"/>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="55dp"
+                                        android:layout_height="16dp"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_marginStart="5dp"
+                                        android:textColor="@color/dark_10"
+                                        android:text="Rp89.000"
+                                        android:textSize="10sp"/>
+                                    <TextView
+                                        android:id="@+id/diskoncard2"
+                                        android:layout_width="22dp"
+                                        android:layout_height="14dp"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_marginStart="6dp"
+                                        android:background="@drawable/bg_diskonproduk"
+                                        android:text="24%"
+                                        android:textAlignment="center"
+                                        android:textColor="#F1C40F"
+                                        android:textSize="8sp" />
+
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
                             android:layout_width="130dp"
                             android:layout_height="160dp"
                             android:layout_marginEnd="10dp"
-                            android:background="@drawable/bg_produk"
-                            android:elevation="10dp"/>
+                            app:cardCornerRadius="8dp"
+                            android:backgroundTint="@color/white"
+                            android:elevation="10dp">
 
-                        <ImageView
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="130dp"
+                                    android:layout_height="71dp"
+                                    android:src="@drawable/fs3"/>
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="35dp"
+                                    android:textColor="@color/dark_70"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginTop="2dp"
+                                    android:textSize="10sp"
+                                    android:text="Daging Sapi AUS Striploin Beef Steak Cut 200gr"/>
+                                <TextView
+                                    android:layout_width="65dp"
+                                    android:layout_height="16dp"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_marginStart="5dp"
+                                    android:textColor="@color/black"
+                                    android:text="Rp37.900"
+                                    android:textSize="14sp"/>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="55dp"
+                                        android:layout_height="16dp"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_marginStart="5dp"
+                                        android:textColor="@color/dark_10"
+                                        android:text="Rp59.000"
+                                        android:textSize="10sp"/>
+                                    <TextView
+                                        android:id="@+id/diskoncard3"
+                                        android:layout_width="22dp"
+                                        android:layout_height="14dp"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_marginStart="6dp"
+                                        android:background="@drawable/bg_diskonproduk"
+                                        android:text="24%"
+                                        android:textAlignment="center"
+                                        android:textColor="#F1C40F"
+                                        android:textSize="8sp" />
+
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
                             android:layout_width="130dp"
                             android:layout_height="160dp"
                             android:layout_marginEnd="120dp"
-                            android:background="@drawable/bg_produk"
-                            android:elevation="10dp"/>
+                            app:cardCornerRadius="8dp"
+                            android:backgroundTint="@color/white"
+                            android:elevation="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="130dp"
+                                    android:layout_height="71dp"
+                                    android:src="@drawable/fs4"/>
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="35dp"
+                                    android:textColor="@color/dark_70"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginTop="2dp"
+                                    android:textSize="10sp"
+                                    android:text="Udang Vaname segar size 85-95 250gr/500gr/1kg"/>
+                                <TextView
+                                    android:layout_width="65dp"
+                                    android:layout_height="16dp"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_marginStart="5dp"
+                                    android:textColor="@color/black"
+                                    android:text="Rp99.000"
+                                    android:textSize="14sp"/>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="55dp"
+                                        android:layout_height="16dp"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_marginStart="5dp"
+                                        android:textColor="@color/dark_10"
+                                        android:text="Rp120.000"
+                                        android:textSize="10sp"/>
+                                    <TextView
+                                        android:id="@+id/diskoncard4"
+                                        android:layout_width="22dp"
+                                        android:layout_height="14dp"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_marginStart="6dp"
+                                        android:background="@drawable/bg_diskonproduk"
+                                        android:text="30%"
+                                        android:textAlignment="center"
+                                        android:textColor="#F1C40F"
+                                        android:textSize="8sp" />
+
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+
+                        </androidx.cardview.widget.CardView>
 
 
                     </LinearLayout>
@@ -295,7 +535,7 @@
             <HorizontalScrollView
                 android:id="@+id/sc_2"
                 android:layout_width="match_parent"
-                android:layout_height="210dp"
+                android:layout_height="240dp"
                 android:overScrollMode="never"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
@@ -306,37 +546,424 @@
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="210dp"
+                    android:layout_height="240dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
-                    <ImageView
+                    <androidx.cardview.widget.CardView
                         android:layout_width="150dp"
-                        android:layout_height="200dp"
+                        android:layout_height="230dp"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
-                        android:background="@drawable/bg_produk"
-                        android:elevation="10dp"/>
+                        android:backgroundTint="@color/white"
+                        android:elevation="10dp">
 
-                    <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="200dp"
-                        android:layout_marginEnd="10dp"
-                        android:background="@drawable/bg_produk"
-                        android:elevation="10dp" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="200dp"
-                        android:layout_marginEnd="10dp"
-                        android:background="@drawable/bg_produk"
-                        android:elevation="10dp"/>
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:src="@drawable/laris1"/>
+                            <TextView
+                                android:layout_width="130dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/dark_70"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="2dp"
+                                android:textSize="14sp"
+                                android:text="Wagyu Sirloin Meltique Beef Steak\n200gr"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:layout_marginStart="8dp"
+                                android:textColor="@color/black"
+                                android:text="Rp39.900"
+                                android:textSize="16sp"/>
 
-                    <ImageView
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_gravity="center_vertical">
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:src="@drawable/icon_toko"
+                                    android:layout_marginEnd="5dp"/>
+                                <TextView
+                                    android:id="@+id/nama_toko1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Morning Raise Farm"
+                                    android:textSize="10sp"
+                                    android:textColor="#999999"/>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_gravity="center_vertical">
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:src="@drawable/icon_lokasi"
+                                    android:layout_marginEnd="5dp"/>
+                                <TextView
+                                    android:id="@+id/alamat_toko1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Jakarta Selatan"
+                                    android:textSize="10sp"
+                                    android:textColor="@color/primary_50"/>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_gravity="center_vertical"
+                                tools:ignore="MissingConstraints">
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:src="@drawable/icon_bintang"
+                                    android:layout_marginEnd="5dp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="4.7 | 35 terjual"
+                                    android:textSize="10sp"
+                                    android:textColor="#999999"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
                         android:layout_width="150dp"
-                        android:layout_height="200dp"
+                        android:layout_height="230dp"
+                        android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
-                        android:background="@drawable/bg_produk"
-                        android:elevation="10dp"/>
+                        android:backgroundTint="@color/white"
+                        android:elevation="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:src="@drawable/laris2"/>
+                            <TextView
+                                android:layout_width="130dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/dark_70"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="2dp"
+                                android:textSize="14sp"
+                                android:text="Wagyu Sirloin Meltique Beef Steak\n200gr"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:layout_marginStart="8dp"
+                                android:textColor="@color/black"
+                                android:text="Rp34.900"
+                                android:textSize="16sp"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_gravity="center_vertical">
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:src="@drawable/icon_toko"
+                                    android:layout_marginEnd="5dp"/>
+                                <TextView
+                                    android:id="@+id/nama_toko2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Morning Raise Farm"
+                                    android:textSize="10sp"
+                                    android:textColor="#999999"/>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_gravity="center_vertical">
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:src="@drawable/icon_lokasi"
+                                    android:layout_marginEnd="5dp"/>
+                                <TextView
+                                    android:id="@+id/alamat_toko2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Jakarta Selatan"
+                                    android:textSize="10sp"
+                                    android:textColor="@color/primary_50"/>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_gravity="center_vertical"
+                                tools:ignore="MissingConstraints">
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:src="@drawable/icon_bintang"
+                                    android:layout_marginEnd="5dp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="4.7 | 35 terjual"
+                                    android:textSize="10sp"
+                                    android:textColor="#999999"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="150dp"
+                        android:layout_height="230dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:backgroundTint="@color/white"
+                        android:elevation="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:src="@drawable/laris3"/>
+                            <TextView
+                                android:layout_width="130dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/dark_70"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="2dp"
+                                android:textSize="14sp"
+                                android:text="Daging Ayam Slice Kualitas Restoran Premium"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:layout_marginStart="8dp"
+                                android:textColor="@color/black"
+                                android:text="Rp34.900"
+                                android:textSize="16sp"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_gravity="center_vertical">
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:src="@drawable/icon_toko"
+                                    android:layout_marginEnd="5dp"/>
+                                <TextView
+                                    android:id="@+id/nama_toko3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Morning Raise Farm"
+                                    android:textSize="10sp"
+                                    android:textColor="#999999"/>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_gravity="center_vertical">
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:src="@drawable/icon_lokasi"
+                                    android:layout_marginEnd="5dp"/>
+                                <TextView
+                                    android:id="@+id/alamat_toko3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Jakarta Selatan"
+                                    android:textSize="10sp"
+                                    android:textColor="@color/primary_50"/>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_gravity="center_vertical"
+                                tools:ignore="MissingConstraints">
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:src="@drawable/icon_bintang"
+                                    android:layout_marginEnd="5dp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="4.7 | 35 terjual"
+                                    android:textSize="10sp"
+                                    android:textColor="#999999"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="150dp"
+                        android:layout_height="230dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:backgroundTint="@color/white"
+                        android:elevation="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:src="@drawable/laris4"/>
+                            <TextView
+                                android:layout_width="130dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/dark_70"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="2dp"
+                                android:textSize="14sp"
+                                android:text="Ayam Karkas Broiler / Ayam Potong Utuh 900gr"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:layout_marginStart="8dp"
+                                android:textColor="@color/black"
+                                android:text="Rp34.500"
+                                android:textSize="16sp"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_gravity="center_vertical">
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:src="@drawable/icon_toko"
+                                    android:layout_marginEnd="5dp"/>
+                                <TextView
+                                    android:id="@+id/nama_toko4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Morning Raise Farm"
+                                    android:textSize="10sp"
+                                    android:textColor="#999999"/>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_gravity="center_vertical">
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:src="@drawable/icon_lokasi"
+                                    android:layout_marginEnd="5dp"/>
+                                <TextView
+                                    android:id="@+id/alamat_toko4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Jakarta Selatan"
+                                    android:textSize="10sp"
+                                    android:textColor="@color/primary_50"/>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_gravity="center_vertical"
+                                tools:ignore="MissingConstraints">
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:src="@drawable/icon_bintang"
+                                    android:layout_marginEnd="5dp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="4.7 | 35 terjual"
+                                    android:textSize="10sp"
+                                    android:textColor="#999999"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
 
 
                 </LinearLayout>

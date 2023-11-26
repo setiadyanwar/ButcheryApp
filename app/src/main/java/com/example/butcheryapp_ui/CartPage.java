@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -48,6 +49,16 @@ public class CartPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart_page);
+
+        //BACK
+        ImageView btnback = findViewById(R.id.arrow);
+        btnback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(CartPage.this, Homepage_MainLogin.class);
+                startActivity(i);
+            }
+        });
 
         SharedPreferences sharedPref = getSharedPreferences("myPrefs", Context.MODE_PRIVATE);
         boolean isLoggedIn = sharedPref.getBoolean("login", false);

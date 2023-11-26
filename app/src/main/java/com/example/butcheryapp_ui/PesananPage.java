@@ -40,6 +40,16 @@ public class PesananPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pesanan_page);
 
+        ImageView btnback = findViewById(R.id.arrow);
+
+        btnback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(PesananPage.this, HomeTokoPage.class);
+                startActivity(i);
+            }
+        });
+
         SharedPreferences sharedPref = getSharedPreferences("myPrefs", Context.MODE_PRIVATE);
         boolean isLoggedIn = sharedPref.getBoolean("login", false);
         String id_user = sharedPref.getString("id_user","");

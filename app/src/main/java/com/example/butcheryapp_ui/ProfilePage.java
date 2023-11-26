@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -17,6 +18,16 @@ public class ProfilePage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_page);
+        //CART
+        ImageButton navcart = findViewById(R.id.nav_cart);
+
+        navcart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(ProfilePage.this,CartPage.class);
+                startActivity(i);
+            }
+        });
 
 //        BOTTOM NAVIGASI
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigation);

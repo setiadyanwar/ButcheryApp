@@ -237,7 +237,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:paddingEnd="10dp"
-                    android:src="@drawable/ulasan" />
+                    android:src="@drawable/icon_followtoko" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -286,7 +286,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:paddingEnd="10dp"
-                    android:src="@drawable/ulasan" />
+                    android:src="@drawable/icon_tokomitra"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -336,7 +336,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:paddingEnd="10dp"
-                    android:src="@drawable/ulasan" />
+                    android:src="@drawable/icon_pusatbantuan" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -368,7 +368,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:paddingEnd="10dp"
-                    android:src="@drawable/ulasan" />
+                    android:src="@drawable/icon_chatbutchery" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -400,7 +400,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:paddingEnd="10dp"
-                    android:src="@drawable/ulasan" />
+                    android:src="@drawable/icon_pengaturan" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -424,14 +424,14 @@
                 android:layout_marginStart="21dp"
                 android:layout_marginEnd="21dp"
                 android:orientation="horizontal"
-                android:paddingBottom="10dp">
+                android:paddingBottom="15dp">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:paddingEnd="10dp"
-                    android:src="@drawable/ulasan" />
+                    android:src="@drawable/icon_logout" />
 
                 <TextView
                     android:id="@+id/keluarakun"
@@ -450,6 +450,13 @@
                     android:paddingStart="252dp"
                     android:src="@drawable/caretdark" />
             </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/dark_30"
+                android:text="Butchery Beta Version 1.0"/>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

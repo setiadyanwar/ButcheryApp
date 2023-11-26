@@ -37,12 +37,14 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
+            android:id="@+id/arrow"
             android:layout_width="34dp"
             android:layout_height="34dp"
             android:src="@drawable/arrow_white"
             android:layout_marginEnd="235dp"
             android:background="@drawable/logoback_black"/>
         <ImageButton
+            android:id="@+id/cart"
             android:layout_width="34dp"
             android:layout_height="34dp"
             android:src="@drawable/cart_troli"
@@ -174,10 +176,13 @@
                     android:layout_marginEnd="15dp"
                     android:src="@drawable/wishlish"/>
                 <ImageView
+                    android:id="@+id/whatsappIcon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:src="@drawable/whatsapp"/>
+                    android:src="@drawable/whatsapp"
+                    android:clickable="true"
+                    android:onClick="openWhatsAppChat" />
             </LinearLayout>
             <ImageView
                 android:layout_width="match_parent"
@@ -249,7 +254,7 @@
                     <TextView
                         android:id="@+id/detail_nama_toko"
                         android:layout_width="130dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="40dp"
                         android:layout_marginStart="5dp"
                         android:text=""
                         android:textColor="#2B2B2B"
@@ -306,10 +311,10 @@
                             android:src="@drawable/bg_gambarproduk"/>
                         <TextView
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="50dp"
                             android:paddingHorizontal="5dp"
                             android:paddingTop="5dp"
-                            android:text="US Sliced Beef Slice\nYakiniku Gyudon 500gr"
+                            android:text="Daging Sapi Wagyu Premium Grade A5"
                             android:textColor="@color/black"
                             android:textSize="12sp"/>
                         <TextView
@@ -317,32 +322,101 @@
                             android:layout_height="wrap_content"
                             android:paddingHorizontal="5dp"
                             android:paddingTop="8dp"
-                            android:text="Rp.14.000"
+                            android:text="Rp1.200.000"
                             android:textStyle="bold"
                             android:textColor="@color/black"
                             android:textSize="12sp"/>
                     </LinearLayout>
 
-                    <ImageView
+                    <LinearLayout
                         android:layout_width="130dp"
                         android:layout_height="160dp"
                         android:layout_marginEnd="10dp"
                         android:background="@drawable/bg_produk"
-                        android:elevation="10dp"/>
+                        android:elevation="4dp"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="71dp"
+                            android:src="@drawable/bg_gambarproduk"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:paddingHorizontal="5dp"
+                            android:paddingTop="5dp"
+                            android:text="Daging Ayam Organik Tanpa Hormon"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="5dp"
+                            android:paddingTop="8dp"
+                            android:text="Rp150.000"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"/>
+                    </LinearLayout>
 
-                    <ImageView
+                    <LinearLayout
                         android:layout_width="130dp"
                         android:layout_height="160dp"
                         android:layout_marginEnd="10dp"
                         android:background="@drawable/bg_produk"
-                        android:elevation="10dp"/>
+                        android:elevation="4dp"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="71dp"
+                            android:src="@drawable/bg_gambarproduk"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="5dp"
+                            android:paddingTop="5dp"
+                            android:text="Daging Kambing Muda Pilihan Lokal 1kg"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="5dp"
+                            android:paddingTop="8dp"
+                            android:text="Rp180.000"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"/>
+                    </LinearLayout>
 
-                    <ImageView
+                    <LinearLayout
                         android:layout_width="130dp"
                         android:layout_height="160dp"
-                        android:layout_marginEnd="120dp"
+                        android:layout_marginEnd="10dp"
                         android:background="@drawable/bg_produk"
-                        android:elevation="10dp"/>
+                        android:elevation="4dp"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="71dp"
+                            android:src="@drawable/bg_gambarproduk"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="5dp"
+                            android:paddingTop="5dp"
+                            android:text="Daging Sapi Wagyu Grade A5 Premium Selection"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="5dp"
+                            android:paddingTop="8dp"
+                            android:text="Rp1.500.000"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"/>
+                    </LinearLayout>
 
 
                 </LinearLayout>

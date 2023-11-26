@@ -10,6 +10,7 @@ import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -42,6 +43,16 @@ public class PesananSayaPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pesanan_saya_page);
 
+        ImageView btnback = findViewById(R.id.arrow);
+
+        btnback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(PesananSayaPage.this, ProfilePage.class);
+                startActivity(i);
+            }
+        });
+
         SharedPreferences sharedPref = getSharedPreferences("myPrefs", Context.MODE_PRIVATE);
         boolean isLoggedIn = sharedPref.getBoolean("login", false);
 
@@ -50,8 +61,8 @@ public class PesananSayaPage extends AppCompatActivity {
             startActivity(intent);
         }
 
-        //progressBar = findViewById(R.id.progressBar);
-        //progressBar.getIndeterminateDrawable().setColorFilter(0xFFFF0000, android.graphics.PorterDuff.Mode.MULTIPLY);
+        progressBar = findViewById(R.id.progressBar);
+        progressBar.getIndeterminateDrawable().setColorFilter(0xFFFF0000, android.graphics.PorterDuff.Mode.MULTIPLY);
 
         recyclerView = findViewById(R.id.listproduk);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -61,7 +72,7 @@ public class PesananSayaPage extends AppCompatActivity {
         getItemsPesanan();
     }
     private void getItemsPesanan() {
-        //progressBar.setVisibility(View.VISIBLE);
+        progressBar.setVisibility(View.VISIBLE);
 
         String url = "https://us-east-1.aws.data.mongodb-api.com/app/application-0-fophn/endpoint/getItemsPesanan";
 
@@ -126,7 +137,7 @@ public class PesananSayaPage extends AppCompatActivity {
 
                     PesananKonsumenAdapter.setPesananList(pesananList);
                     PesananKonsumenAdapter.notifyDataSetChanged();
-                    //progressBar.setVisibility(View.INVISIBLE);
+                    progressBar.setVisibility(View.INVISIBLE);
 
                 } catch (JSONException e) {
                     e.printStackTrace();

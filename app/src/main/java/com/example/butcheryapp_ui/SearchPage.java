@@ -5,7 +5,11 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -14,10 +18,20 @@ public class SearchPage extends AppCompatActivity {
     RadioButton Viewsemua, Viewterakhir, Viewpopuler, Viewbersertifikat, Viewtermurah;
     RadioGroup sectionsNav;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_page);
+
+        ImageView btnback = findViewById(R.id.arrow);
+        btnback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SearchPage.this, Homepage_MainLogin.class);
+                startActivity(i);
+            }
+        });
 
         Viewsemua = findViewById(R.id.semua);
         Viewterakhir = findViewById(R.id.terakhir);
