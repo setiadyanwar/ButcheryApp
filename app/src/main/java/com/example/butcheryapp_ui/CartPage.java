@@ -4,7 +4,6 @@ import static java.lang.Integer.getInteger;
 import static java.lang.Integer.parseInt;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -12,13 +11,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
-import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,11 +29,8 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
-import java.text.NumberFormat;
 import java.util.ArrayList;
-import java.util.Currency;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -215,7 +209,7 @@ public class CartPage extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 if(response.isEmpty()){
-                    Intent intent = new Intent(CartPage.this, ManagePaymentPage.class);
+                    Intent intent = new Intent(CartPage.this, CheckoutPage.class);
                     startActivity(intent);
                 }else {
                     Intent intent = new Intent(CartPage.this, CartPage.class);

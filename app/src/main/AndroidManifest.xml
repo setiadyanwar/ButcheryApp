@@ -34,7 +34,7 @@
             android:name=".ConfirmPayment"
             android:exported="false" />
         <activity
-            android:name=".ManagePaymentPage"
+            android:name=".CheckoutPage"
             android:exported="false"
             android:windowSoftInputMode="adjustPan" />
         <activity

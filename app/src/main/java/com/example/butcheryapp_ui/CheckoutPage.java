@@ -12,7 +12,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -23,10 +22,11 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+
+/*
 import com.midtrans.sdk.corekit.core.MidtransSDK;
 import com.midtrans.sdk.corekit.core.TransactionRequest;
 import com.midtrans.sdk.corekit.core.themes.CustomColorTheme;
@@ -36,7 +36,7 @@ import com.midtrans.sdk.corekit.models.snap.CreditCard;
 import com.midtrans.sdk.corekit.models.snap.TransactionResult;
 import com.midtrans.sdk.uikit.SdkUIFlowBuilder;
 import com.midtrans.sdk.corekit.core.MidtransSDK;
-
+*/
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -48,7 +48,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ManagePaymentPage extends AppCompatActivity {
+public class CheckoutPage extends AppCompatActivity {
 
     TextView namaPembeliTextview, alamatPembeliTextview, noHPPembeliTextView, subtotalCheckoutTextView ,subtotalTextView, opsiPengirimanTextView, totalHargaTextView, TotalProdukTextView, totalHargaRingkasanTextView;
     EditText getNoteEditText;
@@ -70,7 +70,7 @@ public class ManagePaymentPage extends AppCompatActivity {
         String id_user = sharedPref.getString("id_user","");
 
         if (!isLoggedIn) {
-            Intent intent = new Intent(ManagePaymentPage.this, LoginPage.class);
+            Intent intent = new Intent(CheckoutPage.this, LoginPage.class);
             startActivity(intent);
         }
 
@@ -84,6 +84,7 @@ public class ManagePaymentPage extends AppCompatActivity {
         linkbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /*
                 getSnapTokenFromServer(new ConfirmPayment.SnapTokenCallback() {
                     @Override
                     public void onSnapTokenReceived(String snapToken, String redirectUrl) {
@@ -98,7 +99,7 @@ public class ManagePaymentPage extends AppCompatActivity {
                         //Toast.makeText(ManagePaymentPage.this, "Error getting SnapToken", Toast.LENGTH_LONG).show();
                     }
                 });
-
+                */
                 List<CheckoutItemModel> checkoutList = new ArrayList<>();
                 opsiPengirimanTextView = findViewById(R.id.pengiriman);
                 getNoteEditText = findViewById(R.id.note_checkout);
@@ -259,14 +260,14 @@ public class ManagePaymentPage extends AppCompatActivity {
 
                 } catch (JSONException e) {
                     e.printStackTrace();
-                    Toast.makeText(ManagePaymentPage.this, "tidak ada data", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CheckoutPage.this, "tidak ada data", Toast.LENGTH_SHORT).show();
                 }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 error.printStackTrace();
-                Toast.makeText(ManagePaymentPage.this, "Error: Gagal mengambil data konsumen", Toast.LENGTH_LONG).show();
+                Toast.makeText(CheckoutPage.this, "Error: Gagal mengambil data konsumen", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -303,14 +304,14 @@ public class ManagePaymentPage extends AppCompatActivity {
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
-                    Toast.makeText(ManagePaymentPage.this, "tidak ada data", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CheckoutPage.this, "tidak ada data", Toast.LENGTH_SHORT).show();
                 }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 error.printStackTrace();
-                Toast.makeText(ManagePaymentPage.this, "Error: Gagal mengambil data konsumen", Toast.LENGTH_LONG).show();
+                Toast.makeText(CheckoutPage.this, "Error: Gagal mengambil data konsumen", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -332,14 +333,14 @@ public class ManagePaymentPage extends AppCompatActivity {
                         startActivity(browserIntent);
                     }
                 }else {
-                    Intent intent = new Intent(ManagePaymentPage.this, ManagePaymentPage.class);
+                    Intent intent = new Intent(CheckoutPage.this, CheckoutPage.class);
                     startActivity(intent);
                 }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(ManagePaymentPage.this, "Error: " + error.toString(), Toast.LENGTH_LONG).show();
+                Toast.makeText(CheckoutPage.this, "Error: " + error.toString(), Toast.LENGTH_LONG).show();
             }
         }) {
 
@@ -373,101 +374,5 @@ public class ManagePaymentPage extends AppCompatActivity {
 
         // Add the request to the request queue
         mRequestQueue.add(stringRequest);
-    }
-
-    private void clickPay(String snapToken) {
-        // Check if snapToken is not null before proceeding
-        if (snapToken != null) {
-            // Set the snapToken in the TransactionRequest
-            MidtransSDK.getInstance().setTransactionRequest(transactionRequest("101", 2000, 1, "John", snapToken));
-        } else {
-            // Handle the case where snapToken is null
-            Toast.makeText(this, "Error: SNAP token ID is null", Toast.LENGTH_LONG).show();
-        }
-    }
-
-    // Example method to get snapToken from your server
-    public interface SnapTokenCallback {
-        void onSnapTokenReceived(String snapToken, String redirectUrl);
-        void onError(VolleyError error);
-
-    }
-    private void getSnapTokenFromServer(final ConfirmPayment.SnapTokenCallback callback) {
-        // Make a network request to get the SnapToken JSON response
-        // Use Volley, Retrofit, or any other networking library
-
-        // Example using Volley
-        String url = "https://a004-120-188-92-237.ngrok-free.app/api/getSnapToken/charge/";
-
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, null, new Response.Listener<JSONObject>() {
-            @Override
-            public void onResponse(JSONObject response) {
-                // Handle the JSON response
-                try {
-                    String snapToken = response.getString("token");
-                    String redirectUrl = response.getString("redirect_url");
-
-                    // Invoke the callback with the obtained SnapToken and Redirect URL
-                    callback.onSnapTokenReceived(snapToken, redirectUrl);
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                    // Handle JSON parsing error
-                    callback.onError(new VolleyError("JSON parsing error"));
-                }
-            }
-        },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        // Invoke the callback with the error
-                        callback.onError(error);
-                    }
-                });
-
-        // Add the request to the RequestQueue to execute the network request
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(jsonObjectRequest);
-    }
-
-
-    private void makePayment(String linkSnap){
-        SdkUIFlowBuilder.init()
-                .setContext(this)
-                .setMerchantBaseUrl(BuildConfig.BASE_URL)
-                .setClientKey(BuildConfig.CLIENT_KEY)
-                .enableLog(true)
-                .setColorTheme(new CustomColorTheme("#777777","#f77474" , "#3f0d0d"))
-                .buildSDK();
-    }
-
-    public static CustomerDetails customerDetails(){
-        CustomerDetails cd = new CustomerDetails();
-        cd.setFirstName("Angga Yunanda");
-        cd.setEmail("anggaY@gmail.com");
-        cd.setPhone("0856000123");
-        return cd;
-    }
-
-    public static TransactionRequest transactionRequest(String id, double price, int qty, String name, String snapToken){
-        TransactionRequest request =  new TransactionRequest(System.currentTimeMillis() + " " , 2000 );
-        CustomerDetails customerDetails = customerDetails();
-
-        request.setCustomerDetails(customerDetails);
-
-        ItemDetails details = new ItemDetails(id, price, qty, name);
-
-        ArrayList<ItemDetails> itemDetails = new ArrayList<>();
-        itemDetails.add(details);
-        request.setItemDetails(itemDetails);
-        CreditCard creditCard = new CreditCard();
-        creditCard.setSaveCard(false);
-        creditCard.setAuthentication(CreditCard.RBA);
-
-        request.setCreditCard(creditCard);
-
-        // Add the snapToken as a custom field
-        request.setCustomField1(snapToken);
-
-        return request;
     }
 }

@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    flavorDimensions "version"
+    //flavorDimensions "version"
 
     namespace "com.example.butcheryapp_ui"
     compileSdk 34
@@ -29,7 +29,7 @@ android {
         targetCompatibility JavaVersion.VERSION_1_9
     }
 
-
+/*
     productFlavors {
         sandbox {
             dimension "version"
@@ -37,6 +37,7 @@ android {
             buildConfigField "String", "CLIENT_KEY", "\"SB-Mid-client-SpSU-pEjrIfuDEE7\""
         }
     }
+ */
 
 }
 
@@ -62,8 +63,7 @@ dependencies {
     implementation 'at.favre.lib:bcrypt:0.9.0'
 
     //chart
-    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    //implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 
-
-    implementation 'com.midtrans:uikit:2.0.0-SANDBOX'
+    //implementation 'com.midtrans:uikit:2.0.0-SANDBOX'
 }

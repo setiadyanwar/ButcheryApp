@@ -13,6 +13,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+/*
 import com.midtrans.sdk.corekit.callback.TransactionFinishedCallback;
 import com.midtrans.sdk.corekit.core.MidtransSDK;
 import com.midtrans.sdk.corekit.core.TransactionRequest;
@@ -22,13 +23,13 @@ import com.midtrans.sdk.corekit.models.ItemDetails;
 import com.midtrans.sdk.corekit.models.snap.CreditCard;
 import com.midtrans.sdk.corekit.models.snap.TransactionResult;
 import com.midtrans.sdk.uikit.SdkUIFlowBuilder;
-
+*/
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class ConfirmPayment extends AppCompatActivity implements TransactionFinishedCallback {
+public class ConfirmPayment extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +45,7 @@ public class ConfirmPayment extends AppCompatActivity implements TransactionFini
             }
         });
     }
-
+/*
     private void clickPay(String snapToken) {
         // Check if snapToken is not null before proceeding
         if (snapToken != null) {
@@ -171,4 +172,5 @@ public class ConfirmPayment extends AppCompatActivity implements TransactionFini
             }
         }
     }
+ */
 }
