@@ -1,11 +1,9 @@
 plugins {
-     id 'com.android.application'
+    id 'com.android.application'
 }
 
 android {
-    //flavorDimensions "version"
-
-    namespace "com.example.butcheryapp_ui"
+    namespace 'com.example.butcheryapp_ui'
     compileSdk 34
 
     defaultConfig {
@@ -29,24 +27,13 @@ android {
         targetCompatibility JavaVersion.VERSION_1_9
     }
 
-/*
-    productFlavors {
-        sandbox {
-            dimension "version"
-            buildConfigField "String", "BASE_URL", "\"http://5ebd-120-188-92-12.ngrok-free.app/api/getSnapToken/charge/\""
-            buildConfigField "String", "CLIENT_KEY", "\"SB-Mid-client-SpSU-pEjrIfuDEE7\""
-        }
-    }
- */
-
 }
 
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.10.0'
+    implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'com.google.ar:core:1.40.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
@@ -63,7 +50,6 @@ dependencies {
     implementation 'at.favre.lib:bcrypt:0.9.0'
 
     //chart
-    //implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 
-    //implementation 'com.midtrans:uikit:2.0.0-SANDBOX'
 }
