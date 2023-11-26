@@ -1,0 +1,8 @@
+<!-- res/drawable/card_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <solid android:color="#FF807C"/> <!-- Warna latar belakang -->
+
+    <corners android:radius="8dp"/> <!-- Sudut lengkung (cornerRadius) -->
+</shape>
