@@ -376,26 +376,13 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-                <ImageView
+                <RatingBar
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/bintang_merah"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/bintang_merah"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/bintang_merah"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/bintang_merah"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/halfbintang"/>
+                    android:numStars="5"
+                    android:rating="3.5"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:progressTint="@color/primary_10"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -408,75 +395,9 @@
                     android:text="(1.7RB Ulasan)"
                     android:textColor="#B3B3B3"/>
             </LinearLayout>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_marginTop="26dp"
-                android:src="@drawable/line"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp">
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginEnd="7dp"
-                    android:src="@drawable/profile_picture"/>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Freya Jayawardana"
-                        android:textStyle="bold"
-                        android:textSize="12sp"
-                        android:textColor="@color/dark_50"/>
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/bintang_merah"/>
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/bintang_merah"/>
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/bintang_merah"/>
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/bintang_merah"/>
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/halfbintang"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="5dp"
-                            android:text="4.7"
-                            android:textColor="@color/primary_10"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="(1.7RB Ulasan)"
-                            android:textColor="#B3B3B3"/>
-                    </LinearLayout>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Pesanan semua lengkap dan datang sesuai\njadwal,terima kasih."
-                        android:textSize="12sp"
-                        android:textColor="@color/dark_10"/>
-                </LinearLayout>
-            </LinearLayout>
+
+
+
 
             <ImageView
                 android:layout_width="match_parent"
@@ -488,134 +409,11 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginTop="10dp">
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginEnd="7dp"
-                    android:src="@drawable/profile_picture"/>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Freya Jayawardana"
-                        android:textStyle="bold"
-                        android:textSize="12sp"
-                        android:textColor="@color/dark_50"/>
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/bintang_merah"/>
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/bintang_merah"/>
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/bintang_merah"/>
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/bintang_merah"/>
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/halfbintang"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="5dp"
-                            android:text="4.7"
-                            android:textColor="@color/primary_10"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="(1.7RB Ulasan)"
-                            android:textColor="#B3B3B3"/>
-                    </LinearLayout>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Pesanan semua lengkap dan datang sesuai\njadwal,terima kasih."
-                        android:textSize="12sp"
-                        android:textColor="@color/dark_10"/>
-                </LinearLayout>
-            </LinearLayout>
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_marginTop="26dp"
-                android:src="@drawable/line"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp">
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginEnd="7dp"
-                    android:src="@drawable/profile_picture"/>
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Freya Jayawardana"
-                        android:textStyle="bold"
-                        android:textSize="12sp"
-                        android:textColor="@color/dark_50"/>
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/bintang_merah"/>
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/bintang_merah"/>
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/bintang_merah"/>
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/bintang_merah"/>
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/halfbintang"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="5dp"
-                            android:text="4.7"
-                            android:textColor="@color/primary_10"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="(1.7RB Ulasan)"
-                            android:textColor="#B3B3B3"/>
-                    </LinearLayout>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Pesanan semua lengkap dan datang sesuai\njadwal,terima kasih."
-                        android:textSize="12sp"
-                        android:textColor="@color/dark_10"/>
-                </LinearLayout>
+                    tools:listitem="@layout/item_rating"/>
             </LinearLayout>
 
             <ImageView
@@ -635,7 +433,7 @@
             <!-- sampah-->
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="500dp"
+                android:layout_height="350dp"
                 android:text=""/>
             <!--sampah-->
         </LinearLayout>

@@ -45,8 +45,7 @@
         android:id="@+id/scrollviewpembayaran"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/nav_pembayaran"
-        android:layout_marginTop="15dp">
+        app:layout_constraintTop_toBottomOf="@id/nav_pembayaran">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -156,109 +155,9 @@
             </androidx.recyclerview.widget.RecyclerView>
 
 
-            <!--    Recycle view itemnya-->
+<!--            &lt;!&ndash;    Recycle view itemnya&ndash;&gt;-->
 
 
-            <!--    Versi manual item -->
-            <!--
-            <LinearLayout
-                android:id="@+id/pesanan"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/infoalamat"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:background="@color/white"
-                android:orientation="vertical">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="21dp"
-                    android:paddingEnd="21dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="15dp"
-                    android:gravity="center_vertical">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/toko"/>
-                    <TextView
-                        android:layout_width="140dp"
-                        android:layout_height="wrap_content"
-                        android:text="Culture Tambak "
-                        android:layout_marginStart="5dp"
-                        android:textStyle="bold"
-                        android:textColor="#000000"/>
-                </LinearLayout>
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:src="@drawable/line"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="21dp"
-                    android:paddingEnd="21dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="15dp">
-                    <ImageView
-                        android:layout_width="75dp"
-                        android:layout_height="64dp"
-                        android:layout_marginEnd="15dp"
-                        android:src="@drawable/gambar_manageproduk"/>
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="250dp"
-                            android:layout_height="38dp"
-                            android:text="Wagyu Sirloin Meltique Beef Steak 200gr"
-                            android:textColor="#000000"/>
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Variasi: "
-                                android:textSize="12sp"
-                                android:textColor="@color/dark_30"/>
-                            <TextView
-                                android:layout_width="50dp"
-                                android:layout_height="wrap_content"
-                                android:textSize="12sp"
-                                android:text="200gr "
-                                android:textColor="@color/dark_30"
-                                android:layout_marginEnd="170dp"/>
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="25dp"
-                            android:layout_marginTop="8dp">
-                            <TextView
-                                android:id="@+id/harga"
-                                android:layout_width="80dp"
-                                android:layout_height="wrap_content"
-                                android:text="Rp34.600"
-                                android:textStyle="bold"
-                                android:textSize="14sp"
-                                android:layout_marginEnd="160dp"
-                                android:textColor="#000000"/>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:textSize="12sp"
-                                android:text="x1"
-                                android:textColor="@color/dark_10"/>
-                        </LinearLayout>
-
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-            -->
-            <!--    Versi manual item-->
 
 
 
@@ -389,7 +288,7 @@
                         android:layout_height="wrap_content"
                         android:text=""
                         android:textSize="12sp"
-                        android:layout_marginEnd="230dp"
+                        android:layout_marginEnd="222dp"
                         android:textColor="@color/dark_30"/>
                     <TextView
                         android:id="@+id/subtotal_checkout"
@@ -411,11 +310,12 @@
                         android:layout_height="wrap_content"
                         android:text="Pengiriman (Promo)"
                         android:textSize="12sp"
-                        android:layout_marginEnd="236dp"
+                        android:layout_marginEnd="140dp"
                         android:textColor="@color/dark_30"/>
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="100dp"
                         android:layout_height="wrap_content"
+                        android:textAlignment="textEnd"
                         android:text="Rp10.000"
                         android:textSize="12sp"
                         android:textColor="@color/dark_30"/>
@@ -425,6 +325,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:layout_marginStart="21dp"
+                    android:layout_marginBottom="160dp"
                     android:layout_marginEnd="21dp">
                     <TextView
                         android:layout_width="wrap_content"
@@ -441,30 +342,6 @@
                         android:textSize="12sp"
                         android:textColor="@color/dark_30"/>
                 </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginStart="21dp"
-                    android:layout_marginEnd="21dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Total"
-                        android:textSize="16sp"
-                        android:layout_marginEnd="240dp"
-                        android:textColor="@color/dark_30"/>
-                    <TextView
-                        android:id="@+id/total_harga_ringkasan"
-                        android:layout_width="75dp"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="textEnd"
-                        android:text=""
-                        android:textSize="16sp"
-                        android:layout_marginBottom="20dp"
-                        android:textColor="@color/dark_30"/>
-                </LinearLayout>
-
 
 
             </LinearLayout>
@@ -498,9 +375,10 @@
             android:textSize="16sp"/>
         <TextView
             android:id="@+id/total_harga_checkout"
-            android:layout_width="100dp"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:text=""
+            android:layout_marginEnd="8dp"
             android:textColor="@color/primary_50"
             android:textStyle="bold"
             android:textSize="16sp"/>
@@ -509,11 +387,11 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="17dp">
+            android:layout_marginEnd="10dp">
 
             <ImageButton
                 android:id="@+id/buttonbeli_checkout"
-                android:layout_width="203dp"
+                android:layout_width="190dp"
                 android:layout_height="55dp"
                 android:background="@drawable/btn_checkout"
                 tools:ignore="MissingConstraints" />

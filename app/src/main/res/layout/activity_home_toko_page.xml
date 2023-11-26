@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeTokoPage"
-    android:background="@color/white">
+    android:background="@color/bg_color">
 
     <LinearLayout
         android:id="@+id/nav_tokosaya"
@@ -337,9 +337,188 @@
             android:background="@color/transparent"
             android:src="@drawable/menu_aitrend"/>
 
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/pembeli"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingHorizontal="21dp"
+        app:layout_constraintTop_toBottomOf="@id/menu_toko"
+        android:orientation="vertical"
+        android:background="@color/white">
 
+        <TextView
+            android:layout_marginVertical="15dp"
+            android:id="@+id/menu_pembeli"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kata Pembeli"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/dark_70"/>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingEnd="10dp"
+                android:src="@drawable/ulasan" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Ulasan"
+                android:textColor="@color/dark_50" />
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:paddingStart="285dp"
+                android:src="@drawable/caretdark" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="17dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingEnd="10dp"
+                android:src="@drawable/icon_chat" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Ulasan"
+                android:textColor="@color/dark_50" />
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:paddingStart="285dp"
+                android:src="@drawable/caretdark" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="21dp"
+        app:layout_constraintTop_toBottomOf="@id/pembeli"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_marginVertical="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bantuan dan info lainnya"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/dark_70"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingEnd="10dp"
+                android:src="@drawable/ulasan" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Pusat Bantuan"
+                android:textColor="@color/dark_50" />
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:paddingStart="285dp"
+                android:src="@drawable/caretdark" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingEnd="10dp"
+                android:src="@drawable/ulasan" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Chat dengan Butchery"
+                android:textColor="@color/dark_50" />
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:paddingStart="285dp"
+                android:src="@drawable/caretdark" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="220dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingEnd="10dp"
+                android:src="@drawable/ulasan" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Pengaturan Toko"
+                android:textColor="@color/dark_50" />
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:paddingStart="285dp"
+                android:src="@drawable/caretdark" />
+        </LinearLayout>
     </LinearLayout>
 
 

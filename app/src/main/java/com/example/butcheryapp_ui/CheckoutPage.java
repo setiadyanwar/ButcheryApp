@@ -216,7 +216,6 @@ public class CheckoutPage extends AppCompatActivity {
 
                         TotalProdukTextView = findViewById(R.id.total_produk);
                         subtotalTextView = findViewById(R.id.subtotal_checkout);
-                        totalHargaRingkasanTextView = findViewById(R.id.total_harga_ringkasan);
                         totalHargaTextView = findViewById(R.id.total_harga_checkout);
 
                         TotalProdukTextView.setText("Subtotal (" + Integer.toString(jsonArray.length()) + ")");

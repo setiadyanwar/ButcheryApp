@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="26dp"
+        android:src="@drawable/line"/>
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/pp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="7dp"
+            android:src="@drawable/profile_picture"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Freya Jayawardana"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="@color/dark_50"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:rating="3.5"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:progressTint="@color/primary_10"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="4.7"
+                    android:textColor="@color/primary_10"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(1.7RB Ulasan)"
+                    android:textColor="#B3B3B3"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:text="Pesanan semua lengkap dan datang sesuai\njadwal,terima kasih."
+                android:textSize="12sp"
+                android:textColor="@color/dark_10"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
