@@ -12,6 +12,7 @@ AndroidManifest.xml
 .DS_Store
 /build
 /captures
+assets/**
 .externalNativeBuild
 .cxx
 local.properties
