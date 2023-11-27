@@ -25,8 +25,8 @@
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="21dp"
-            android:layout_marginEnd="21dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
             android:layout_below="@+id/imageSlider"
             android:overScrollMode="never"
             android:scrollbars="none">
@@ -34,7 +34,6 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="190dp"
-                android:layout_marginStart="110dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
