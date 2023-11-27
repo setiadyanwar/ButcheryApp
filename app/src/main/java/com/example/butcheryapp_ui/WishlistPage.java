@@ -44,7 +44,7 @@ public class WishlistPage extends AppCompatActivity {
         bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()){
                 case R.id.home:
-                    startActivity(new Intent(getApplicationContext(),Homepage_MainLogin.class));
+                    startActivity(new Intent(getApplicationContext(),HomePage_NotLogin.class));
                     finish();
                     overridePendingTransition(0, 0);
                     return true;

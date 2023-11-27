@@ -122,10 +122,12 @@ public class LoginPage extends AppCompatActivity {
                     JSONArray jsonArray = new JSONArray(response);
                     boolean loginSuccessful = false;
                     String id_user = "";
+                    String role = "";
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
 
                         String getIDUser = jsonObject.getString("_id");
+                        String getRole = jsonObject.getString("role");
                         String getPassword = jsonObject.getString("password");
 
                         Verifyer verify = BCrypt.verifyer();
@@ -135,6 +137,7 @@ public class LoginPage extends AppCompatActivity {
                         if(result){
                             loginSuccessful = true;
                             id_user = getIDUser;
+                            role = getRole;
                             break;
                         }
                     }
@@ -146,6 +149,7 @@ public class LoginPage extends AppCompatActivity {
                         SharedPreferences.Editor editor = sharedPref.edit();
                         editor.putBoolean("login", true);
                         editor.putString("id_user", id_user);
+                        editor.putString("role", role);
                         editor.apply();
 
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);

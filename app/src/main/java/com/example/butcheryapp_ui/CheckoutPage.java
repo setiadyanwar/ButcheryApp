@@ -327,7 +327,7 @@ public class CheckoutPage extends AppCompatActivity {
                     for (int i = 0; i < checkoutToBeliList.size(); i++) {
                         CheckoutItemModel checkoutItem = checkoutToBeliList.get(i);
                         // Open a browser with the specified URL
-                        String redirectUrl = "https://5ebd-120-188-92-12.ngrok-free.app/login";  // Replace with your actual URL
+                        String redirectUrl = "http://146.190.89.250/login";  // Replace with your actual URL
                         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(redirectUrl));
                         startActivity(browserIntent);
                     }

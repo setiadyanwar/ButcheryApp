@@ -1,14 +1,18 @@
 package com.example.butcheryapp_ui;
 
+import android.net.Uri;
+
+import java.net.URI;
+
 public class ProdukModel {
     private String id_produk;
     private String supplierID;
     private String namaToko;
     private String id_alamatToko;
     private String alamatToko;
-    private String fotoProduk1;
-    private String fotoProduk2;
-    private String fotoProduk3;
+    private Uri fotoProduk1;
+    private Uri fotoProduk2;
+    private Uri fotoProduk3;
     private String namaProduk;
     private String id_kategori;
     private String deskripsi;
@@ -60,27 +64,27 @@ public class ProdukModel {
         this.namaToko = namaToko;
     }
 
-    public String getFotoProduk1() {
+    public Uri getFotoProduk1() {
         return fotoProduk1;
     }
 
-    public void setFotoProduk1(String fotoProduk1) {
+    public void setFotoProduk1(Uri fotoProduk1) {
         this.fotoProduk1 = fotoProduk1;
     }
 
-    public String getFotoProduk2() {
+    public Uri getFotoProduk2() {
         return fotoProduk2;
     }
 
-    public void setFotoProduk2(String fotoProduk2) {
+    public void setFotoProduk2(Uri fotoProduk2) {
         this.fotoProduk2 = fotoProduk2;
     }
 
-    public String getFotoProduk3() {
+    public Uri getFotoProduk3() {
         return fotoProduk3;
     }
 
-    public void setFotoProduk3(String fotoProduk3) {
+    public void setFotoProduk3(Uri fotoProduk3) {
         this.fotoProduk3 = fotoProduk3;
     }
 

@@ -88,7 +88,7 @@
                         android:src="@drawable/kategori_ikan" />
 
                     <TextView
-
+                        android:id="@+id/ikan_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignTop="@+id/kategori_ikan"
@@ -116,7 +116,7 @@
                         android:src="@drawable/kategori_ayam" />
 
                     <TextView
-
+                        android:id="@+id/ayam_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignTop="@+id/kategori_ayam"
@@ -144,7 +144,7 @@
                         android:src="@drawable/kategori_bebek" />
 
                     <TextView
-
+                        android:id="@+id/bebek_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignTop="@+id/kategori_bebek"
@@ -172,7 +172,7 @@
                         android:src="@drawable/kategori_kambing" />
 
                     <TextView
-
+                        android:id="@+id/kambing_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignTop="@+id/kategori_kambing"
@@ -200,7 +200,7 @@
                         android:src="@drawable/kategori_sapi" />
 
                     <TextView
-
+                        android:id="@+id/sapi_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignTop="@+id/kategori_sapi"
@@ -228,7 +228,7 @@
                         android:src="@drawable/kategori_kelinci" />
 
                     <TextView
-
+                        android:id="@+id/kelinci_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignTop="@+id/kategori_kelinci"
@@ -256,7 +256,7 @@
                         android:src="@drawable/kategori_domba" />
 
                     <TextView
-
+                        android:id="@+id/domba_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignTop="@+id/kategori_domba"
@@ -284,7 +284,7 @@
                         android:src="@drawable/kategori_puyuh" />
 
                     <TextView
-
+                        android:id="@+id/puyuh_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignTop="@+id/kategori_puyuh"
@@ -312,7 +312,7 @@
                         android:src="@drawable/kategori_udang" />
 
                     <TextView
-
+                        android:id="@+id/udang_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignTop="@+id/kategori_udang"
@@ -340,7 +340,7 @@
                         android:src="@drawable/kategori_kerang" />
 
                     <TextView
-
+                        android:id="@+id/kerang_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignTop="@+id/kategori_kerang"
@@ -368,7 +368,7 @@
                         android:src="@drawable/kategori_cumi" />
 
                     <TextView
-
+                        android:id="@+id/cumi_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignTop="@+id/kategori_cumi"
@@ -381,10 +381,6 @@
                         android:text="Cumi cumi"/>
 
                 </RelativeLayout>
-
-
-
-
             </RelativeLayout>
 
 

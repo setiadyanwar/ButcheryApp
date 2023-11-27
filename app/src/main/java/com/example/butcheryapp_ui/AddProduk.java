@@ -24,6 +24,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -36,6 +37,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -61,6 +63,8 @@ public class AddProduk extends AppCompatActivity {
 
     private TextView simpan;
 
+    Uri imageUri;
+
     private final int MAIN_IMAGE_REQUEST_CODE = 1;
     private final int SECOND_IMAGE_REQUEST_CODE = 2;
     private final int THIRD_IMAGE_REQUEST_CODE = 3;
@@ -75,6 +79,7 @@ public class AddProduk extends AppCompatActivity {
                 if (result.getResultCode() == RESULT_OK) {
                     if (result.getData() != null) {
                         Uri imageUri = result.getData().getData();
+                        setImageUri(imageUri);
                         if(imageUri != null){
                             try {
                                 // Mengambil path file gambar dari URI
@@ -85,8 +90,9 @@ public class AddProduk extends AppCompatActivity {
                                 String imageName = imageFile.getName();
 
                                 // Simpan path file ke variabel foto3
-                                foto1 = imageName;
-                                Toast.makeText(this, "foto 1" + foto1, Toast.LENGTH_SHORT).show();
+                                foto1 = imagePath;
+                                //changeFotoToLink(foto1);
+                                //Toast.makeText(this, "foto 1" + foto1, Toast.LENGTH_SHORT).show();
 
                                 // Set gambar langsung ke ImageView menggunakan setImageURI
                                 mainImage.setImageURI(imageUri);
@@ -117,8 +123,9 @@ public class AddProduk extends AppCompatActivity {
                                 String imageName = imageFile.getName();
 
                                 // Simpan path file ke variabel foto3
-                                foto2 = imageName;
-                                Toast.makeText(this, "foto 2 : " + foto2, Toast.LENGTH_SHORT).show();
+                                foto2 = imagePath;
+                                //changeFotoToLink(foto2);
+                                //Toast.makeText(this, "foto 2 : " + foto2, Toast.LENGTH_SHORT).show();
 
                                 // Set gambar langsung ke ImageView menggunakan setImageURI
                                 secondImage.setImageURI(imageUri);
@@ -150,8 +157,9 @@ public class AddProduk extends AppCompatActivity {
                                 String imageName = imageFile.getName();
 
                                 // Simpan path file ke variabel foto3
-                                foto3 = imageName;
-                                Toast.makeText(this, "foto 3 :" + foto3, Toast.LENGTH_SHORT).show();
+                                foto3 = imagePath;
+                                //changeFotoToLink(foto3);
+                                //Toast.makeText(this, "foto 3 :" + foto3, Toast.LENGTH_SHORT).show();
 
                                 // Set gambar langsung ke ImageView menggunakan setImageURI
                                 thirdImage.setImageURI(imageUri);
@@ -408,7 +416,17 @@ public class AddProduk extends AppCompatActivity {
             public void onResponse(String response) {
                 if(response.isEmpty()){
                     Intent intent = new Intent(AddProduk.this, ManageProdukToko.class);
+
+                    SharedPreferences sharedPref = getSharedPreferences("myPrefs", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPref.edit();
+                    editor.putBoolean("login", true);
+                    editor.putString("imageUri", String.valueOf(getImageUri()));
+                    editor.apply();
+
                     startActivity(intent);
+
+
+
                 }else {
                     Intent intent = new Intent(AddProduk.this, AddProduk.class);
                     startActivity(intent);
@@ -498,6 +516,8 @@ public class AddProduk extends AppCompatActivity {
                         foto2 = getFotoProduk.getString("foto2");
                         foto3 = getFotoProduk.getString("foto3");
 
+
+
                         nama_produk.setText(jsonObject.getString("nama_produk"));
                         deskripsi.setText(jsonObject.getString("deskripsi"));
 
@@ -549,5 +569,13 @@ public class AddProduk extends AppCompatActivity {
         } else {
             return null;
         }
+    }
+
+    public Uri getImageUri() {
+        return imageUri;
+    }
+
+    public void setImageUri(Uri imageUri) {
+        this.imageUri = imageUri;
     }
 }

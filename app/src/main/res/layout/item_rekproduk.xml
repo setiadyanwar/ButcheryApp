@@ -17,7 +17,8 @@
             android:layout_width="180dp"
             android:layout_height="121dp"
             android:background="@drawable/bg_gambarproduk"
-            android:id="@+id/image1"/>
+            android:id="@+id/image1"
+            />
         <TextView
             android:id="@+id/nama_produk"
             android:layout_width="wrap_content"
@@ -96,9 +97,17 @@
                 android:src="@drawable/icon_bintang"
                 android:layout_marginEnd="5dp"/>
             <TextView
+                android:id="@+id/rating_tagline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="4.7 | 325 terjual"
+                android:text="0.0 | "
+                android:textSize="12sp"
+                android:textColor="#999999"/>
+            <TextView
+                android:id="@+id/total_jual_tagline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 0 terjual"
                 android:textSize="12sp"
                 android:textColor="#999999"/>
         </LinearLayout>

@@ -31,7 +31,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/nama"
+                android:id="@+id/nama_user_reviews"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Freya Jayawardana"
@@ -45,28 +45,26 @@
                 android:orientation="horizontal">
 
                 <RatingBar
+                    android:id="@+id/rating_star_reviews"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:numStars="5"
-                    android:rating="3.5"
+                    android:rating="0"
                     style="?android:attr/ratingBarStyleSmall"
                     android:progressTint="@color/primary_10"/>
 
                 <TextView
+                    android:id="@+id/rating_text_reviews"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
-                    android:text="4.7"
+                    android:text="0.0"
                     android:textColor="@color/primary_10"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="(1.7RB Ulasan)"
-                    android:textColor="#B3B3B3"/>
             </LinearLayout>
 
             <TextView
+                android:id="@+id/reviews_text"
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:text="Pesanan semua lengkap dan datang sesuai\njadwal,terima kasih."

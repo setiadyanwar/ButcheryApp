@@ -148,6 +148,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <TextView
+                    android:id="@+id/total_jual_tagline"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -163,6 +164,7 @@
                     android:src="@drawable/bintang_merah"
                     android:layout_marginTop="10dp"/>
                 <TextView
+                    android:id="@+id/rating_tagline"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="4.7"
@@ -451,22 +453,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <RatingBar
+                    android:id="@+id/star_rating"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:numStars="5"
-                    android:rating="3.5"
+                    android:rating="0"
                     style="?android:attr/ratingBarStyleSmall"
                     android:progressTint="@color/primary_10"/>
                 <TextView
+                    android:id="@+id/rating_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
-                    android:text="4.7"
+                    android:text="0.0"
                     android:textColor="@color/primary_10"/>
                 <TextView
+                    android:id="@+id/jumlah_penilai"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="(1.7RB Ulasan)"
+                    android:text=" (1.7RB Ulasan)"
                     android:textColor="#B3B3B3"/>
             </LinearLayout>
 
@@ -485,6 +490,7 @@
                 android:layout_marginTop="10dp">
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/listreviews"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:listitem="@layout/item_rating"/>
@@ -496,6 +502,7 @@
                 android:layout_marginTop="20dp"
                 android:src="@drawable/line"/>
             <TextView
+                android:id="@+id/lihat_lainnya_jumlah_penilaian"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -11,10 +11,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -43,6 +45,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
+import java.net.URI;
 import java.net.URL;
 import java.text.NumberFormat;
 import java.util.ArrayList;
@@ -121,6 +124,28 @@ public class HomePage_NotLogin extends AppCompatActivity {
             return false;
         });
 
+        ImageView searchklik = findViewById(R.id.iconsearch);
+        EditText keyword = findViewById(R.id.search_container);
+        ImageButton sub_kategori = findViewById(R.id.premium);
+
+        sub_kategori.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(HomePage_NotLogin.this,SearchPage.class);
+                i.putExtra("id_kategori","daging-sapi");
+                startActivity(i);
+            }
+        });
+
+        searchklik.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(HomePage_NotLogin.this,SearchPage.class);
+                i.putExtra("search",keyword.getText().toString());
+                startActivity(i);
+            }
+        });
+
 
         getDataAllProduk();
     }
@@ -168,10 +193,14 @@ public class HomePage_NotLogin extends AppCompatActivity {
                         String getDetailedAlamatToko = getAlamatToko.getString("alamat");
                         produk.setAlamatToko(getDetailedAlamatToko);
 
+                        produk.setFotoProduk1(Uri.parse(getFotoProduk.getString("foto1")));
+                        produk.setFotoProduk2(Uri.parse(getFotoProduk.getString("foto2")));
+                        produk.setFotoProduk3(Uri.parse(getFotoProduk.getString("foto3")));
+
                         produkList.add(produk);
                     }
 
-                    produkAdapter.setProdukList(produkList);
+                    produkAdapter.setProdukList(HomePage_NotLogin.this,produkList);
                     produkAdapter.notifyDataSetChanged();
                 } catch (JSONException e) {
                     e.printStackTrace();
