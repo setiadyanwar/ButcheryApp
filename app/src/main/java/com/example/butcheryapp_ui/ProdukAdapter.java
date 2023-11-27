@@ -2,7 +2,10 @@ package com.example.butcheryapp_ui;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -71,6 +74,11 @@ public class ProdukAdapter extends RecyclerView.Adapter<ProdukAdapter.ProdukView
         holder.hargaProdukTextView.setText(produk.getHargaProduk());
         holder.namaTokoTextView.setText(produk.getNamaToko());
         holder.alamatTokoTextView.setText(produk.getAlamatToko());
+
+        byte[] bytes1 = Base64.decode(produk.getGambarproduk1(), Base64.DEFAULT);
+        Bitmap gambar1 = BitmapFactory.decodeByteArray(bytes1, 0, bytes1.length);
+        holder.foto.setImageBitmap(gambar1);
+
         holder.card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -15,6 +15,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.text.TextUtils;
+import android.util.Base64;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -36,6 +37,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -82,15 +84,28 @@ public class AddProduk extends AppCompatActivity {
                         setImageUri(imageUri);
                         if(imageUri != null){
                             try {
+                                InputStream inputStream = getContentResolver().openInputStream(imageUri);
+                                Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
+
+                                ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+                                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayOutputStream);
+                                byte[] byteArray = byteArrayOutputStream.toByteArray();
+
+                                // Mengencode byte array menjadi string Base64
+                                String encodedImage = Base64.encodeToString(byteArray, Base64.DEFAULT);
+
+
                                 // Mengambil path file gambar dari URI
                                 String imagePath = getImagePath(imageUri);
+
+                                //Ubah UrI jadi JSON ENCODE
 
                                 // Mengambil hanya nama file dari path
                                 File imageFile = new File(imagePath);
                                 String imageName = imageFile.getName();
 
                                 // Simpan path file ke variabel foto3
-                                foto1 = imagePath;
+                                foto1 = encodedImage;
                                 //changeFotoToLink(foto1);
                                 //Toast.makeText(this, "foto 1" + foto1, Toast.LENGTH_SHORT).show();
 
@@ -115,6 +130,17 @@ public class AddProduk extends AppCompatActivity {
                         Uri imageUri = result.getData().getData();
                         if(imageUri != null){
                             try {
+                                InputStream inputStream = getContentResolver().openInputStream(imageUri);
+                                Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
+
+                                ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+                                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayOutputStream);
+                                byte[] byteArray = byteArrayOutputStream.toByteArray();
+
+                                // Mengencode byte array menjadi string Base64
+                                String encodedImage = Base64.encodeToString(byteArray, Base64.DEFAULT);
+
+
                                 // Mengambil path file gambar dari URI
                                 String imagePath = getImagePath(imageUri);
 
@@ -123,7 +149,7 @@ public class AddProduk extends AppCompatActivity {
                                 String imageName = imageFile.getName();
 
                                 // Simpan path file ke variabel foto3
-                                foto2 = imagePath;
+                                foto2 = encodedImage;
                                 //changeFotoToLink(foto2);
                                 //Toast.makeText(this, "foto 2 : " + foto2, Toast.LENGTH_SHORT).show();
 
@@ -149,6 +175,18 @@ public class AddProduk extends AppCompatActivity {
                         Uri imageUri = result.getData().getData();
                         if(imageUri != null){
                             try {
+                                InputStream inputStream = getContentResolver().openInputStream(imageUri);
+                                Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
+
+                                ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+                                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayOutputStream);
+                                byte[] byteArray = byteArrayOutputStream.toByteArray();
+
+                                // Mengencode byte array menjadi string Base64
+                                String encodedImage = Base64.encodeToString(byteArray, Base64.DEFAULT);
+
+
+
                                 // Mengambil path file gambar dari URI
                                 String imagePath = getImagePath(imageUri);
 
@@ -157,7 +195,7 @@ public class AddProduk extends AppCompatActivity {
                                 String imageName = imageFile.getName();
 
                                 // Simpan path file ke variabel foto3
-                                foto3 = imagePath;
+                                foto3 = encodedImage;
                                 //changeFotoToLink(foto3);
                                 //Toast.makeText(this, "foto 3 :" + foto3, Toast.LENGTH_SHORT).show();
 

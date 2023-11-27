@@ -204,9 +204,9 @@ public class Homepage_MainLogin extends AppCompatActivity {
                         String getDetailedAlamatToko = getAlamatToko.getString("alamat");
                         produk.setAlamatToko(getDetailedAlamatToko);
 
-                        produk.setFotoProduk1(Uri.parse(getFotoProduk.getString("foto1")));
-                        produk.setFotoProduk2(Uri.parse(getFotoProduk.getString("foto2")));
-                        produk.setFotoProduk3(Uri.parse(getFotoProduk.getString("foto3")));
+                        produk.setGambarproduk1(getFotoProduk.getString("foto1"));
+                        produk.setGambarproduk2(getFotoProduk.getString("foto2"));
+                        produk.setGambarproduk3(getFotoProduk.getString("foto3"));
 
                         produkList.add(produk);
                     }

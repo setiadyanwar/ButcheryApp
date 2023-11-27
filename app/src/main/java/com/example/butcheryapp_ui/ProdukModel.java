@@ -13,6 +13,10 @@ public class ProdukModel {
     private Uri fotoProduk1;
     private Uri fotoProduk2;
     private Uri fotoProduk3;
+    //coba2
+    private String gambarproduk1;
+    private String gambarproduk2;
+    private String gambarproduk3;
     private String namaProduk;
     private String id_kategori;
     private String deskripsi;
@@ -25,6 +29,35 @@ public class ProdukModel {
     private String varianProduk3;
     private String stokProduk3;
     private String hargaProduk3;
+
+    //coba lagi
+
+
+    public String getGambarproduk1() {
+        return gambarproduk1;
+    }
+
+    public void setGambarproduk1(String gambarproduk1) {
+        this.gambarproduk1 = gambarproduk1;
+    }
+
+    public String getGambarproduk2() {
+        return gambarproduk2;
+    }
+
+    public void setGambarproduk2(String gambarproduk2) {
+        this.gambarproduk2 = gambarproduk2;
+    }
+
+    public String getGambarproduk3() {
+        return gambarproduk3;
+    }
+
+    public void setGambarproduk3(String gambarproduk3) {
+        this.gambarproduk3 = gambarproduk3;
+    }
+
+    //akhir coba
 
     public String getId_produk() {
         return id_produk;

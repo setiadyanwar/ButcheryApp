@@ -62,7 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginEnd="69dp"
+            android:layout_marginEnd="55dp"
             android:layout_gravity="center_vertical">
         <TextView
             android:id="@+id/nama_toko_supplier"
@@ -94,16 +94,7 @@
                     android:textColor="@color/primary_10"/>
             </LinearLayout>
         </LinearLayout>
-        <ImageButton
-            android:id="@+id/btn_lihattoko"
-            android:layout_width="125dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/btn_lihattoko"
-            android:background="@color/transparent"
-            android:layout_gravity="center_vertical"
-            android:layout_marginEnd="21dp"/>
     </LinearLayout>
-
     <LinearLayout
         android:id="@+id/penjualan"
         android:layout_width="match_parent"

@@ -4,10 +4,14 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -51,6 +55,12 @@ public class DaftarProdukSupplierAdapter extends RecyclerView.Adapter<DaftarProd
         holder.hargaProdukTextView.setText(truncateText(produk.getHargaProduk(),12));
         holder.namaTokoTextView.setText(truncateText(produk.getNamaToko(),18));
         holder.variasiProdukTextView.setText(produk.getVarianProduk());
+
+        //buat endcode jadi bitmap
+        byte[] bytes1 = Base64.decode(produk.getGambarproduk1(), Base64.DEFAULT);
+        Bitmap gambar1 = BitmapFactory.decodeByteArray(bytes1, 0, bytes1.length);
+        holder.gambarProduk.setImageBitmap(gambar1);
+
         holder.btn_ubah.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -123,12 +133,14 @@ public class DaftarProdukSupplierAdapter extends RecyclerView.Adapter<DaftarProd
 
     public class ProdukViewHolder extends RecyclerView.ViewHolder {
         TextView namaProdukTextView, hargaProdukTextView, variasiProdukTextView, namaTokoTextView;
+        ImageView gambarProduk;
         Button btn_ubah,btn_hapus;
         public ProdukViewHolder(@NonNull View itemView) {
             super(itemView);
             namaProdukTextView = itemView.findViewById(R.id.nama_produk);
             hargaProdukTextView = itemView.findViewById(R.id.harga_produk);
             variasiProdukTextView = itemView.findViewById(R.id.variasi);
+            gambarProduk = itemView.findViewById(R.id.gambar_produk);
             namaTokoTextView = itemView.findViewById(R.id.nama_toko);
             btn_ubah = itemView.findViewById(R.id.btnubah);
             btn_hapus = itemView.findViewById(R.id.btnhapus);

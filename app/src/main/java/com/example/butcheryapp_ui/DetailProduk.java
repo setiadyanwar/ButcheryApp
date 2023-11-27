@@ -11,15 +11,19 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.media.Rating;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Base64;
 import android.util.Dumpable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -47,8 +51,9 @@ public class DetailProduk extends AppCompatActivity {
     TextView nama_produk, deskripsi, harga_produk, nama_toko, alamat_toko, ratingTagline, totalJualTagline, ratingTextTextView, jumlahPenilaianTextView, lihatLainnyaJPTextView;
     RatingBar ratingStarTextView;
     RadioButton varian1, varian2, varian3;
+    ImageView imageDetail;
     Boolean isVarian1Selected, isVarian2Selected, isVarian3Selected;
-    String supplier_id, getNamaProduk,getValVarianProduk,getHargaProduk,getQTYProduk, getSubtotalProduk, getNoteProduk, getValFotoProduk;
+    String supplier_id, getNamaProduk,getValVarianProduk,getHargaProduk,getQTYProduk, getSubtotalProduk, getNoteProduk, getValFotoProduk1, getValFotoProduk2, getValFotoProduk3;
     private RequestQueue mRequestQueue;
     private StringRequest mStringRequest;
     private RReviewsAdapter rReviewsAdapter;
@@ -96,7 +101,7 @@ public class DetailProduk extends AppCompatActivity {
                     Intent intent = new Intent(DetailProduk.this, LoginPage.class);
                     startActivity(intent);
                 }else{
-                    insertProdukToCheckoutFromBeli(id_user, id_produk, supplier_id, getValFotoProduk, getNamaProduk,getValVarianProduk,getHargaProduk,getQTYProduk, getSubtotalProduk, getNoteProduk);
+                    insertProdukToCheckoutFromBeli(id_user, id_produk, supplier_id, getValFotoProduk1, getNamaProduk,getValVarianProduk,getHargaProduk,getQTYProduk, getSubtotalProduk, getNoteProduk);
                 }
             }
         });
@@ -114,7 +119,7 @@ public class DetailProduk extends AppCompatActivity {
                     Intent intent = new Intent(DetailProduk.this, LoginPage.class);
                     startActivity(intent);
                 }else{
-                    insertProdukToCart(id_user, id_produk, supplier_id, getNamaProduk,getValVarianProduk,getHargaProduk,getQTYProduk, getSubtotalProduk, getNoteProduk, getValFotoProduk);
+                    insertProdukToCart(id_user, id_produk, supplier_id, getNamaProduk,getValVarianProduk,getHargaProduk,getQTYProduk, getSubtotalProduk, getNoteProduk, getValFotoProduk1);
                 }
             }
         });
@@ -169,16 +174,23 @@ public class DetailProduk extends AppCompatActivity {
                         JSONObject getAlamatToko = jsonObject.getJSONObject("alamat_toko");
 
                         supplier_id = jsonObject.getString("supplier_id");
-                        getValFotoProduk = getFotoProduk.getString("foto1");
+                        getValFotoProduk1 = getFotoProduk.getString("foto1");
+                        getValFotoProduk2 = getFotoProduk.getString("foto2");
+                        getValFotoProduk3 = getFotoProduk.getString("foto3");
 
                         nama_produk = findViewById(R.id.detail_nama_produk);
                         deskripsi = findViewById(R.id.detail_deskripsi_produk);
                         harga_produk = findViewById(R.id.detail_harga_produk);
+                        imageDetail = findViewById(R.id.gambar_detail);
                         varian1 = findViewById(R.id.varian1);
                         varian2 = findViewById(R.id.varian2);
                         varian3 = findViewById(R.id.varian3);
                         nama_toko = findViewById(R.id.detail_nama_toko);
                         alamat_toko = findViewById(R.id.detail_alamat_toko);
+
+                        byte[] bytes1 = Base64.decode(getValFotoProduk1, Base64.DEFAULT);
+                        Bitmap gambar1 = BitmapFactory.decodeByteArray(bytes1, 0, bytes1.length);
+                        imageDetail.setImageBitmap(gambar1);
 
                         nama_produk.setText(jsonObject.getString("nama_produk"));
                         getNamaProduk = nama_produk.getText().toString();
@@ -202,6 +214,10 @@ public class DetailProduk extends AppCompatActivity {
                             public void onClick(View v) {
                                 RadioButton varian1,varian2,varian3;
                                 TextView harga_produk = findViewById(R.id.detail_harga_produk);
+
+                                byte[] bytes1 = Base64.decode(getValFotoProduk1, Base64.DEFAULT);
+                                Bitmap gambar1 = BitmapFactory.decodeByteArray(bytes1, 0, bytes1.length);
+                                imageDetail.setImageBitmap(gambar1);
 
                                 varian1 = findViewById(R.id.varian1);
                                 varian1.setBackgroundResource(R.drawable.radio_selected);
@@ -231,6 +247,10 @@ public class DetailProduk extends AppCompatActivity {
                                 RadioButton varian1,varian2,varian3;
                                 TextView harga_produk = findViewById(R.id.detail_harga_produk);
 
+                                byte[] bytes1 = Base64.decode(getValFotoProduk2, Base64.DEFAULT);
+                                Bitmap gambar1 = BitmapFactory.decodeByteArray(bytes1, 0, bytes1.length);
+                                imageDetail.setImageBitmap(gambar1);
+
                                 varian1 = findViewById(R.id.varian1);
                                 varian1.setBackgroundResource(R.drawable.radio_notselected);
 
@@ -259,6 +279,10 @@ public class DetailProduk extends AppCompatActivity {
                             public void onClick(View v) {
                                 RadioButton varian1,varian2,varian3;
                                 TextView harga_produk = findViewById(R.id.detail_harga_produk);
+
+                                byte[] bytes1 = Base64.decode(getValFotoProduk3, Base64.DEFAULT);
+                                Bitmap gambar1 = BitmapFactory.decodeByteArray(bytes1, 0, bytes1.length);
+                                imageDetail.setImageBitmap(gambar1);
 
                                 varian1 = findViewById(R.id.varian1);
                                 varian1.setBackgroundResource(R.drawable.radio_notselected);

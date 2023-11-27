@@ -128,6 +128,8 @@ public class ManageProdukToko extends AppCompatActivity {
                         String formattedCurrency = currencyFormat.format(Integer.parseInt(getHargaProduk));
                         produk.setHargaProduk(formattedCurrency);
 
+                       produk.setGambarproduk1(getFotoProduk.getString("foto1"));
+
                         produk.setNamaToko(getNamaToko);
 
                         String getDetailedAlamatToko = getAlamatToko.getString("alamat");

@@ -17,9 +17,8 @@
     <ImageView
         android:id="@+id/gambar_detail"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="281dp"
         android:adjustViewBounds="true"
-        android:src="@drawable/image"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -171,12 +170,13 @@
                     android:textColor="@color/black"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="175dp"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <RadioButton
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="15dp"
-                    android:src="@drawable/wishlish"/>
+                    android:button="@drawable/radio_null_selector"
+                    android:background="@drawable/toggle_selector"/>
                 <ImageView
                     android:id="@+id/whatsappIcon"
                     android:layout_width="wrap_content"
