@@ -126,7 +126,8 @@
             android:id="@+id/toko_views_fragment_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/sections_nav"/>
+            android:layout_below="@+id/sections_nav"
+            android:layout_marginTop="15dp"/>
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
